@@ -1,0 +1,130 @@
+a:link{
+    text-decoration: none;
+}
+a:visited{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+
+
+    ul,li{
+    	list-style:none;
+    }
+
+    .b3r-circle-right{
+
+	    width:35%;height:100%;position:absolute;right:3%;top:0;
+    }
+    .b3r-circle-right p{
+        height: 30%;
+     
+        position:absolute;
+        top:0;left:0;
+        width:100%;
+        padding:2% 0;
+    }
+    .b3r-circle-right p:nth-of-type(2){
+    	top:34%;
+    }
+    .b3r-circle-right p:nth-of-type(3){
+    	top:68%;
+    }
+    .b3r-circle-right p span{
+    	display:block;
+    	font-size:1.2rem;
+    	color:#a29eb3;
+    	width: 100%;
+    }
+    .b3r-circle-right p span.b3r-circle-right-line{
+        padding:5px 0;
+    }
+    .b3r-circle-right p span.b3r-circle-right-line:before,.b3r-circle-right p span.b3r-circle-right-line:after{
+    	display:block;
+      content:"";
+      clear:both;
+    }
+    .b3r-circle-right p em{
+    	font-style:normal;
+    	float:left;
+    	font-size:1.6rem;
+    	color:#2a9fda;
+    }
+    .b3r-circle-right p a{
+    	float:right;
+    	font-size:1.2rem;
+        padding:1% 4%;
+        border:1px solid #2a9fda;
+        color:#2a9fda;
+        border-radius:10px;
+        margin-right:4%;
+    }
+    .b3r-parameter{
+    	width: 100%;
+    height: 42%;
+    /* background: yellow; */
+    padding: 0 4%;
+ 
+    margin-top: 3%;
+    }
+     .b3r-parameter:after, .b3r-parameter:before{
+     	display:block;
+     	content:"";
+     	clear:both;
+     }
+    .b3r-parameter li{
+    	width: 25%;
+    	height:95%;
+    	border-right:1px solid #585564;
+    	float:left;
+    	padding-top:2%;
+    }
+    .b3r-parameter li:last-child{
+    	border:none;
+    }
+     .b3r-parameter li p{
+     	margin-bottom:0;
+        font-size:1.2rem;
+        text-align: center;
+        color:#28abeb;
+     }
+     .b3r-parameter li .b3r-parameter-top{
+     	padding:4% 0;
+     	color:#a29eb3;
+     }
+     .b3r-parameter li .b3r-parameter-middle span:first-child{
+     	font-size:1.6rem;
+     }
+     .layermchild.layermanim{
+     	width: 80%;
+     }
+     .layermchild.layermanim,.layermchild.layermanim h3{
+        margin:0;
+     
+     }
+      .layermchild.layermanim .layermcont{
+     	padding: 13px;
+
+     }
+     .layermcont input{
+     	width: 90%;
+	    color: #B9B9B9;
+	    background: #eee;
+	    border: none;
+	    outline: medium;
+	    font-size: 1.2rem;
+	    padding: 10px 15px;
+	    border-radius: 10px;
+     }
+     .layermchild.layermanim .layermbtn{
+     	overflow:hidden;
+     }
+
+     .b3r-circle-bg-newcircle{
+        width:100%;
+        height: 100%;
+        background: url("../Image/b3-color-circle-bg.png") no-repeat 48% 48%;
+        background-size:90%;
+        /*margin-left:5%;*/
+     }

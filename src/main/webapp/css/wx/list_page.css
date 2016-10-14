@@ -1,0 +1,23 @@
+body {
+	overflow-y: auto;
+	overflow-x: hidden;
+	margin: 0px;
+	padding: 0px;
+	background-color: rgb(55, 52, 70);
+}
+
+.page1 {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	overflow-x: hidden;
+}
+
+#mainmenu {
+	padding-left: 2%;
+	padding-right: 2%;
+	width: 100%;
+}
+
+#

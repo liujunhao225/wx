@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+ 
+ 
+ 	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:applicationContext.xml</param-value>
+	</context-param>
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<servlet>
+		<servlet-name>springmvc</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<!--为DispatcherServlet建树映射 -->
+	<servlet-mapping>
+		<servlet-name>springmvc</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+	
+ 	<servlet>  
+        <servlet-name>coreServlet</servlet-name>  
+        <servlet-class>  
+            wx.CoreServlet  
+        </servlet-class>  
+    </servlet>  
+  
+    <!-- url-pattern中配置的/coreServlet用于指定该Servlet的访问路径 -->  
+    <servlet-mapping>  
+        <servlet-name>coreServlet</servlet-name>  
+        <url-pattern>/coreServlet</url-pattern>  
+    </servlet-mapping> 
+ 	<servlet>  
+        <servlet-name>grap</servlet-name>  
+        <servlet-class>  
+            wx.GrapServletClass  
+        </servlet-class>  
+    </servlet>  
+  
+    <!-- url-pattern中配置的/coreServlet用于指定该Servlet的访问路径 -->  
+    <servlet-mapping>  
+        <servlet-name>grap</servlet-name>  
+        <url-pattern>/grap.do</url-pattern>  
+    </servlet-mapping> 
+
+	<servlet>
+		<servlet-name>unbind</servlet-name>
+		<servlet-class>wx.WXUbindAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>unbind</servlet-name>
+		<url-pattern>/unbind.do</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>deviceList</servlet-name>
+		<servlet-class>wx.AirMachineServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>deviceList</servlet-name>
+		<url-pattern>/devicelist.do</url-pattern>
+	</servlet-mapping>
+<!-- 	<servlet> -->
+<!-- 		<servlet-name>wxtime</servlet-name> -->
+<!-- 		<servlet-class>wx.WeiXinTimeTasker</servlet-class> -->
+<!-- 		<load-on-startup>0</load-on-startup> -->
+<!-- 	</servlet> -->
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+</web-app>

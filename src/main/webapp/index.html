@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!--headTrap<body></body><head></head><html></html>-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport"
+	content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link rel="dns-prefetch" href="//res.wx.qq.com">
+<link rel="dns-prefetch" href="//mmbiz.qpic.cn">
+<script type="text/javascript" src="./js/jquery-1.10.1.min.js"></script>
+<link rel="shortcut icon" type="image/x-icon"
+	href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/images/icon/common/favicon22c41b.ico">
+<title>帮大忙</title>
+<script>
+	function submitF() {
+		var phone = $("#phoneNum").val();
+		var jin = $("#jinJ").val();
+		console.log(phone+jin);
+		if (phone == null || phone == "" || jin == null || jin == ""){
+			return ;
+		}
+			$.ajax({
+				url : "/wx/grap.do",
+				type : 'post',
+				data : {
+					"phone" : phone,
+					"jin" : jin
+				},
+				error : function(e) {
+					alert(e.repsonseText);
+				},
+				success : function(data) {
+					alert(data);
+				}
+			});
+	}
+</script>
+</head>
+<body id="activity-detail" class="zh_CN mm_appmsg" ontouchstart="">
+
+	<div id="js_article" class="rich_media">
+
+		<div id="js_top_ad_area" class="top_banner"></div>
+
+
+		<div class="rich_media_inner">
+			<div id="page-content">
+				<div id="img-content" class="rich_media_area_primary">
+					<h2 class="rich_media_title" id="activity-name">买新鲜葡萄，助困难家庭</h2>
+					<div class="rich_media_meta_list">
+						<em id="post-date" class="rich_media_meta rich_media_meta_text">2016-04-29</em>
+
+						<em class="rich_media_meta rich_media_meta_text">刘关张</em> <span
+							class="profile_arrow_wrp" id="js_profile_arrow_wrp"> <i
+							class="profile_arrow arrow_out"></i> <i
+							class="profile_arrow arrow_in"></i>
+						</span>
+					</div>
+				</div>
+				<div class="rich_media_content " id="js_content">
+
+
+
+					<p style="text-align: center;">
+						<span style="line-height: 1;"> <img src="./image/putao.jpg"
+							style="text-align: center; white-space: normal; line-height: 25.6000003814697px;" />
+
+						</span>
+					</p>
+					<p style="text-align: center;">
+						<span style="line-height: 1;"><br /></span>
+					</p>
+					<p style="text-align: left;">
+						在这葡萄丰收的季节里，本来是老王家高兴的日子，可是一些不幸的事情发生了。（不是为了博取大家同情，具体情况就不详细介绍了。）<br />
+						<br /> 新鲜葡萄 <span style="color: red;">3斤/10元</span><br />
+						地址：15斤以上送货上门（每天进行统计，如果一个小区或者附近小区超过15斤，也可以送货）。 <br /> 联系人：王女士
+						13633863985
+					</p>
+					<p style="text-align: left;">
+						<br />
+					</p>
+					<section class="wx96Diy cur" data-source="bj.96weixin.com">
+						<section class="96wx-bdtc"
+							style="border-width: 0px; border-style: none; border-top-color: rgba(215, 31, 6, 0.972549);">
+							<section
+								style="border: 0px; margin-top: 10px; margin-bottom: 10px; transform: skew(-20deg); text-align: center;">
+								<section style="font-size: 1em; color: inherit;">
+									<section class="96wx-bgc"
+										style="display: inline-block; color: rgb(255, 255, 238); border-color: rgb(0, 187, 236); background-color: rgba(215, 31, 6, 0.972549);"></section>
+								</section>
+							</section>
+							<section class="96wx-bdtc"
+								style="border-top-width: 2px; border-top-style: solid; border-top-color: rgba(215, 31, 6, 0.972549); margin-top: -1.2em; color: inherit;"></section>
+							<section style="margin-bottom: 1.8em; color: inherit;"></section>
+						</section>
+					</section>
+					</section>
+					</section>
+					<section class="wx96Diy cur" data-source="bj.96weixin.com"></section>
+				</div>
+
+				<div class="rich_media_area_primary sougou" id="sg_tj">
+					如果您想要，请提交资料，我们会尽快联系您。
+					<div style="align: center;">
+						<span style="margin: 20px 50px; display: block;"> 电话：<input
+							type="text" id="phoneNum">
+						</span> <span style="margin: 20px 50px; display: block;"> 斤数：<input
+							type="text" id="jinJ">(斤)
+						</span> <span style="margin: 20px 80px; display: block;">
+							<button onclick="submitF();" type="button" value="提交"
+								style="width: 100px; height: 40px; background: #93CCE2; margin-left: 30%;">提交</button>
+							<span>
+					</div>
+				</div>
+
+
+
+
+			</div>
+		</div>
+</body>
+</html>
+
+
