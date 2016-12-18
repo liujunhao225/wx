@@ -15,38 +15,29 @@ import org.apache.http.util.EntityUtils;
 import org.json.JSONObject;
 import org.junit.Test;
 
+import wx.WeixinConfig;
+
 public class WXProductID {
 
 	static String deviceId_url = "https://api.weixin.qq.com/shakearound/device/applyid?access_token=%s";
 
+	// 测试
+	// static String access_toket_url =
+	// "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wx15692e8dccaef0a1&secret=5515a0ec4559e1d8222f05b8fcf05d09";
+	// //正式
 	static String access_toket_url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wx7b982f3eac2bc602&secret=bceb1e2455d47bcad880fb7dcfaab0ed";
-
-	static String deviceID_qr_url = "https://api.weixin.qq.com/device/getqrcode?access_token=%s&product_id=22571";
 
 	static String qrcode_url = "https://api.weixin.qq.com/device/create_qrcode?access_token=%s";
 
-	static String token = "E-DE1ZC3th048Dl1FkyNji4l5cOG3OT_H6i_OMZKQjwF3B9O_A1V71sK4FGeaBXVfJQD2VSGtpnkkaNMGNIAyl1S0HeN35OJLyUbGoI7M3stLjnZfB-tuacNmvwyysArXWNaAFAMLC";
+	static String token = "sUJcKo7sfMlKziNUsMVppvvMNHHhdc9GNArWk8zDZZN2u7lXXZq_DKBxIMqwezDfESMnLQbcgQYCF4R1i_x94OMyBlz8rsmV6Z2dYrt618CWNL9Do_qoSUbBiKWcM18cWFFfAFAZII";
+
 	static String deviceId = "gh_f279452b86ad_9a7422ad8c96a649";
 
-	static String ticket = "kgt8ON7yVITDhtdwci0qeetzxe08hBcU7VbLnPY3uPqcg2SvIPsyq-9p8AFfxq1gs8FI0A3kxx00oZnMFQAP_g";
+	static String ticket = "";
 
 	public static void main(String[] args) {
-		// access_token get
 		WXProductID wx = new WXProductID();
-		// String jobString = wx.getAccessToken(access_toket_url);
-		// JSONObject job = new JSONObject(jobString);
-		// System.out.println(job.get("access_token"));
-
-		// wx.getDeviceId();
-
-		// qr and deviceId
-		// String tempurl = String.format(deviceID_qr_url,
-		// "JxasbFrPIBH5kG3Yq5v5zjl1wVc8CFdgAxcNhRFcmg3dLdJ73f5Fh4gkrY4Ie5PMGkSZTLISOCFlQeEgp4pj5XrmZtezYgSNCo-4X_pfdJ6A23ttnJjQYybpX4kdTh1xJIJaAAAUTU");
-		// wx.doGet(tempurl);
-		//
-		// qrcode
-		String tempurl = String.format(qrcode_url,
-				"JxasbFrPIBH5kG3Yq5v5zjl1wVc8CFdgAxcNhRFcmg3dLdJ73f5Fh4gkrY4Ie5PMGkSZTLISOCFlQeEgp4pj5XrmZtezYgSNCo-4X_pfdJ6A23ttnJjQYybpX4kdTh1xJIJaAAAUTU");
+		String tempurl = String.format(qrcode_url, token);
 		JSONObject job = new JSONObject();
 		job.put("device_num", "1");
 		// job.put("device_id_list",["gh_f279452b86ad_9a7422ad8c96a649"]);
@@ -55,22 +46,25 @@ public class WXProductID {
 	}
 
 	@Test
-	public void deviceStatus() {
-		String url = "https://api.weixin.qq.com/device/get_stat?access_token=%s&device_id=%s";
-		String tempurl = String.format(url, token, deviceId);
-		doGet(tempurl);
-
+	public void bind() {
+		String url = "https://api.weixin.qq.com/device/bind?access_token=%s";
+		JSONObject job = new JSONObject();
+		job.put("ticket", "");
+		job.put("device_id", "gh_f279452b86ad_7c73c6fb6adca7be");
+		job.put("openid", "oWpqHs27Hl_g99HJ7l6lU_meN1cQ");
 	}
 
 	@Test
+	public void deviceStatus() {
+		String url = "https://api.weixin.qq.com/device/get_stat?access_token=%s&device_id=%s";
+		String tempurl = String.format(url, token, "gh_f279452b86ad_9a7422ad8c96a649");
+		doGet(tempurl);
+	}
+
 	public void thirdSendMsg() {
 		String url = "https://api.weixin.qq.com/device/transmsg?access_token=%s";
-
-		String tempurl = String.format(url,
-				"TQc4hbzCEnktYyAWWXKnmImJD2rUx6JM9-m4Oi4Y270mo4L3RB9McJ7de2UWYhP9enH91Sb7Ny5zp5sNrOdPcjYv6z9o0kUYSyTuZBh6QG5WngAa64tRkWMa-xfTT6TGORSbAJAXAB");
-
+		String tempurl = String.format(url, token);
 		JSONObject job = new JSONObject();
-
 		job.put("device_type", "gh_f279452b86ad");
 		job.put("device_id", "gh_f279452b86ad_9a7422ad8c96a649");
 		job.put("open_id", "oXb3KvhNkqr26hINjPLFEKa0SGHI");
@@ -80,22 +74,24 @@ public class WXProductID {
 		// result:{"ret":100024,"ret_info":"user not subscribe device status"}
 	}
 
-	@Test
 	public void createQRcode() {
 
 		String url = "https://api.weixin.qq.com/device/create_qrcode?access_token=%s";
-
-		String tempUrl = String.format(url,
-				"S7GU5LRq7WpvxBElPmldgLVnYfkN6j1DpjauE8Cf7H1SJawJR-YW3kb7Gfp4mZJoDKRRnImh8xhBWxyLSrB3VEqa4N6CRjBZhyFscwCJTNijvHnyhm37eM2pISw4RJSGAVUfABAHCB");
-
+		String tempUrl = String.format(url, token);
 		JSONObject job = new JSONObject();
 		job.put("device_num", "1");
 		job.put("device_id_list", new String[] { "gh_f279452b86ad_9a7422ad8c96a649" });
 		doPost(tempUrl, job.toString());
-		// result:{"errcode":0,"errmsg":"ok","
-		// device_num":1,"code_list":[{"device_id":"gh_f279452b86ad_9a7422ad8c96a649",
-		// "ticket":http://we.qq.com/d/AQBdvcq_WSaeNwEJ5o_7rURyQSd9FIgcCguIAEeh}]}
-		// System.out.println(job.toString());
+	}
+
+	/**
+	 * 新设备授权
+	 */
+	@Test
+	public void getQrcode() {
+		String url = "https://api.weixin.qq.com/device/getqrcode?access_token=%s&product_id=24319";
+		String tempUrl = String.format(url, token);
+		doGet(tempUrl);
 
 	}
 
@@ -106,7 +102,7 @@ public class WXProductID {
 
 		String url = "https://api.weixin.qq.com/device/get_openid?access_token=%s&device_type=%s&device_id=%s";
 
-		String tempUrl = String.format(url, token, "gh_f279452b86ad", "gh_f279452b86ad_9a7422ad8c96a649");
+		String tempUrl = String.format(url, token, "gh_72bfb5420cfb", "gh_72bfb5420cfb_d28180ab082a9890");
 		doGet(tempUrl);
 		// {"open_id":["oXb3KvhNkqr26hINjPLFEKa0SGHI","oXb3KvrYk30tLsZgEWQkqzNPRUEw"],"resp_msg":{"ret_code":0,"error_info":"ok"}}
 	}
@@ -116,7 +112,7 @@ public class WXProductID {
 		String url = "https://api.weixin.qq.com/device/unbind?access_token=%s";
 		String tempurl = String.format(url, token);
 		JSONObject job = new JSONObject();
-		job.put("TICKET", ticket);
+		job.put("TICKET", "harddevice_oper_tic_5811469794753536");
 		job.put("DEVICE_ID", deviceId);
 		job.put("OPENID", "oXb3KvhNkqr26hINjPLFEKa0SGHI");
 		System.out.println(job.toString());
@@ -125,16 +121,20 @@ public class WXProductID {
 
 	}
 
-	public String unBound(String tempToken, String tempTicket) {
-		String url = "https://api.weixin.qq.com/device/unbind?access_token=%s";
-		String tempurl = String.format(url, tempToken);
+	/**
+	 * 服务器端强制解绑
+	 */
+	@Test
+	public void unBoundStrong() {
+		String url = "https://api.weixin.qq.com/device/compel_unbind?access_token=%s";
+		String tempurl = String.format(url, token);
+
 		JSONObject job = new JSONObject();
-		job.put("TICKET", tempTicket);
-		job.put("DEVICE_ID", "gh_f279452b86ad_9a7422ad8c96a649");
-		job.put("OPENID", "oXb3KvhNkqr26hINjPLFEKa0SGHI");
+		job.put("device_id", "gh_f279452b86ad_9a7422ad8c96a649");
+		job.put("openid", "oXb3KvhNkqr26hINjPLFEKa0SGHI");
 		System.out.println(job.toString());
 		System.out.println(tempurl);
-		return doPost(tempurl, job.toString());
+		doPost(tempurl, job.toString());
 
 	}
 
@@ -142,20 +142,83 @@ public class WXProductID {
 	public void getDevice() {
 		String url = "https://api.weixin.qq.com/device/get_bind_device?access_token=%s&openid=%s";
 
-		String tempUrl = String.format(url,
-				"S7GU5LRq7WpvxBElPmldgLVnYfkN6j1DpjauE8Cf7H1SJawJR-YW3kb7Gfp4mZJoDKRRnImh8xhBWxyLSrB3VEqa4N6CRjBZhyFscwCJTNijvHnyhm37eM2pISw4RJSGAVUfABAHCB",
-				"oXb3KvhNkqr26hINjPLFEKa0SGHI");
+		String tempUrl = String.format(url, token, "oXb3KvhNkqr26hINjPLFEKa0SGHI");
 		System.out.println(tempUrl);
 
 		doGet(tempUrl);
+	}
 
-		// {"resp_msg":{"ret_code":0,"error_info":"ok"},
-		// "openid":"oXb3KvhNkqr26hINjPLFEKa0SGHI","device_list":[{"device_type":"gh_f279452b86ad","device_id":"gh_f279452b86ad_9a7422ad8c96a649","sub_device_list":[]}]}
+	/**
+	 * 
+	 * @return
+	 */
+	public String getDeviceList(String openId) {
+		WeixinConfig config = new WeixinConfig();
+		String url = "https://api.weixin.qq.com/device/get_bind_device?access_token=%s&openid=%s";
+
+		String tempUrl = String.format(url, config.getToken(), openId);
+		System.out.println(tempUrl);
+
+		return doGet(tempUrl);
+	}
+
+	@Test
+	public void getDeviceList() {
+		String openId = "oXb3KvhNkqr26hINjPLFEKa0SGHI";
+		WeixinConfig config = new WeixinConfig();
+		String url = "https://api.weixin.qq.com/device/get_bind_device?access_token=%s&openid=%s";
+
+		String tempUrl = String.format(url, token, openId);
+		System.out.println(tempUrl);
+
+		String result = doGet(tempUrl);
+		System.out.println(result);
+	}
+
+	@Test
+	public void sendStatusToUser() {
+		String url = "https://api.weixin.qq.com/device/transmsg?access_token=%s";
+
+		String tempUrl = String.format(url, token);
+
+		JSONObject job = new JSONObject();
+
+		job.put("device_type", "gh_f279452b86ad");
+		job.put("device_id", "gh_f279452b86ad_9a7422ad8c96a649");
+		job.put("open_id", "oXb3KvhNkqr26hINjPLFEKa0SGHI");
+		job.put("msg_type", 2);
+		job.put("device_status", 1);
+		doPost(tempUrl, job.toString());
+
+	}
+
+	public String getDeviceStatus(String openId, String deviceType, String deviceId) {
+
+		WeixinConfig config = new WeixinConfig();
+		String url = "https://api.weixin.qq.com/hardware/mydevice/platform/get_device_status?access_token=%s";
+		String tempUrl = String.format(url, config.getToken());
+		JSONObject jsonObject = new JSONObject();
+		jsonObject.put("device_type", deviceType);
+		jsonObject.put("device_id", deviceId);
+		JSONObject sonJob = new JSONObject();
+		JSONObject grandSonJsonObject = new JSONObject();
+		grandSonJsonObject.put("air_quality_lev", 0);
+		grandSonJsonObject.put("air_pm_2_5", 0);
+		grandSonJsonObject.put("air_pm_1_0", 0);
+		grandSonJsonObject.put("air_pm_10_0", 0);
+		grandSonJsonObject.put("concentration_co2", 0);
+		grandSonJsonObject.put("formaldehyde", 0);
+		sonJob.put("air_quality", grandSonJsonObject);
+		jsonObject.put("services", sonJob);
+		jsonObject.put("user", openId);
+		jsonObject.put("data", "");
+		System.out.println(jsonObject.toString());
+		return doPost(tempUrl, jsonObject.toString());
 
 	}
 
 	@Test
-	public void accessToken() {
+	public void getAccessToken() {
 		String jobString = doGet(access_toket_url);
 		JSONObject job = new JSONObject(jobString);
 		System.out.println(job.get("access_token"));
@@ -170,7 +233,6 @@ public class WXProductID {
 	@Test
 	public void getUserInfo() {
 		String url = "https://api.weixin.qq.com/cgi-bin/user/info?access_token=%s&openid=%s&lang=zh_CN";
-
 		String tempUrl = String.format(url, token, "oXb3KvhNkqr26hINjPLFEKa0SGHI");
 		System.out.println(tempUrl);
 		doGet(tempUrl);
@@ -193,14 +255,13 @@ public class WXProductID {
 	@Test
 	public void authDev() {
 		String url = "https://api.weixin.qq.com/device/authorize_device?access_token=%s";
-		String tempurl = String.format(url,
-				"PPIP21waHVPQZFToBl8OsG7S4Bj7tg1agoD9xIlGM2C_dHBjrKzmlb1DaD4UriscDs1Q9BKadgAIbOWpPAM9is3-IJoex2ijLlR8aARG_yj-IBrHhaxZa3H_DDxuNFc1KLGhAFAGHC");
+		String tempurl = String.format(url, token);
 		JSONObject job = new JSONObject();
 		job.put("device_num", "1");
 		List<JSONObject> jobList = new ArrayList<JSONObject>();
 		JSONObject jsonObject = new JSONObject();
-		jsonObject.put("id", "gh_f279452b86ad_9a7422ad8c96a649");
-		jsonObject.put("mac", "D0BAE4086707");
+		jsonObject.put("id", "gh_f279452b86ad_9a5e22eea532612d");
+		jsonObject.put("mac", "5CCF7Fd0BD5F");
 		jsonObject.put("connect_protocol", "4");
 		jsonObject.put("auth_key", "1234567890ABCDEF1234567890ABCDEF");
 		jsonObject.put("close_strategy", "1");
@@ -225,10 +286,10 @@ public class WXProductID {
 	 */
 	public String doGet(String url) {
 		HttpClient client = HttpClientBuilder.create().build();
-		HttpGet post = new HttpGet(url);
+		HttpGet get = new HttpGet(url);
 		String result = "";
 		try {
-			HttpResponse response = client.execute(post);
+			HttpResponse response = client.execute(get);
 			result = EntityUtils.toString(response.getEntity(), "utf-8");
 
 			System.out.println(result);
@@ -236,9 +297,10 @@ public class WXProductID {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
+		} finally {
+			get.abort();
 		}
 		return result;
-
 	}
 
 	@Test
@@ -264,27 +326,29 @@ public class WXProductID {
 	}
 
 	@Test
-	public void changeMenu() {
-		String url = "";
-
-		String tempurl = "";
-
-		// http://www.fqkvk.xyz/wx/unbind.html
-
-	}
-
-	@Test
 	public void deleteMenu() {
 		String url = "https://api.weixin.qq.com/cgi-bin/menu/delete?access_token=%s";
 		String tempUrl = String.format(url, token);
-
 		doGet(tempUrl);
+	}
 
+	@Test
+	public void getTimeStamp() {
+		System.out.println(System.currentTimeMillis() / 1000);
+	}
+
+	public String getOpenID(String code) {
+
+		WeixinConfig config = new WeixinConfig();
+		String url = "https://api.weixin.qq.com/sns/oauth2/access_token?appid=%s&secret=%s&code=%s&grant_type=authorization_code";
+		String tempUrl = String.format(url, config.getAppId(), config.getSecret(), code);
+		return doGet(tempUrl);
 	}
 
 	/**
 	 * 
 	 */
+	@Test
 	public void getDeviceId() {
 
 		JSONObject job = new JSONObject();
@@ -293,8 +357,7 @@ public class WXProductID {
 		job.put("comment", "测试");
 		// StringBuilder sb = new StringBuilder();
 		// sb.append("{\"quantity\":3,\"apply_reason\":\"测试\",\"comment\":\"测试\"}");
-		String tempUrl = String.format(deviceId_url,
-				"JxasbFrPIBH5kG3Yq5v5zjl1wVc8CFdgAxcNhRFcmg3dLdJ73f5Fh4gkrY4Ie5PMGkSZTLISOCFlQeEgp4pj5XrmZtezYgSNCo-4X_pfdJ6A23ttnJjQYybpX4kdTh1xJIJaAAAUTU");
+		String tempUrl = String.format(deviceId_url, token);
 		doPost(tempUrl, job.toString());
 	}
 
@@ -314,6 +377,8 @@ public class WXProductID {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
+		} finally {
+			post.abort();
 		}
 		return result;
 	}

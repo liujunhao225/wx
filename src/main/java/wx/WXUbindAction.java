@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.json.JSONObject;
 
+import com.freemarker.WXProductID;
+
 import dao.WXTicketDao;
 
 public class WXUbindAction extends HttpServlet {

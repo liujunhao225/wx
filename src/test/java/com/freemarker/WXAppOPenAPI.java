@@ -1,4 +1,4 @@
-package wx;
+package com.freemarker;
 
 import java.io.IOException;
 
@@ -16,10 +16,10 @@ public class WXAppOPenAPI {
 
 	static String deviceType = "gh_f279452b86ad";
 
-	static String deviceId = "gh_f279452b86ad_9a7422ad8c96a649";
+	static String deviceId = "gh_f279452b86ad_7c73c6fb6adca7be";
 
-	static String openId = "oXb3KvhNkqr26hINjPLFEKa0SGHI";
-	static String token = "8i4dxiR7qvIoOvvEx9i3VywCqZDWxvHQMG_FhBsoDwTny8y4EjiDXz-LE0TFVG5ucdmMFDsNJaI-e8RhVZhyUbtWOwtMxzjStOs-2BzkaiAQBHjAHAALR";
+	static String openId = "oWpqHs27Hl_g99HJ7l6lU_meN1cQ";
+	static String token = "OjN9Jg60vY8OEa44cezS9sd1Tj-dF9cHsF0cI8AzcxH-rgm1SajnfLeRDjk35eR_GCzopUWTaZYTR59thoDbavYwg2dTlp_lEQRMsPBRiG7QDmC20LUTsT_njVNV13wyYTHgAGACXL";
 
 	@Test
 	public void getStatus() {
@@ -28,6 +28,8 @@ public class WXAppOPenAPI {
 		JSONObject jsonObject = new JSONObject();
 		jsonObject.put("device_type", deviceType);
 		jsonObject.put("device_id", deviceId);
+		jsonObject.put("user", openId);
+		jsonObject.put("data", "");
 		JSONObject sonJob = new JSONObject();
 		JSONObject grandSonJsonObject = new JSONObject();
 		grandSonJsonObject.put("air_quality_lev", 0);
@@ -38,12 +40,9 @@ public class WXAppOPenAPI {
 		grandSonJsonObject.put("formaldehyde", 0);
 		sonJob.put("air_quality", grandSonJsonObject);
 		jsonObject.put("services", sonJob);
-		jsonObject.put("user", openId);
-		jsonObject.put("data", "");
 		System.out.println(jsonObject.toString());
 		System.out.println(tempUrl);
 		doPost(tempUrl, jsonObject.toString());
-
 	}
 
 	public String doPost(String url, String params) {
@@ -66,6 +65,10 @@ public class WXAppOPenAPI {
 			post.abort();
 		}
 		return result;
+	}
+
+	public static void main(String[] args) {
+		System.out.println("字符串长度是:" + "gh_f279452b86ad_7c73c6fb6adca7be".length());
 	}
 
 }

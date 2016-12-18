@@ -1,0 +1,2785 @@
+<!DOCTYPE html>
+<!-- saved from url=(0152)http://haierwx.haier.net/wxAircontrol/haierservice?isShare=1&openId=oFE8Aj7jgN9VwV7VnGUm_bap6HJQ&callback=1&code=0117ckmq1lkwOo0dhmnq1drfmq17ckmM&state= -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--<base href="http://haierwx.haier.net:80/wxAircontrol/">--><base href=".">
+<title>刘俊浩家室外空气质量轻度污染。湿气蒙蒙，让除湿器来帮你</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link type="text/css" rel="stylesheet" href="./index_files/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="./index_files/icon_control.css">
+<link type="text/css" rel="stylesheet" href="./index_files/main.css">
+<link rel="stylesheet" type="text/css" href="./index_files/base.css">
+<link rel="stylesheet" type="text/css" href="./index_files/allknow_tryout.css">
+<link rel="stylesheet" type="text/css" href="./index_files/air_condition_control.css">
+
+<link rel="stylesheet" type="text/css" href="./index_files/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="./index_files/buttons.css">
+<link rel="stylesheet" type="text/css" href="./index_files/circle.css">
+<link rel="stylesheet" type="text/css" href="./index_files/list.css">
+<link rel="stylesheet" type="text/css" href="./index_files/line.css">
+<link rel="stylesheet" type="text/css" href="./index_files/xpg.scrollSelect.css">
+<link rel="stylesheet" type="text/css" href="./index_files/prize.css">
+<script type="text/javascript" src="./index_files/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="./index_files/bootstrap.min.js"></script>
+<script type="text/javascript" src="./index_files/knockout-3.0.0.js"></script>
+<script type="text/javascript" src="./index_files/circle.js"></script>
+<script type="text/javascript" src="./index_files/air_condition_control.js"></script>
+<script type="text/javascript" src="./index_files/iscroll.js"></script>
+<script type="text/javascript" src="./index_files/jQueryRotate.js"></script>
+<script type="text/javascript" src="./index_files/prize.js"></script>
+<script src="./index_files/jweixin-1.0.0.js" type="text/javascript"></script>
+</head>
+<body style="background-color: rgb(240, 240, 240);">
+	<input type="hidden" id="openId" value="oFE8Aj7jgN9VwV7VnGUm_bap6HJQ">
+	<input type="hidden" id="page" value="main">
+	<input type="hidden" id="hasDevice" value="false">
+	<input type="hidden" id="bindingHaierAccount" value="false">
+	<input type="hidden" id="mac" value="">
+	<input type="hidden" id="familyid" value="">
+	<input type="hidden" id="subscribe" value="1">
+	<input type="hidden" id="before" value="">
+	<input type="hidden" id="after" value="">
+	<input type="hidden" id="aqi" value="">
+	<input type="hidden" id="pkId" value="">
+	<input type="hidden" id="nearId" value="">
+    <input type="hidden" id="city" value="广州">
+    <input type="hidden" id="isVirtual" value="">
+    <input type="hidden" id="outdoor" value="">
+	<input type="hidden" id="indoor" value="">
+	<input type="hidden" id="nickName" value="刘俊浩">
+
+	<!-- 预加载页面 -->
+	
+<div id="preload" style=" overflow-x: hidden; display: none;"><!-- style=" overflow-x: hidden; display: none;" -->
+	<div style="position: fixed; left: 20%; top: 40%; width: 78%; z-index: 1051; color:white;text-align:left;">
+	
+			<img id="preloading" src="./index_files/loading.png" style="width: 38px; display: inline; transform: rotate(300deg); transform-origin: 50% 50% 0px;" alt="" class="img-rounded img-responsive">
+	
+		<span id="waittingMsg">正在检测室外天气情况…</span>
+	</div>
+	<div class="modal-backdrop fade in"></div>
+</div>
+
+
+
+	<!-- 首页 -->
+	
+<!-- 首页  -->
+
+<div id="main" style="overflow-x: hidden;">
+	<div class="bg air_light_pollution" data-bind="css:{air_outstanding: outDoorHai()&gt;-1 &amp;&amp; outDoorHai()&lt;61, air_good: outDoorHai()&gt;60 &amp;&amp; outDoorHai()&lt;121, 
+
+air_light_pollution: outDoorHai()&gt;120 &amp;&amp; outDoorHai()&lt;181, air_moderate_pollution: outDoorHai()&gt;180 &amp;&amp; outDoorHai()&lt;241, 
+
+air_severe_pollution: outDoorHai()&gt;240 &amp;&amp; outDoorHai()&lt;301, air_serious_pollution: outDoorHai()&gt;300}">
+		<div class="location">
+			<img src="./index_files/haw_10.png" style="width: 30px; display: inline;" alt=""> <span data-bind="text:location">河南省郑州市金水区凤鸣路</span>
+		</div>
+		<img id="goto" src="./index_files/haw_76.png" style="width: 32%; display: inline; margin-top: 61%">
+		<div class="absoluteCentering circleSize">
+			<div class="circleMain" id="circleMain" style="transform: scale(1.1);">
+				<div class="circle_1">
+					<div class="circle_2">
+						<div class="circle_3" id="circle_3" style="transform: rotate(45deg); -ms-transform: rotate(45deg); -moz-transform: rotate(45deg); -webkit-transform: rotate(45deg); -o-transform: rotate(45deg);">
+							<div class="hold hold1">
+								<div class="pie pie1 angle_1" style="transform: rotate(0deg);"></div>
+							</div>
+							<div class="hold hold2">
+								<div class="pie pie2 angle_2" style="transform: rotate(96deg);"></div>
+							</div>
+						</div>
+						<div class="air-quality-end" style="transform: rotate(140deg);">
+							<span class="air-quality-text-end" data-bind="text:quality" style="bottom: -38px; transform: rotate(-140deg); display: inline;">轻度污染</span>
+						</div>
+					</div>
+				</div>
+				<div class="circleText">
+					<div class="circle-hai" id="out_door_hai">127</div>
+					<div class="circle-hai-text" data-bind="text:quality" style="display: none;">轻度污染</div>
+					<div class="circle-hai-text">室外空气指数</div>
+				</div>
+				<div class="air-quality-triangle">
+					<span style="position: absolute; top: 50%; left: 3px; transform: rotate(180deg); display: inline-block;"></span>
+					<span style="position: absolute; top: 3px; left: 47%; transform: rotate(-90deg); display: none;"></span>
+					<span style="position: absolute; top: 50%; right: 1px; display: none;"></span>
+				</div>
+				<div class="air-quality-triangle" style="transform: rotate(45deg); -ms-transform: rotate(45deg); -moz-transform: rotate(45deg); -webkit-transform: rotate(45deg); -o-transform: rotate(45deg);">
+					<span style="position: absolute; top: 50%; left: 3px; transform: rotate(180deg); display: inline-block;"></span>
+					<span style="position: absolute; top: 3px; left: 48%; transform: rotate(-90deg); display: none;"></span>
+					<span style="position: absolute; top: 50%; right: 1px; display: none;"></span> <span class="pointLast" style="position: absolute; bottom: 1px; right: 48%; display:inline-block; transform: rotate(90deg); -ms-transform: rotate(90deg); -moz-transform: rotate(90deg); -webkit-transform: rotate(90deg); -o-transform: rotate(90deg);"></span>
+				</div>
+				<div class="air-quality-text">
+					<span style="position: absolute; top: 50%; left: -25px; opacity: 0;">舒适</span>
+					<span style="position: absolute; top: 20px; left: 0px; opacity: 0;">较舒适</span> <span style="position: absolute; top: -15px; left: 38%;">不舒适</span><span style="position: absolute; top: 0; right: 0;">极不<br>舒适
+					</span> <span style="position: absolute; top: 46%; right: -30px;">健康<br>威胁
+					</span> <span style="position: absolute; bottom: -5px; right: 3px;">严重<br>污染
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="middleBar">
+			<img src="./index_files/share.png" data-bind="click:function(){getPrize(shareOutdoor,&#39;shareOutdoor&#39;);}" style="width: 30px; display: inline;" alt="">
+		</div>
+		<div class="bar">
+			<img src="./index_files/loading.png" style="width: 7%; display: none; margin: 0px auto; position: relative; top: 26%; transform: rotate(300deg); transform-origin: 50% 50% 0px;" alt="" class="img-rounded img-responsive loading"> <span style="color: #fff; display: inline; margin: 0 auto; position: relative; top: 26%; vertical-align: middle;" data-bind="text:tips">湿气蒙蒙，让除湿器来帮你</span>
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-xs-1"></div>
+		<div class="col-xs-5 ">
+			<img src="./index_files/temperature.png" alt="" class="img-rounded img-responsive icon"> <span class="icon-text">室外温度</span>
+		</div>
+		<div class="col-xs-4" style="text-align: right;">
+			<span data-bind="text:outTemp" class="airValue">20</span>
+		</div>
+		<span style="display: inline-block; vertical-align: top; font-size: 10px;">℃</span>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-xs-1"></div>
+		<div class="col-xs-5">
+			<img src="./index_files/humidity.png" alt="" class="img-rounded img-responsive icon"> <span class="icon-text">室外湿度</span>
+		</div>
+		<div class="col-xs-4" style="text-align: right;">
+			<span data-bind="text:outWet" class="airValue">79</span>
+		</div>
+		<span style="display: inline-block; vertical-align: top; font-size: 10px;">%</span>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-xs-1"></div>
+		<div class="col-xs-5 ">
+			<img src="./index_files/qiya.png" alt="" class="img-rounded img-responsive icon"> <span class="icon-text">室外气压</span>
+		</div>
+		<div class="col-xs-4" style="text-align: right;">
+			<span data-bind="text:pressure" class="airValue"></span>
+		</div>
+		<span style="display: inline-block; vertical-align: top; font-size: 10px;">Kpa</span>
+	</div>
+	<br>
+	<div class="row" style="font-size: 15px;">
+		<div class="col-xs-1"></div>
+		<div class="col-xs-5 ">
+			<img src="./index_files/pm25.png" alt="" class="img-rounded img-responsive icon"> <span class="icon-text">室外PM2.5</span>
+		</div>
+		<div class="col-xs-4" style="text-align: right;">
+			<span data-bind="text:outPm25" class="airValue">92</span>
+		</div>
+		<span style="display: inline-block; vertical-align: top; font-size: 10px;">μg/m³</span>
+	</div>
+	<br>
+	<hr>
+	<div style="text-align: center; margin: auto;">
+		<button type="button" class="btn binding" style="background-color: #999; color: #fff; width: 50%;">
+			<img src="./index_files/haw_70.png" style="width: 20px; display: inline;" alt="" class="img-rounded img-responsive"> 管理我的家电
+		</button>
+	</div>
+	<br>
+</div>
+<div class="modal fade" id="noEquipment" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header" data-dismiss="modal">
+				<img class="glyphicon close-modal" alt="close" src="./index_files/whiteDel.png" data-dismiss="modal">
+				<h5 class="modal-title">警告</h5>
+			</div>
+			<div class="modal-body">
+				<img src="./index_files/warning.png" style="width: 25%;">
+				<p style="margin-bottom: 20%;">未检测到设备</p>
+				<button type="button" class="btn btn-primary" id="checkNearBy" style="background-color: #0099cc; width: 50%;">
+					<img src="./index_files/haw_22.png" style="width: 20px; display: inline;" alt="" class="img-rounded img-responsive">查看附近的人
+				</button>
+				<button type="button" class="btn btn-default binding" style="background-color: #999; color: #fff; width: 50%; margin-top: 20px;" id="myAppliances">
+					<img src="./index_files/haw_70.png" style="width: 20px; display: inline;" alt="" class="img-rounded img-responsive"> 管理我的家电
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<!-- 首页 有设备 -->
+	
+
+<div id="inDoor" style="display: none; overflow-x: hidden; z-index: 0;">
+	<div class="bg" data-bind="css:{air_outstanding: indoorHai()&gt;-1 &amp;&amp; indoorHai()&lt;61, air_good: indoorHai()&gt;60 &amp;&amp; indoorHai()&lt;121, 
+
+air_light_pollution: indoorHai()&gt;120 &amp;&amp; indoorHai()&lt;181, air_moderate_pollution: indoorHai()&gt;180 &amp;&amp; indoorHai()&lt;241, 
+
+air_severe_pollution: indoorHai()&gt;240 &amp;&amp; indoorHai()&lt;301, air_serious_pollution: indoorHai()&gt;300}">
+		<div class="location">
+			<img src="./index_files/haw_33.png" style="width: 30px; display: inline;" alt=""> <span data-bind="html:rank"></span>
+		</div>
+		<!-- <img class="goto_icon" data-bind="visible:!isVirtual()"
+			src="images/haw_76_1.png"
+			style="width: 32%; display: inline; margin-top: 63%"> <img
+			class="goto_icon" data-bind="visible:isVirtual()"
+			src="images/haw_76_5.png"
+			style="width: 32%; display: inline; margin-top: 63%"> -->
+		<div class="absoluteCentering circleSize">
+			<div class="circleMain" id="in4rotate" style="transform: scale(1.1);">
+				<div class="cdCircleMain">
+					<div class="circle_out">
+						<div class="cdHold cdHold1">
+							<div class="cdPie cdPie1 cdAngle_1"></div>
+						</div>
+						<div class="cdHold cdHold2">
+							<div class="cdPie cdPie2 cdAngle_2"></div>
+						</div>
+					</div>
+					<div class="countdownText">
+						<div class="cd-time"></div>
+						<span class="cd-hai">26</span>
+					</div>
+				</div>
+				<div class="circle_1">
+					<div class="circle_2">
+						<div class="indoorCircle_3" id="indoorCircle_3" style="transform: rotate(45deg); -ms-transform:rotate(45deg); -moz-transform:rotate(45deg); -webkit-transform:rotate(45deg); -o-transform:rotate(45deg);">
+							<!-- style="transform:rotate(45deg);" -->
+							<div class="hold hold1">
+								<div class="pie pie1 indoorAngle_1"></div>
+							</div>
+							<div class="hold hold2">
+								<div class="pie pie2 indoorAangle_2"></div>
+							</div>
+						</div>
+						<div class="air-quality-end" style="transform: rotate(140deg);">
+							<span class="air-quality-text-end" data-bind="text:quality" style="bottom: -38px; transform: rotate(-140deg); display: inline;"></span>
+						</div>
+					</div>
+				</div>
+				<div class="circleText">
+					<div class="circle-hai" id="myHai">0</div>
+					<div class="circle-hai-text" data-bind="text:quality" id="myQuality" style="display: none;"></div>
+					<div class="circle-hai-text">室内空气指数</div>
+				</div>
+				<div class="air-quality-triangle">
+					<span style="position: absolute; top: 50%; left: 3px; transform: rotate(180deg); display: none;"></span>
+					<span style="position: absolute; top: 3px; left: 47%; transform: rotate(-90deg); display: none;"></span>
+					<span style="position: absolute; top: 50%; right: 1px; display: none;"></span>
+				</div>
+				<div class="air-quality-triangle" style="transform: rotate(45deg); -ms-transform: rotate(45deg); -moz-transform: rotate(45deg); -webkit-transform: rotate(45deg); -o-transform: rotate(45deg);">
+					<span style="position: absolute; top: 50%; left: 3px; transform: rotate(180deg); display: none;"></span>
+					<span style="position: absolute; top: 3px; left: 48%; transform: rotate(-90deg); display: none;"></span>
+					<span style="position: absolute; top: 50%; right: 1px; display: none;"></span> <span class="pointLast" style="position: absolute; bottom: 1px; right: 48%; display:inline-block; transform: rotate(90deg); -ms-transform: rotate(90deg); -moz-transform: rotate(90deg); -webkit-transform: rotate(90deg); -o-transform: rotate(90deg);"></span>
+				</div>
+				<div class="air-quality-text">
+					<span style="position: absolute; top: 50%; left: -25px;">舒适</span>
+					<span style="position: absolute; top: 20px; left: -10px;">较舒适</span> <span style="position: absolute; top: -15px; left: 38%;">不舒适</span><span style="position: absolute; top: 0; right: 0;">极不<br>舒适
+					</span> <span style="position: absolute; top: 46%; right: -30px;">健康<br>威胁	
+					</span> <span style="position: absolute; bottom: -5px; right: 3px;">严重<br>污染
+					</span>
+				</div>
+				<img class="goto_icon" data-bind="visible:!isVirtual()" src="./index_files/haw_76_1.png" style="width: 54%; position: absolute; left: -35%; top: 70%;">
+				<img class="goto_icon" data-bind="visible:isVirtual()" src="./index_files/haw_76_5.png" style="width: 54%; position: absolute; left: -35%; top: 70%; display: none;">
+			</div>
+		</div>
+		<div class="middleBar">
+			<img id="inOutDoorLine" src="./index_files/line.png" data-bind="style:{display:isVirtual() ? &#39;none&#39;:&#39;inline&#39;}" style="width: 30px; display: inline; margin: 0 5px;" alt=""> <img src="./index_files/share.png" data-bind="click:function(){getPrize(shareIndoor,&#39;shareIndoor&#39;)}" style="width: 30px; display: inline; margin: 0 5px;" alt=""> <a href="javascript:void(0)"><img id="btn-pk" src="./index_files/haw_59.png" style="width: 30px; display: inline; margin: 0 5px;" alt="" class="img-rounded img-responsive"></a> <a class="ding" href="javascript:void(0)" style="color: #fff; margin-right: -18px;"><img src="./index_files/like.png" style="width: 30px; display: inline; margin: 0 5px;" alt="" class="img-responsive"><span data-bind="text:zan"></span></a>
+		</div>
+		<div class="bar">
+			<img src="./index_files/loading.png" style="width: 7%; display: none; margin: 0px auto; position: relative; top: 26%; transform: rotate(300deg); transform-origin: 50% 50% 0px;" alt="" class="img-rounded img-responsive loading"> <span id="optimize_tips" style="color: #fff; display: inline-block; margin: 0 auto; position: relative; top: 26%; vertical-align: middle;" data-bind="text:tips">正在启动检测设备…</span>
+		</div>
+	</div>
+
+	<div style="width: 100%;">
+		<!-- <div id="btn-mydevice" class=" ButtonText"
+			data-bind="visible:!isVirtual()"
+			style="background-color: #0099cc; width: 25%; padding: 2px; display: inline-block;">我的家电</div>
+		<div id="btn-xunidevice" class=" ButtonText"
+			data-bind="visible:isVirtual()"
+			style="background-color: #0099cc; width: 25%; padding: 2px; display: inline-block;">虚拟家电</div> -->
+		<!-- <div style="color: gray; font-size: 10px; display: inline;">
+			<span>Tips:点亮更多设备提高空气质量</span>
+		</div> -->
+		<div style="font-size: smaller;">
+			<div class="row" style="margin: 15px;" data-bind="foreach: devices">
+				<div class="col-xs-3" style="padding-top: 10px; text-align: center;" data-bind="css: { &#39;gray&#39; :status==&#39;STATUS_ONLINE&#39;&amp;&amp;isVirtual==&#39;true&#39; }">
+					<!-- 真实设备 -->
+					<img data-bind="visible:isVirtual==&#39;false&#39;&amp;&amp;status==&#39;STATUS_ONLINE&#39;, attr:{src:img, mac: mac,familyId:familyId},click:function(){
+						air_condition_point(mac,familyId,deviceType);
+						}" alt="" class="img-rounded img-responsive deviceIcon" src="./index_files/haw_17.png" mac="" familyid="" style="display: none;"> <img data-bind="visible:isVirtual==&#39;false&#39;&amp;&amp;status==&#39;STATUS_OFFLINE&#39;, attr:{src:img, mac: mac,familyId:familyId},click:function(){
+						showOfflineMessage();
+						}" alt="" class="img-rounded img-responsive deviceIcon" src="./index_files/haw_17.png" mac="" familyid="" style="display: none;">
+					<!-- 虚拟设备  -->
+					<img data-bind="visible:isVirtual==&#39;true&#39;&amp;&amp;status === &#39;STATUS_OFFLINE&#39;,attr:{src:img},click:function(){loadDeviceInfo(deviceType)}" alt="" class="img-rounded img-responsive deviceIcon" src="./index_files/haw_17.png"> <img data-bind="visible:isVirtual==&#39;true&#39;&amp;&amp;status === &#39;STATUS_ONLINE&#39;,attr:{src:img},click:function(){tryoutboxandknow(deviceType);}" alt="" class="img-rounded img-responsive deviceIcon" src="./index_files/haw_17.png" style="display: none;"> <span data-bind="text:name">空调</span>
+				</div>
+
+				<div data-bind="css: { &#39;clearfix visible-xs&#39; :($index()+1)%4===0 }" class=""></div>
+			
+				<div class="col-xs-3" style="padding-top: 10px; text-align: center;" data-bind="css: { &#39;gray&#39; :status==&#39;STATUS_ONLINE&#39;&amp;&amp;isVirtual==&#39;true&#39; }">
+					<!-- 真实设备 -->
+					<img data-bind="visible:isVirtual==&#39;false&#39;&amp;&amp;status==&#39;STATUS_ONLINE&#39;, attr:{src:img, mac: mac,familyId:familyId},click:function(){
+						air_condition_point(mac,familyId,deviceType);
+						}" alt="" class="img-rounded img-responsive deviceIcon" src="./index_files/haw_40.png" mac="" familyid="" style="display: none;"> <img data-bind="visible:isVirtual==&#39;false&#39;&amp;&amp;status==&#39;STATUS_OFFLINE&#39;, attr:{src:img, mac: mac,familyId:familyId},click:function(){
+						showOfflineMessage();
+						}" alt="" class="img-rounded img-responsive deviceIcon" src="./index_files/haw_40.png" mac="" familyid="" style="display: none;">
+					<!-- 虚拟设备  -->
+					<img data-bind="visible:isVirtual==&#39;true&#39;&amp;&amp;status === &#39;STATUS_OFFLINE&#39;,attr:{src:img},click:function(){loadDeviceInfo(deviceType)}" alt="" class="img-rounded img-responsive deviceIcon" src="./index_files/haw_40.png"> <img data-bind="visible:isVirtual==&#39;true&#39;&amp;&amp;status === &#39;STATUS_ONLINE&#39;,attr:{src:img},click:function(){tryoutboxandknow(deviceType);}" alt="" class="img-rounded img-responsive deviceIcon" src="./index_files/haw_40.png" style="display: none;"> <span data-bind="text:name">空气盒子</span>
+				</div>
+
+				<div data-bind="css: { &#39;clearfix visible-xs&#39; :($index()+1)%4===0 }" class=""></div>
+			
+				<div class="col-xs-3" style="padding-top: 10px; text-align: center;" data-bind="css: { &#39;gray&#39; :status==&#39;STATUS_ONLINE&#39;&amp;&amp;isVirtual==&#39;true&#39; }">
+					<!-- 真实设备 -->
+					<img data-bind="visible:isVirtual==&#39;false&#39;&amp;&amp;status==&#39;STATUS_ONLINE&#39;, attr:{src:img, mac: mac,familyId:familyId},click:function(){
+						air_condition_point(mac,familyId,deviceType);
+						}" alt="" class="img-rounded img-responsive deviceIcon" src="./index_files/haw_48.png" mac="" familyid="" style="display: none;"> <img data-bind="visible:isVirtual==&#39;false&#39;&amp;&amp;status==&#39;STATUS_OFFLINE&#39;, attr:{src:img, mac: mac,familyId:familyId},click:function(){
+						showOfflineMessage();
+						}" alt="" class="img-rounded img-responsive deviceIcon" src="./index_files/haw_48.png" mac="" familyid="" style="display: none;">
+					<!-- 虚拟设备  -->
+					<img data-bind="visible:isVirtual==&#39;true&#39;&amp;&amp;status === &#39;STATUS_OFFLINE&#39;,attr:{src:img},click:function(){loadDeviceInfo(deviceType)}" alt="" class="img-rounded img-responsive deviceIcon" src="./index_files/haw_48.png"> <img data-bind="visible:isVirtual==&#39;true&#39;&amp;&amp;status === &#39;STATUS_ONLINE&#39;,attr:{src:img},click:function(){tryoutboxandknow(deviceType);}" alt="" class="img-rounded img-responsive deviceIcon" src="./index_files/haw_48.png" style="display: none;"> <span data-bind="text:name">醛知道</span>
+				</div>
+
+				<div data-bind="css: { &#39;clearfix visible-xs&#39; :($index()+1)%4===0 }" class=""></div>
+			
+				<div class="col-xs-3" style="padding-top: 10px; text-align: center;" data-bind="css: { &#39;gray&#39; :status==&#39;STATUS_ONLINE&#39;&amp;&amp;isVirtual==&#39;true&#39; }">
+					<!-- 真实设备 -->
+					<img data-bind="visible:isVirtual==&#39;false&#39;&amp;&amp;status==&#39;STATUS_ONLINE&#39;, attr:{src:img, mac: mac,familyId:familyId},click:function(){
+						air_condition_point(mac,familyId,deviceType);
+						}" alt="" class="img-rounded img-responsive deviceIcon" src="./index_files/haw_103.png" mac="" familyid="" style="display: none;"> <img data-bind="visible:isVirtual==&#39;false&#39;&amp;&amp;status==&#39;STATUS_OFFLINE&#39;, attr:{src:img, mac: mac,familyId:familyId},click:function(){
+						showOfflineMessage();
+						}" alt="" class="img-rounded img-responsive deviceIcon" src="./index_files/haw_103.png" mac="" familyid="" style="display: none;">
+					<!-- 虚拟设备  -->
+					<img data-bind="visible:isVirtual==&#39;true&#39;&amp;&amp;status === &#39;STATUS_OFFLINE&#39;,attr:{src:img},click:function(){loadDeviceInfo(deviceType)}" alt="" class="img-rounded img-responsive deviceIcon" src="./index_files/haw_103.png"> <img data-bind="visible:isVirtual==&#39;true&#39;&amp;&amp;status === &#39;STATUS_ONLINE&#39;,attr:{src:img},click:function(){tryoutboxandknow(deviceType);}" alt="" class="img-rounded img-responsive deviceIcon" src="./index_files/haw_103.png" style="display: none;"> <span data-bind="text:name">空气魔方</span>
+				</div>
+
+				<div data-bind="css: { &#39;clearfix visible-xs&#39; :($index()+1)%4===0 }" class="clearfix visible-xs"></div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="row" style="font-size: 15px; display: none;" data-bind="visible:pm25()===&#39;&#39;" onclick="loadDeviceInfo(&#39;AirCircle&#39;);">
+		<div class="col-xs-1"></div>
+		<div class="col-xs-4 ">
+			<img src="./index_files/pm25.png" alt="" class="img-rounded img-responsive icon"> <span class="icon-text">室内PM2.5</span>
+		</div>
+		<div class="col-xs-5" style="text-align: right;">未检测</div>
+		<span style="display: inline-block; vertical-align: top; font-size: 10px; float:left; width:3.2em;">&nbsp;</span>
+		<div class="col-xs-1" style="padding-left: 0;">
+			<img alt="" src="./index_files/next.png" style="width: 20px;">
+		</div>
+	</div>
+	<div class="row" style="font-size: 15px;" data-bind="visible:pm25()!==&#39;&#39;" onclick="loadDeviceInfo(&#39;AirCircle&#39;);">
+		<div class="col-xs-1"></div>
+		<div class="col-xs-4 ">
+			<img src="./index_files/pm25.png" alt="" class="img-rounded img-responsive icon"> <span class="icon-text">室内PM2.5</span>
+			<!-- <span class="icon-text need-optimize"
+				data-bind="style: { visibility: pm25() > 10 ? 'visible' : 'hidden' }">需优化</span> -->
+		</div>
+		<div class="col-xs-5" style="text-align: right;">
+			<span data-bind="text:pm25,css: { warningRed:pm25()&gt;60 }" class="airValue"></span><span style="display: none; margin-left: 4px; height: 20px;" class="after-air"> <img id="down_icon" src="./index_files/change.gif" height="12px" width="20px" style="margin-top: -7px;" alt=""> <span class="airValue" style="">20</span>
+			</span>
+		</div>
+		<span style="display: inline-block; vertical-align: top; font-size: 10px; float:left; width:3.2em;" data-bind=" css: { warningRed:pm25()&gt;60 }" class="">μg/m³</span>
+		<div class="col-xs-1" style="padding-left: 0;">
+			<img alt="" src="./index_files/next.png" style="width: 20px;">
+		</div>
+	</div>
+	<br>
+	<div class="row" style="font-size: 15px; display: none;" data-bind="visible:hcho()===&#39;&#39;" onclick="loadDeviceInfo(&#39;AllKnow&#39;);">
+		<div class="col-xs-1"></div>
+		<div class="col-xs-4 ">
+			<img src="./index_files/aldehyde.png" alt="" class="img-rounded img-responsive icon"> <span class="icon-text">室内甲醛</span>
+		</div>
+		<div class="col-xs-5" style="text-align: right;">未检测</div>
+		<span style="display: inline-block; vertical-align: top; font-size: 10px; float:left; width:3.2em;">&nbsp;</span>
+		<div class="col-xs-1" style="padding-left: 0;">
+			<img alt="" src="./index_files/next.png" style="width: 20px;">
+		</div>
+	</div>
+	<div class="row" style="font-size: 15px;" data-bind="visible:hcho()!==&#39;&#39;" onclick="loadDeviceInfo(&#39;AllKnow&#39;);">
+		<div class="col-xs-1"></div>
+		<div class="col-xs-4 ">
+			<img src="./index_files/aldehyde.png" alt="" class="img-rounded img-responsive icon"> <span class="icon-text">室内甲醛</span>
+			<!-- <span class="icon-text need-optimize"
+				data-bind="style: { visibility: hcho() > 0.01 ? 'visible' : 'hidden' }">需优化</span> -->
+		</div>
+		<div class="col-xs-5" style="text-align: right;">
+			<span data-bind="text:hcho,css: { warningRed:hcho()&gt;0.03 }" class="aldehydeValue"></span><span style="display: none; margin-left: 4px; height: 20px;" class="after-air"> <img id="down_icon" src="./index_files/change.gif" height="12px" width="20px" style="margin-top: -7px;" alt=""> <span class="airValue">0.01</span>
+			</span>
+		</div>
+		<span style="display: inline-block; vertical-align: top; font-size: 10px; float:left; width:3.2em;" data-bind="css: { warningRed:hcho()&gt;0.03 }" class="">mg/m³</span>
+		<div class="col-xs-1" style="padding-left: 0;">
+			<img alt="" src="./index_files/next.png" style="width: 20px;">
+		</div>
+	</div>
+	<br>
+	<div class="row" data-bind="visible:temp()===&#39;&#39;" onclick="loadDeviceInfo(&#39;aircondition&#39;);" style="display: none;">
+		<div class="col-xs-1"></div>
+		<div class="col-xs-4 ">
+			<img src="./index_files/temperature.png" alt="" class="img-rounded img-responsive icon"> <span class="icon-text">室内温度</span>
+			<!-- <span class="icon-text need-optimize"
+				data-bind="style: { visibility: temp() > 23 ? 'visible' : 'hidden' }">需优化</span> -->
+		</div>
+		<div class="col-xs-5" style="text-align: right; font-size: 15px;">未检测</div>
+		<span style="display: inline-block; vertical-align: top; font-size: 10px; float:left; width:3.2em;">&nbsp;</span>
+		<div class="col-xs-1" style="padding-left: 0;">
+			<img alt="" src="./index_files/next.png" style="width: 20px;">
+		</div>
+	</div>
+	<div class="row" data-bind="visible:temp()!==&#39;&#39;" onclick="loadDeviceInfo(&#39;aircondition&#39;);">
+		<div class="col-xs-1"></div>
+		<div class="col-xs-4 ">
+			<img src="./index_files/temperature.png" alt="" class="img-rounded img-responsive icon"> <span class="icon-text">室内温度</span>
+			<!-- <span class="icon-text need-optimize"
+				data-bind="style: { visibility: temp() > 23 ? 'visible' : 'hidden' }">需优化</span> -->
+		</div>
+		<div class="col-xs-5 " style="text-align: right;">
+			<span data-bind="text:temp,css: { warningRed:temp()&gt;28||temp()&lt;16 }" class="airValue"></span><span style="display: none; margin-left: 4px; height: 20px;" class="after-air"> <img id="down_icon" src="./index_files/change.gif" height="12px" width="20px" style="margin-top: -7px;" alt=""> <span class="airValue" style="">25</span>
+			</span>
+		</div>
+		<span style="display: inline-block; vertical-align: top; font-size: 10px; float:left; width:3.2em;" data-bind="css: { warningRed:temp()&gt;28||temp()&lt;16 }" class="">℃</span>
+		<div class="col-xs-1" style="padding-left: 0;">
+			<img alt="" src="./index_files/next.png" style="width: 20px;">
+		</div>
+	</div>
+	<br>
+	<div class="row" data-bind="visible:wet()===&#39;&#39;" onclick="loadDeviceInfo(&#39;aircondition&#39;);" style="display: none;">
+		<div class="col-xs-1"></div>
+		<div class="col-xs-4 ">
+			<img src="./index_files/humidity.png" alt="" class="img-rounded img-responsive icon"> <span class="icon-text">室内湿度</span>
+			<!-- <span class="icon-text need-optimize"
+				data-bind="style: { visibility: wet() > 40 ? 'visible' : 'hidden' }">需优化</span> -->
+		</div>
+		<div class="col-xs-5" style="text-align: right; font-size: 15px;">未检测</div>
+		<span style="display: inline-block; vertical-align: top; font-size: 10px; float:left; width:3.2em;">&nbsp;</span>
+		<div class="col-xs-1" style="padding-left: 0;">
+			<img alt="" src="./index_files/next.png" style="width: 20px;">
+		</div>
+	</div>
+	<div class="row" data-bind="visible:wet()!==&#39;&#39;" onclick="loadDeviceInfo(&#39;aircondition&#39;);">
+		<div class="col-xs-1"></div>
+		<div class="col-xs-4 ">
+			<img src="./index_files/humidity.png" alt="" class="img-rounded img-responsive icon"> <span class="icon-text">室内湿度</span>
+			<!-- <span class="icon-text need-optimize"
+				data-bind="style: { visibility: wet() > 40 ? 'visible' : 'hidden' }">需优化</span> -->
+		</div>
+		<div class="col-xs-5" style="text-align: right;">
+			<span data-bind="text:wet,css: { warningRed:wet()&gt;75||wet()&lt;30 }" class="airValue"></span><span style="display: none; margin-left: 4px; height: 20px;" class="after-air"> <img id="down_icon" src="./index_files/change.gif" height="12px" width="20px" style="margin-top: -7px;" alt=""> <span class="airValue">50</span>
+			</span>
+		</div>
+		<span style="display: inline-block; vertical-align: top; font-size: 10px; float:left; width:3.2em;" data-bind="css: { warningRed:wet()&gt;75||wet()&lt;30 }" class="">%</span>
+		<div class="col-xs-1" style="padding-left: 0;">
+			<img alt="" src="./index_files/next.png" style="width: 20px;">
+		</div>
+	</div>
+	<br>
+	<div class="row" style="font-size: 15px; display: none;" data-bind="visible:voc()===&#39;&#39;" onclick="loadDeviceInfo(&#39;purifier&#39;);">
+		<div class="col-xs-1"></div>
+		<div class="col-xs-4 ">
+			<img src="./index_files/voc.png" alt="" class="img-rounded img-responsive icon"> <span class="icon-text">室内VOC</span>
+		</div>
+		<div class="col-xs-5" style="text-align: right;">未检测</div>
+		<span style="display: inline-block; vertical-align: top; font-size: 10px; float:left; width:3.2em;">&nbsp;</span>
+		<div class="col-xs-1" style="padding-left: 0;">
+			<img alt="" src="./index_files/next.png" style="width: 20px;">
+		</div>
+	</div>
+	<div class="row" style="font-size: 15px;" data-bind="visible:voc()!==&#39;&#39;" onclick="loadDeviceInfo(&#39;purifier&#39;);">
+		<div class="col-xs-1"></div>
+		<div class="col-xs-4 ">
+			<img src="./index_files/voc.png" alt="" class="img-rounded img-responsive icon"> <span class="icon-text">室内VOC</span>
+			<!-- <span class="icon-text need-optimize"
+				data-bind="style: { visibility: voc() > 20 ? 'visible' : 'hidden' }">需优化</span> -->
+		</div>
+		<div class="col-xs-5" style="text-align: right;">
+			<span data-bind="text:voc,css: { warningRed:voc()&gt;50 }" class="vocValue"></span><span style="display: none; margin-left: 4px; height: 20px;" class="after-air"> <img id="down_icon" src="./index_files/change.gif" height="12px" width="20px" style="margin-top: -7px;" alt=""> <span class="airValue">20</span>
+			</span>
+		</div>
+		<span style="display: inline-block; vertical-align: top; font-size: 10px; float:left; width:3.2em;" data-bind="css: { warningRed:voc()&gt;50 }" class="">mg/m³</span>
+		<div class="col-xs-1" style="padding-left: 0;">
+			<img alt="" src="./index_files/next.png" style="width: 20px;">
+		</div>
+	</div>
+	<br>
+	<hr>
+	<div style="text-align: center; margin: auto;">
+		<button type="button" class="btn binding" style="color: rgb(255, 255, 255); width: 50%; background: rgb(153, 153, 153);" data-bind="style: { background: viewModel.indoorViewModel.hasDevice() ? &#39;#0099cc&#39; : &#39;#999999&#39; }">
+			<img src="./index_files/haw_70.png" style="width: 20px; display: inline;" alt="" class="img-rounded img-responsive"> 管理我的家电
+		</button>
+	</div>
+	<br>
+</div>
+<div class="modal fade" id="optimization-complete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+	<div class="modal-dialog">
+		<div class="modal-content" style="height:auto;">
+			<div class="modal-header" id="close-complete">
+				<img class="glyphicon close-modal" alt="close" src="./index_files/whiteDel.png">
+				<h5 class="modal-title">提示</h5>
+			</div>
+			<div class="modal-body" style="padding: 0; text-align: center; max-height:380px;overflow-y:auto;">
+				<p style="color: #0099cc; font-size: 2em; margin-top: 5%; text-align: center;">优化完毕！</p>
+				<p style="color: #666; font-size: 1.1em; text-align: center; margin-bottom: 10%;">您家空气
+					水光潋滟晴方好 山色空朦雨亦奇</p>
+				<div>
+					<div style="text-align: center; display: inline-block;">
+						<p style="color: #666; font-size: 1.1em; margin: 0;">优化前</p>
+						<p style="color: #cc6666; font-size: 5em;" class="optimization-before"></p>
+					</div>
+					<div style="text-align: center; display: inline-block; vertical-align: middle; margin-bottom: 12%;">
+						<img alt="" src="./index_files/changeTo.png" style="width: 65%;">
+					</div>
+					<div style="text-align: center; display: inline-block;">
+						<p style="color: #666; font-size: 1.1em; margin: 0;">优化后</p>
+						<p style="color: #64c6be; font-size: 5em;" class="optimization-after"></p>
+					</div>
+				</div>
+				<button type="button" class="btn btn-primary" onclick="getPrize(function(){shareYouhua($(&#39;.optimization-before:first&#39;).text(),$(&#39;.optimization-after:first&#39;).text())},&#39;optimizeWeixinShare&#39;)" style="background-color: #0099cc; display: block; margin: 0 auto; width: 60%;">
+					<img src="./index_files/shareBtn.png" style="width: 20px; display: inline;" alt="" class="img-rounded img-responsive">微信分享
+				</button>
+				<button type="button" class="btn btn-default" style="background-color: #FF3399; color: #fff; margin: 10px auto; width: 60%;" onclick="window.location.href=&#39;http://&#39;+window.location.hostname+ &#39;:&#39;+ window.location.port+&#39;/wxAircontrol/product?deviceType=1&#39;">
+					<img style="width: 20px; height: 20px; margin-right: 5px;" src="./index_files/haw_81.png" alt="">进入商城
+				</button>
+				<p style="color: #666; font-size: 1.1em;">添加更多设备，让空气更好!</p>
+			</div>
+		</div>
+	</div>
+</div>
+	<!-- PK -->
+	
+<div class="modal fade" id="pk" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+	<div class="modal-dialog">
+		<div class="modal-content" style="height:auto;">
+			<div class="modal-header" id="close-pk">
+				<img class="glyphicon close-modal" alt="close" src="./index_files/whiteDel.png">
+				<h5 class="modal-title">提示</h5>
+			</div>
+			<div class="modal-body container" style="padding: 0;">
+                 
+
+
+<div class="bg pk">
+	<div style="height: 70%">
+		<div data-bind="text:tips" style="position: absolute; margin-top: 5px; z-index: 1000; width:100%;"></div>
+		<div style="vertical-align: middle; height: 40%; padding-left: 9%; padding-top: 12%">
+			<div>
+				<div style="float: left; height: 100%; width: 30px; padding-top: 10px; text-align: center;">
+					<img class="pk_img_3" src="./index_files/haw_85.png" width="30px" height="30px"> <img data-bind="attr:{src:myheadUrl}" style="display: block; border: solid 1px #F0F0F0;" width="28px" height="27px">
+				</div>
+				<div style="float: left; width: 95px; height: 95px; background: url(images/haw_74.png); background-size: 95px 95px; margin-left: 5px;">
+					<div style="margin: 22px 18px;">
+						<div style="width: 61px; height: 36px; font-size: 35px; line-height: 36px; text-align: center;">
+							<span style="font-size: 35px;" data-bind="text:myhai"></span>
+						</div>
+						<div style="width: 61px; height: 12px; font-size: 8px; text-align: center;">
+							<span data-bind="text:myquality"></span>
+						</div>
+
+					</div>
+				</div>
+				<img class="pk_img_1" src="./index_files/haw_30.png" style="display: block; float: left; margin-top: 8px; margin-left: 5px; width: 130px; height: 60px;">
+
+			</div>
+		</div>
+		<div style="width: 100%; height: 45%;">
+			<div style="width: 100%; margin-left: 15%; padding-top: 24%">
+				<img class="pk_img_2" width="100px" height="50px" src="./index_files/haw_62.png" style="display: block; float: left;">
+				<div style="float: left; width: 70px; height: 70px; background: url(&#39;images/haw_74.png&#39;); background-size: 70px 70px; margin-left: 10px;">
+					<div style="margin: 11px 13px;">
+						<div style="width: 36px; height: 34px; font-size: 28px; line-height: 34px; text-align: center;">
+							<span style="font-size: 28px;" data-bind="text:hai"></span>
+						</div>
+						<div style="width: 36px; height: 12px; font-size: 8px; text-align: center;">
+							<span data-bind="text:quality"></span>
+						</div>
+					</div>
+
+				</div>
+				<div style="float: left; height: 100%; width: 30px; text-align: center; margin-left: 10px;">
+					<img class="pk_img_4" src="./index_files/haw_85.png" width="30px" height="30px"> <img data-bind="attr:{src:headUrl}" style="display: block; border: solid 1px #F0F0F0;" width="28px" height="27px">
+				</div>
+			</div>
+		</div>
+<!-- 		<div -->
+<!-- 			style="width: 100%;  text-align: center; clear:both; text-align: center; clear: both; margin-top: 10%; overflow: hidden;"> -->
+<!-- 			<span data-bind="text:nickName"></span>来自： &nbsp;<span -->
+<!-- 				data-bind="text:locate"></span> -->
+<!-- 		</div> -->
+	</div>
+	<div style="text-align: center; width: 45%; margin: 40px auto;">
+		<button type="button" class="btn btn-primary  btn-block" data-bind="click:function(){sharePk(myhai(),pkId());}" style="background-color: #0099cc;">
+			<img src="./index_files/shareBtn.png" style="width: 20px; display: inline;" alt="" class="img-rounded img-responsive"> 微信分享
+		</button>
+	</div>
+</div>
+			</div>
+		</div>
+	</div>
+</div>
+	<!-- 附近的人 -->
+	
+
+<!-- 查看附件的人 -->
+<div id="near" style="display: none; overflow-x: hidden;">
+	<div class="bg air_outstanding" data-bind="css:{air_outstanding: hai()&gt;-1 &amp;&amp; hai()&lt;61, air_good: hai()&gt;60 &amp;&amp; hai()&lt;121, air_light_pollution: hai()&gt;120 &amp;&amp; hai()
+	
+		&lt;181, air_moderate_pollution: hai()&gt;180 &amp;&amp; hai()&lt;241, air_severe_pollution: hai()&gt;240 &amp;&amp; hai()&lt;301, air_serious_pollution: hai
+
+()&gt;300}">
+		<div class="location">
+			<img src="./index_files/haw_22.png" style="width: 30px; display: inline;" alt=""> 
+			<span data-bind="text:locate"></span>&nbsp;
+		</div>
+		<img id="virtualIcon" src="./index_files/haw_76_6.png" style="width: 32%; display: inline; margin-top: 63%">
+			
+		<div class="absoluteCentering circleSize">
+			<div class="circleMain" id="circleNear" style="transform: scale(1.1);">
+				<div class="circle_1">
+					<div class="circle_2">
+						<div class="nearCircle_3" id="nearCircle_3" style="transform: rotate(45deg); -ms-transform: rotate(45deg); -moz-transform: rotate(45deg); -webkit-transform: rotate(45deg); -o-transform: rotate(45deg);">
+							<div class="hold hold1">
+								<div class="pie pie1 nearAngle_1"></div>
+							</div>
+							<div class="hold hold2">
+								<div class="pie pie2 nearAangle_2"></div>
+							</div>
+						</div>
+						<div class="air-quality-end" style="transform: rotate(140deg);">
+							<span class="air-quality-text-end" data-bind="text:quality" style="bottom: -38px; transform: rotate(-140deg); display: inline;"></span>
+						</div>
+					</div>
+				</div>
+				<div class="circleText">
+					<div class="circle-hai" id="nearby_hai">0</div>
+					<div class="circle-hai-text" data-bind="text:quality" id="myQuality" style="display: none;"></div>
+					<div class="circle-hai-text">附近朋友家室内</div>
+				</div>
+				<div class="air-quality-triangle">
+					<span style="position: absolute; top: 50%; left: 3px; transform: rotate(180deg); display: none;"></span>
+					<span style="position: absolute; top: 3px; left: 47%; transform: rotate(-90deg); display: none;"></span>
+					<span style="position: absolute; top: 50%; right: 1px; display: none;"></span>
+				</div>
+				<div class="air-quality-triangle" style="transform: rotate(45deg); -ms-transform: rotate(45deg); -moz-transform: rotate(45deg); -webkit-transform: rotate(45deg); -o-transform: rotate(45deg);">
+					<span style="position: absolute; top: 50%; left: 3px; transform: rotate(180deg); display: none;"></span>
+					<span style="position: absolute; top: 3px; left: 48%; transform: rotate(-90deg); display: none;"></span>
+					<span style="position: absolute; top: 50%; right: 1px; display: none;"></span> <span class="pointLast" style="position: absolute; bottom: 1px; right: 48%; display:inline-block; transform: rotate(90deg); -ms-transform: rotate(90deg); -moz-transform: rotate(90deg); -webkit-transform: rotate(90deg); -o-transform: rotate(90deg);"></span>
+				</div>
+				<div class="air-quality-text">
+					<span style="position: absolute; top: 50%; left: -25px;">舒适</span>
+					<span style="position: absolute; top: 20px; left: -10px;">较舒适</span> <span style="position: absolute; top: -15px; left: 38%;">不舒适</span><span style="position: absolute; top: 0; right: 0;">极不<br>舒适
+					</span> <span style="position: absolute; top: 46%; right: -30px;">健康<br>威胁	
+					</span> <span style="position: absolute; bottom: -5px; right: 3px;">严重<br>污染
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="middleBar">
+			<img src="./index_files/share.png" data-bind="click:function(){shareNear(hai());}" style="width: 30px; display: inline; margin: 0 5px;" alt=""> 
+				<a href="javascript:void(0)">
+					<img id="refresh" src="./index_files/refresh.png" style="width: 30px; display: inline; margin: 0px 5px; transform: rotate(0deg); transform-origin: 50% 50% 0px;" alt="" class="img-rounded img-responsive">
+				</a> 
+					<a class="ding" href="javascript:void(0)" style="color: #fff; margin-right: -15px;">
+					<img src="./index_files/like.png" style="width: 30px; display: inline; margin: 0 5px;" alt="" class="img-responsive">
+					<span id="count" data-bind="text:zan"></span>
+				</a>
+		</div>
+		<div class="bar">
+			<img src="./index_files/loading.png" style="width: 7%; display: none; margin: 0px auto; position: relative; top: 26%; transform: rotate(300deg); transform-origin: 50% 50% 0px;" alt="" class="img-rounded img-responsive loading"> 
+				<span style="color: #fff; display: inline; margin: 0 auto; position: relative; top: 26%; vertical-align: middle;" data-bind="text:tips">正在启动检测设备…</span>
+		</div>
+	</div>
+	<div style="width: 100%;">
+		<!-- <div class=" ButtonText"
+			style="background-color: #0099cc; width: 25%; display:inline-block;">TA的家电</div> -->
+		<!-- <div style="color: gray; font-size: 10px; display: inline;">
+			<span>Tips:点击Ta的家电进行体验</span>
+		</div> -->
+		<div class="row" style="margin: 15px;" data-bind="foreach: devices"></div>
+	</div>
+	<br>
+	<div class="row" style="font-size: 15px;">
+		<div class="col-xs-1"></div>
+		<div class="col-xs-5 ">
+			<img src="./index_files/pm25.png" alt="" class="img-rounded img-responsive icon"> <span class="icon-text">室内PM2.5</span>
+		</div>
+		<div class="col-xs-4" style="text-align: right;">
+			<span data-bind="text:pm25" class="airValue"></span>
+		</div>
+		<span style="display: inline-block; vertical-align: top; font-size: 10px;">μg/m³</span>
+	</div>
+	<br>
+	<div class="row" style="font-size: 15px; display: none;" data-bind="visible:hcho()===&#39;&#39;" onclick="navigateToPage($(&#39;#condition_Modal&#39;)); load_data_with_device_type(&#39;AllKnow&#39;);">
+		<div class="col-xs-1"></div>
+		<div class="col-xs-5 ">
+			<img src="./index_files/aldehyde.png" alt="" class="img-rounded img-responsive icon"> <span class="icon-text">室内甲醛</span>
+		</div>
+		<div class="col-xs-4" style="text-align: right;">
+			<span>未检测</span>
+		</div>
+	</div>
+	<div class="row" style="font-size: 15px;" data-bind="visible:hcho()!==&#39;&#39;">
+		<div class="col-xs-1"></div>
+		<div class="col-xs-5 ">
+			<img src="./index_files/aldehyde.png" alt="" class="img-rounded img-responsive icon"> <span class="icon-text">室内甲醛</span>
+		</div>
+		<div class="col-xs-4" style="text-align: right;">
+			<span data-bind="text:hcho" class="aldehydeValue"></span>
+		</div>
+		<span style="display: inline-block; vertical-align: top; font-size: 10px;">mg/m³</span>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-xs-1"></div>
+		<div class="col-xs-5 ">
+			<img src="./index_files/temperature.png" alt="" class="img-rounded img-responsive icon"> <span class="icon-text">室内温度</span>
+		</div>
+		<div class="col-xs-4 " style="text-align: right;">
+			<span data-bind="text:temp" class="airValue"></span>
+		</div>
+		<span style="display: inline-block; vertical-align: top; font-size: 10px;">℃</span>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-xs-1"></div>
+		<div class="col-xs-5 ">
+			<img src="./index_files/humidity.png" alt="" class="img-rounded img-responsive icon"> <span class="icon-text">室内湿度</span>
+		</div>
+		<div class="col-xs-4" style="text-align: right;">
+			<span data-bind="text:wet" class="airValue"></span>
+		</div>
+		<span style="display: inline-block; vertical-align: top; font-size: 10px;">%</span>
+	</div>
+	<br>
+
+
+	<div class="row" style="font-size: 15px; display: none;" data-bind="visible:voc()===&#39;&#39;" onclick="navigateToPage($(&#39;#condition_Modal&#39;)); load_data_with_device_type(&#39;AirCircle&#39;);">
+		<div class="col-xs-1"></div>
+		<div class="col-xs-5 ">
+			<img src="./index_files/voc.png" alt="" class="img-rounded img-responsive icon"> <span class="icon-text">室内VOC</span>
+		</div>
+		<div class="col-xs-4" style="text-align: right;">
+			<span>未检测</span>
+		</div>
+	</div>
+	<div class="row" style="font-size: 15px;" data-bind="visible:voc()!==&#39;&#39;">
+		<div class="col-xs-1"></div>
+		<div class="col-xs-5 ">
+			<img src="./index_files/voc.png" alt="" class="img-rounded img-responsive icon"> <span class="icon-text">室内VOC</span>
+		</div>
+		<div class="col-xs-4" style="text-align: right;">
+			<span data-bind="text:voc" class="vocValue"></span>
+		</div>
+		<span style="display: inline-block; vertical-align: top; font-size: 10px;">mg/m³</span>
+	</div>
+	<br>
+
+	<hr>
+	<div style="text-align: center; margin: auto;">
+		<button type="button" class="btn binding" style="background-color: #999; color: #fff; width: 50%;">
+			<img src="./index_files/haw_70.png" style="width: 20px; display: inline;" alt="" class="img-rounded img-responsive"> 管理我的家电
+		</button>
+	</div>
+	<br>
+</div>
+	<!-- 空调控制页面 -->
+	
+
+<form id="base_parameter" action="">
+	<input type="hidden" name="control_mac" id="control_mac"> <input type="hidden" name="control_familyid" id="control_familyid">
+
+	<!-- 模式 -->
+	<!-- <input type="hidden" name="pattern" id="pattern" value="" /> -->
+	<!-- 风速 -->
+	<!-- <input type="hidden" name="speed" id="speed" value="" /> -->
+	<!-- 风向 -->
+	<input type="hidden" name="direction" id="direction" value="">
+	<!-- 温度 -->
+	<input type="hidden" name="temp" id="temp" value=""> <input type="hidden" name="familyId" id="familyId" value="">
+</form>
+<div class="modal fade" id="air_condition_control" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header" data-dismiss="modal" onclick="closeDevice();">
+				<img class="glyphicon close-modal" alt="close" src="./index_files/whiteDel.png" data-dismiss="modal">
+					<h5 class="modal-title">海尔空调</h5>
+			</div>
+			<div class="modal-body" style="padding: 20px 0; color: #02ccff; background-color:rgb(240, 240, 240); height:90%;overflow-y:auto;">
+				<div data-bind="css:{controlpanel00ccff:mode()==&#39;制冷&#39;,controlpanelff9900:mode()==&#39;制热&#39;,controlpanel00cc00:mode()==&#39;送风&#39;,controlpanelff99cc:mode()==&#39;除湿&#39;,controlpanel0099cc:mode()==&#39;自动&#39;}" class="">
+					<div data-bind="visible:onOff()==&#39;开&#39;" style="display: none;">
+						<span class="glyphicon ic_ICON_02 control-icon" id="turnOffDeviceBtn" style="z-index: 2; position: relative;"></span>
+						<input type="hidden" value="2">
+						<!-- <img alt="" src="images/control/ac2_32.png" style="width: 3em" onclick="turnOnDevice();"> -->
+						<div id="temp-area">
+							<div id="temp-select" class="scroll-select">
+								<table>
+									<tbody><tr>
+										<td id="temp_turn_left" class="btn-area"><span class="glyphicon ic_ICON_16 control-icon"></span></td>
+										<td class="content"><span id="temp" style="margin-right: 10px;" class="temperature" data-bind="text:temp"></span> <span id="unit">°C</span></td>
+										<td id="temp_turn_right" class="btn-area"><span class="glyphicon ic_ICON_17 control-icon"></span></td>
+									</tr>
+								</tbody></table>
+							</div>
+						</div>
+						<div id="indoorTemp" style="font-size: 1.2em;">室内温度：<span data-bind="text:viewModel.indoorViewModel.temp()"></span></div>
+						<div style=" text-align:center;" id="controlTips"></div>
+						<div class="function-selection">
+							<span class="glyphicon control-icon" id="model-select" data-bind="css:{ic_ICON_23:mode()==&#39;制冷&#39;,ic_ICON_20:mode()==&#39;制热&#39;,ic_ICON_13:mode()==&#39;送风&#39;,ic_ICON_11:mode()==&#39;除湿&#39;,ic_ICON_18:mode()==&#39;自动&#39;}"></span>
+							<span class="glyphicon control-icon" id="speed-set" data-bind="css:{ic_ICON_07:windSpeed()==&#39;高风&#39;,ic_ICON_08:windSpeed()==&#39;中风&#39;,ic_ICON_09:windSpeed()==&#39;低风&#39;,ic_ICON_18:windSpeed()==&#39;自动&#39;},style:{display:mode()==&#39;除湿&#39;||mode()==&#39;自动&#39;?&#39;none&#39;:&#39;inline-block&#39;}" style="display: inline-block;"></span>
+							<span class="glyphicon control-icon" id="wind-direction-select" data-bind="css:{ic_ICON_06:windDirection()==&#39;左右&#39;,ic_ICON_15:windDirection()==&#39;上下&#39;,ic_ICON_22:windDirection()==&#39;全向&#39;,ic_ICON_14:windDirection()==&#39;定向&#39;},style:{display:mode()==&#39;除湿&#39;||mode()==&#39;自动&#39;?&#39;none&#39;:&#39;inline-block&#39;}" style="display: inline-block;"></span>
+							<span class="glyphicon ic_ICON_24 control-icon" id="function-select" data-bind="visible:mode()==&#39;制冷&#39;||mode()==&#39;制热&#39;" style="display: none;"></span>
+							<!-- <img alt="model-select" src="images/control/ac2_33.png" name="" style="width: 3em">
+							<img alt="speed-set" src="images/control/ac2_41.png" style="width: 3em">
+							<img alt="wind-direction-select" src="images/control/ac2_45.png" style="width: 3em">
+							<img alt="function-select" src="images/control/ac2_37.png" style="width: 3em"> -->
+						</div>
+					</div>
+					<div data-bind="visible:onOff()==&#39;关&#39;" style="display: none;">
+						<img alt="" src="./index_files/ac2_03.png" style="width: 80%;" id="turnOnDeviceBtn">
+						<input type="hidden" value="3">
+					</div>
+					<div class="temp-line" data-bind="style: { color: onOff()==&#39;关&#39; ? &#39;#00ccff&#39; : &#39;inherit&#39; }" style="color: inherit;">
+						<div class="lineTitle">
+							<div class="col-xs-4 turnLeftLine" style="text-align: right;">
+								<font style="font-size: 1em;">&lt;</font>
+							</div>
+							<div class="col-xs-4 lineTypeText" style="text-align: center;">室内温度曲线</div>
+							<div class="col-xs-4 turnRightLine" style="text-align: left;">
+								<font style="font-size: 1em;">&gt;</font>
+							</div>
+						</div>
+						<div id="wrapper_line">
+			<div id="scroller_line">
+							<canvas class="canvas" id="canvas-control" style="position:relative; left:0; right:0;" onclick="javascript:void(0);" width="1730" height="250">你的浏览器不支持HTML5，赶快升级一下吧！</canvas>
+						</div>
+						</div>
+					</div>
+					<div class="control-area" data-bind="visible:onOff()==&#39;开&#39;" style="display: none;">
+						<div class="model-select">
+							<h5>选择模式</h5>
+							<div class="col-xs-2 defaultColor" data-bind="css:{active:mode()==&#39;制冷&#39;,defaultColor:mode()!=&#39;制冷&#39;}">
+								<span class="glyphicon ic_ICON_23 control-icon select-icon"></span><span>制冷</span>
+								<input type="hidden" value="4">
+							</div>
+							<div class="col-xs-2 defaultColor" data-bind="css:{active:mode()==&#39;制热&#39;,defaultColor:mode()!=&#39;制热&#39;}">
+								<span class="glyphicon ic_ICON_20 control-icon select-icon"></span><span>制热</span>
+								<input type="hidden" value="5">
+							</div>
+							<div class="col-xs-2 defaultColor" data-bind="css:{active:mode()==&#39;送风&#39;,defaultColor:mode()!=&#39;送风&#39;}">
+								<span class="glyphicon ic_ICON_13 control-icon select-icon"></span><span>送风</span>
+								<input type="hidden" value="7">
+							</div>
+							<div class="col-xs-2 defaultColor" data-bind="css:{active:mode()==&#39;除湿&#39;,defaultColor:mode()!=&#39;除湿&#39;}">
+								<span class="glyphicon ic_ICON_11 control-icon select-icon"></span><span>除湿</span>
+								<input type="hidden" value="6">
+							</div>
+							<div class="col-xs-2 defaultColor" data-bind="css:{active:mode()==&#39;自动&#39;,defaultColor:mode()!=&#39;自动&#39;}">
+								<span class="glyphicon ic_ICON_18 control-icon select-icon"></span><span>自动</span>
+								<input type="hidden" value="8">
+							</div>
+						</div>
+						<div class="speed-set">
+							<h5>选择风速</h5>
+							<div class="col-xs-2 defaultColor" data-bind="css:{active:windSpeed()==&#39;高风&#39;,defaultColor:windSpeed()!=&#39;高风&#39;}">
+								<span class="glyphicon ic_ICON_07 control-icon select-icon"></span><span>高风</span>
+								<input type="hidden" value="9">
+							</div>
+							<div class="col-xs-2 defaultColor" data-bind="css:{active:windSpeed()==&#39;中风&#39;,defaultColor:windSpeed()!=&#39;中风&#39;}">
+								<span class="glyphicon ic_ICON_08 control-icon select-icon"></span><span>中风</span>
+								<input type="hidden" value="10">
+							</div>
+							<div class="col-xs-2 defaultColor" data-bind="css:{active:windSpeed()==&#39;低风&#39;,defaultColor:windSpeed()!=&#39;低风&#39;}">
+								<span class="glyphicon ic_ICON_09 control-icon select-icon"></span><span>低风</span>
+								<input type="hidden" value="11">
+							</div>
+							<div class="col-xs-2 defaultColor" data-bind="css:{active:windSpeed()==&#39;自动&#39;,defaultColor:windSpeed()!=&#39;自动&#39;}">
+								<span class="glyphicon ic_ICON_18 control-icon select-icon"></span><span>自动</span>
+								<input type="hidden" value="12">
+							</div>
+						</div>
+						<div class="wind-direction-select">
+							<h5>选择风向</h5>
+							<div class="col-xs-2 defaultColor" data-bind="css:{active:windDirection()==&#39;左右&#39;,defaultColor:windDirection()!=&#39;左右&#39;}">
+								<span class="glyphicon ic_ICON_06 control-icon select-icon"></span><span>左右</span>
+								<input name="auto_on" type="hidden" value="24">
+							</div>
+							<div class="col-xs-2 defaultColor" data-bind="css:{active:windDirection()==&#39;上下&#39;,defaultColor:windDirection()!=&#39;上下&#39;}">
+								<span class="glyphicon ic_ICON_15 control-icon select-icon"></span><span>上下</span>
+								<input name="left_right_on" type="hidden" value="20">
+							</div>
+							<div class="col-xs-2 defaultColor" data-bind="css:{active:windDirection()==&#39;全向&#39;,defaultColor:windDirection()!=&#39;全向&#39;}">
+								<span class="glyphicon ic_ICON_22 control-icon select-icon"></span><span>全向</span>
+								<input type="hidden" value="22">
+							</div>
+							<div class="col-xs-2 defaultColor" data-bind="css:{active:windDirection()==&#39;定向&#39;,defaultColor:windDirection()!=&#39;定向&#39;}">
+								<span class="glyphicon ic_ICON_14 control-icon select-icon"></span><span>定向</span>
+								<input type="hidden" value="23">
+							</div>
+						</div>
+						<div class="function-select">
+							<h5>选择功能</h5>
+							<div class="col-xs-2 defaultColor" data-bind="css:{active:healthy(),defaultColor:!healthy()}">
+								<span class="glyphicon ic_ICON_05 control-icon select-icon"></span><span>健康</span>
+								<input type="hidden" value="14">
+							</div>
+							<div class="col-xs-2 defaultColor" data-bind="css:{active:touching(),defaultColor:!touching()}">
+								<span class="glyphicon ic_ICON_03 control-icon select-icon"></span><span>感人</span>
+								<input type="hidden" value="30">
+							</div>
+							<div class="col-xs-2 defaultColor" data-bind="css:{active:sleep(),defaultColor:!sleep()}">
+								<span class="glyphicon ic_ICON_01 control-icon select-icon"></span><span>睡眠</span>
+								<input type="hidden" value="33">
+							</div>
+							<div class="col-xs-2 defaultColor" data-bind="css:{active:addOxygen(),defaultColor:!addOxygen()}">
+								<span class="glyphicon ic_ICON_12 control-icon select-icon"></span><span>加氧</span>
+								<input type="hidden" value="18">
+							</div>
+							<!-- <div class="col-xs-2" data-bind="css:{active:airFunction()=='无',defaultColor:airFunction()!='无'}">
+								<span class="glyphicon ic_ICON_10 control-icon select-icon" ></span><span>无</span>
+								<input type="hidden" data-bind="value:airFuncOff" />
+							</div> -->
+						</div>
+					</div>
+				
+				<div id="unbindcondition" style="text-align: center; margin-bottom: 15px;">
+					<button type="button" class="btn btn-sm btn-danger btnSize" style="font-size: 1.1em;" onclick="$(&#39;#air_condition_control&#39;).modal(&#39;hide&#39;);cancel_tryout_air_condition(1);">
+						<span class="glyphicon glyphicon-remove"></span> 取消试用
+					</button>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+$(document).ready(function(){
+	$(".function-selection>span").each(function(index){
+		$(this).click(function(event){
+			if($(this).attr("class").match('active')){
+				$(this).removeClass("active");
+				$("#air_condition_control .control-area>div").css("display","none");
+				$(".temp-line").show();
+				control_line_color(controlLineType[lineTypeFlag],control_offset);
+			}else{
+				$(".function-selection>span").removeClass("active");
+				$(this).addClass("active");
+				$(".temp-line").hide();
+				var elementClass = "." + $(this).attr("id");
+				$("#air_condition_control .control-area>div").css("display","none");
+				$(elementClass).show();
+			}
+		});
+	});
+});
+</script>
+
+	<!-- 空气魔方控制页面 -->
+	
+
+<div class="modal fade" id="air_magic_control" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header" data-dismiss="modal" onclick="closeDevice();">
+				<img class="glyphicon close-modal" alt="close" src="./index_files/whiteDel.png" data-dismiss="modal">
+				<h5 class="modal-title">海尔空气魔方</h5>
+			</div>
+			<div class="modal-body" style="padding: 20px 0; color: #02ccff; background-color: rgb(240, 240, 240); height: 90%; overflow-y: auto;">
+				<div class="controlpanel00cc00">
+					<div data-bind="visible:power()&amp;&amp;online()">
+						<span class="glyphicon ic_ICON_02 control-icon" id="turnOffDeviceBtn_air_magic" style="z-index: 2; position: relative;"></span> <input type="hidden" value="2">
+						<div id="temp-area-air-magic">
+							<div id="temp-select" class="scroll-select">
+								<table>
+									<tbody><tr>
+										<td id="wet_turn_left" class="btn-area"><span class="glyphicon ic_ICON_16 control-icon"></span></td>
+										<td class="content"><span id="wet" style="margin-right: 10px;" data-bind="text:humidity()">0</span>
+											<span id="air_magic_unit" data-bind="visible:humidity() != &#39;CO&#39;&amp;&amp; humidity() != &#39;AU&#39; ">%</span></td>
+										<td id="wet_turn_right" class="btn-area"><span class="glyphicon ic_ICON_17 control-icon"></span></td>
+									</tr>
+								</tbody></table>
+							</div>
+						</div>
+						<div id="indoorWet" style="font-size: 1.2em;">
+							室内湿度：<span></span>
+						</div>
+						<div style="text-align: center;" id="controlTips_air_magic"></div>
+						<div class="control-area" style="margin-top: 0;">
+							<div class="col-xs-2 active" id="deceleration" data-bind="css:{active:speed()&gt;1&amp;&amp;!sleep()}">
+								<span>风速</span> <span class="glyphicon ic_ICON_16 control-icon" style="font-size: 1.5em; display:block; margin:0 auto;"></span>
+							</div>
+							<div class="col-xs-4">
+								<div class="triangle_box">
+									<div class="triangle_bg"></div>
+									<div class="triangle_controle gear_3" data-bind="css:{gear_1: speed() == 1,gear_2: speed() == 2,gear_3: speed() == 3,gear_4: speed() == 4,gear_5: speed() == 5 }"></div>
+								</div>
+								<!-- <div class="progress"
+									style="margin-bottom: 12px; height: 10px; background-color: #ccc;">
+									<div class="progress-bar" role="progressbar" aria-valuenow=""
+										data-bind="css:{progress_bar_20: speed() == 1,progress_bar_40: speed() == 2,progress_bar_60: speed() == 3,progress_bar_80: speed() == 4,progress_bar_100: speed() == 5 }"
+										aria-valuemin="0" aria-valuemax="100"
+										style="background-color: #00cc00;">
+										<span class="sr-only"></span>
+									</div>
+								</div> -->
+							</div>
+							<div class="col-xs-2 active" id="acceleration" data-bind="css:{active:speed()&lt;5&amp;&amp;!sleep()}">
+								<span>风速</span> <span class="glyphicon ic_ICON_17 control-icon" style="font-size: 1.5em; display:block; margin:0 auto;"></span>
+							</div>
+						</div>
+						<div class="function-select_air_magic control-area" style="margin-top: 1em;">
+							<div class="col-xs-2 defaultColor" data-bind="css:{active:intelligence(),defaultColor:!intelligence()}">
+								<span class="glyphicon ic_ICON_26 control-icon select-icon"></span><span>智能</span>
+								<input type="hidden" value="5">
+							</div>
+							<div class="col-xs-2 defaultColor" data-bind="css:{active:humidification(),defaultColor:!humidification()}">
+								<span class="glyphicon ic_ICON_29 control-icon select-icon"></span><span>加湿</span>
+								<input type="hidden" value="6">
+							</div>
+							<div class="col-xs-2 defaultColor" data-bind="css:{active:dehumidification(),defaultColor:!dehumidification()}">
+								<span class="glyphicon ic_ICON_28 control-icon select-icon"></span><span>除湿</span>
+								<input type="hidden" value="7">
+							</div>
+							<div class="col-xs-2 defaultColor" data-bind="css:{active:purification(),defaultColor:!purification()}">
+								<span class="glyphicon ic_ICON_05 control-icon select-icon"></span><span>净化</span>
+								<input type="hidden" value="8"> <span class="glyphicon ic_ICON_27 control-icon select-icon warning_icon active" data-bind="css:{active:!purification(),defaultColor:purification()},visible:alert()" style="display: none;"></span>
+							</div>
+							<div class="col-xs-2 defaultColor" data-bind="css:{active:sleep(),defaultColor:!sleep()}">
+								<span class="glyphicon ic_ICON_01 control-icon select-icon"></span><span>睡眠</span>
+								<input type="hidden" value="9">
+							</div>
+						</div>
+					</div>
+					<div data-bind="visible:!power()||!online()" style="display: none;">
+						<img alt="" src="./index_files/ac2_03.png" style="width: 80%;" id="turnOnDeviceBtn_air_magic"> <input type="hidden" value="3">
+					</div>
+					<div class="temp-line">
+						<div class="lineTitle">
+							<div class="col-xs-4 turnLeftLine" style="text-align: right;">
+								<font style="font-size: 1em;">&lt;</font>
+							</div>
+							<div class="col-xs-4 lineTypeText" style="text-align: center;">室内湿度曲线</div>
+							<div class="col-xs-4 turnRightLine" style="text-align: left;">
+								<font style="font-size: 1em;">&gt;</font>
+							</div>
+						</div>
+						<div id="wrapper_line_air_magic">
+							<div id="scroller_line_air_magic">
+								<canvas class="canvas" id="canvas-control_air_magic" style="position: relative; left: 0; right: 0;" onclick="javascript:void(0);" width="1730" height="250">你的浏览器不支持HTML5，赶快升级一下吧！</canvas>
+							</div>
+						</div>
+					</div>
+					<div id="unbindcondition_air_magic" style="text-align: center; margin-bottom: 15px;">
+						<button type="button" class="btn btn-sm btn-danger btnSize" style="font-size: 1.1em;">
+							<span class="glyphicon glyphicon-remove"></span> 取消试用
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	/* var wetArray = ["AU","CO","40","45","50","55","60","65","70","75","80"];
+	var wetArrayFlag = null;
+	function speedControl(speed) {
+		switch(speed){
+			case 1 :
+				alert("118:221004-321005（静音）");
+				break;
+			case 2 :
+				alert("117:221004-321004（低风）");
+				break;
+			case 3 :
+				alert("116:221004-321003（中风）");
+				break;
+			case 4 :
+				alert("115:221004-321002（高风）");
+				break;
+			case 5 :
+				alert("114221004-321001（强劲）");
+				break;
+			default:
+				break;
+		}
+	}
+	function humidity(humidity){
+		switch(humidity){
+			case "AU" :
+				alert("102：自动增加湿度=221005-321000(AU)");
+				break;
+			case "CO" :
+				alert("103:221005-321001（CO）");
+				break;
+			case "40" :
+				alert("104:221005-321002（40%）");
+				break;
+			case "45" :
+				alert("105:221005-321003（45%）");
+				break;
+			case "50" :
+				alert("106:221005-321004（50%）");
+				break;
+			case "55" :
+				alert("107:221005-321005（55%）");
+				break;
+			case "60" :
+				alert("108:221005-321006（60%）");
+				break;
+			case "65" :
+				alert("119:221005-321007（65%）");
+				break;
+			case "70" :
+				alert("110:221005-321008（70%）");
+				break;
+			case "75" :
+				alert("111:221005-321009（75%）");
+				break;
+			case "80" :
+				alert("112:221005-32100a(80%)");
+				break;
+			default:
+				break;
+		}
+	}
+	$(document).ready(function() {
+		$("#acceleration").click(function() {
+			var speed = viewModel.airMagicStatus.speed();
+			if (speed < 5 && !viewModel.airMagicStatus.sleep()) {
+				speed++;
+				viewModel.airMagicStatus.speed(speed);
+				speedControl(speed);
+			}
+		});
+		$("#deceleration").click(function() {
+			var speed = viewModel.airMagicStatus.speed();
+			if (speed > 1 && !viewModel.airMagicStatus.sleep()) {
+				speed--;
+				viewModel.airMagicStatus.speed(speed);
+				speedControl(speed);
+			}
+		});
+		$("#wet_turn_left").click(function(e) {
+			if(wetArrayFlag == null){
+				wetArrayFlag = 0;
+			}else{
+				wetArrayFlag --;
+				if(wetArrayFlag < 0){
+					wetArrayFlag = wetArray.length - 1;
+				}
+			}
+			viewModel.airMagicStatus.humidity(wetArray[wetArrayFlag]);
+			humidity(wetArray[wetArrayFlag]);
+		});
+		$("#wet_turn_right").click(function(e) {
+			if(wetArrayFlag == null){
+				wetArrayFlag = 0;
+			}else{
+				wetArrayFlag ++;
+				if(wetArrayFlag > wetArray.length - 1){
+					wetArrayFlag = 0;
+				}
+			}
+			viewModel.airMagicStatus.humidity(wetArray[wetArrayFlag]);
+			humidity(wetArray[wetArrayFlag]);
+		});
+		$("#turnOffDeviceBtn_air_magic").click(function(e) {
+			viewModel.airMagicStatus.power(false);
+			alert("101关机=221002-NULL");
+		});
+		$("#turnOnDeviceBtn_air_magic").click(function(e) {
+			viewModel.airMagicStatus.power(true);
+			alert("100开机=221001-221001");
+		});
+		$(".function-select_air_magic>div").each(function(index) {
+			$(this).click(function(e) {
+				var $this = $(this);
+				var flag = $this.find("input").val();
+				switch (flag) {
+				case "5":
+					if (viewModel.airMagicStatus.intelligence()) {
+						viewModel.airMagicStatus.intelligence(false);
+						alert("130：送风=221003-321006");
+					} else {
+						viewModel.airMagicStatus.intelligence(true);
+						viewModel.airMagicStatus.purification(false);
+						viewModel.airMagicStatus.humidification(false);
+						viewModel.airMagicStatus.dehumidification(false);
+						alert("124:智能=221003-321000");
+					}
+					break;
+				case "6":
+					if (viewModel.airMagicStatus.humidification()) {
+						viewModel.airMagicStatus.humidification(false);
+						if(viewModel.airMagicStatus.purification()){
+							alert("125：净化=221003-321001");
+						}else{
+							alert("130：送风=221003-321006");
+						}
+					} else {
+						viewModel.airMagicStatus.humidification(true);
+						viewModel.airMagicStatus.dehumidification(false);
+						viewModel.airMagicStatus.intelligence(false);
+						if(viewModel.airMagicStatus.purification()){
+							alert("127：净化加湿=221003-321003");
+						}else{
+							alert("126：加湿=221003-321002");
+						}
+					}
+					break;
+				case "7":
+					if (viewModel.airMagicStatus.dehumidification()) {
+						viewModel.airMagicStatus.dehumidification(false);
+						if(viewModel.airMagicStatus.purification()){
+							alert("125：净化=221003-321001");
+						}else{
+							alert("130：送风=221003-321006");
+						}
+					} else {
+						viewModel.airMagicStatus.dehumidification(true);
+						viewModel.airMagicStatus.humidification(false);
+						viewModel.airMagicStatus.intelligence(false);
+						if(viewModel.airMagicStatus.purification()){
+							alert("129：净化除湿=221003-321005");
+						}else{
+							alert("128:除湿=221003-321004");
+						}
+					}
+					break;
+				case "8":
+					if (viewModel.airMagicStatus.purification()) {
+						viewModel.airMagicStatus.purification(false);
+						if(viewModel.airMagicStatus.humidification()){
+							alert("126：加湿=221003-321002");
+						}else{
+							if(viewModel.airMagicStatus.dehumidification()){
+								alert("128:除湿=221003-321004");
+							}else{
+								alert("130：送风=221003-321006");
+							}
+						}
+					} else {
+						viewModel.airMagicStatus.purification(true);
+						viewModel.airMagicStatus.intelligence(false);
+						if(viewModel.airMagicStatus.humidification()){
+							alert("127：净化加湿=221003-321003");
+						}else{
+							if(viewModel.airMagicStatus.dehumidification()){
+								alert("129：净化除湿=221003-321005");
+							}else{
+								alert("125：净化=221003-321001");
+							}
+						}
+					}
+					break;
+				case "9":
+					if (viewModel.airMagicStatus.sleep()) {
+						viewModel.airMagicStatus.sleep(false);
+						alert("121:睡眠关闭=221008-321000");
+					} else {
+						viewModel.airMagicStatus.sleep(true);
+						viewModel.airMagicStatus.speed(1);
+						alert("122:睡眠开启=221008-321001");
+					}
+					break;
+				default:
+					break;
+				}
+			});
+		});
+	}); */
+</script>
+
+	<!-- 净化器控制页面 -->
+	
+
+<div class="modal fade" id="purifier_control" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header" data-dismiss="modal" onclick="closeDevice();">
+				<img class="glyphicon close-modal" alt="close" src="./index_files/whiteDel.png" data-dismiss="modal">
+				<h5 class="modal-title">海尔净化器</h5>
+			</div>
+			<div class="modal-body" style="padding: 20px 0; color: #02ccff; background-color: rgb(240, 240, 240); height: 90%; overflow-y: auto;">
+				<div class="controlpanel00cc00">
+					<div data-bind="visible:power()&amp;&amp;online()">
+						<span class="glyphicon ic_ICON_02 control-icon" id="turnOffDeviceBtn_purifier" style="z-index: 2; position: relative;"></span> <input type="hidden" value="2">
+						<div>
+							<div id="temp-select" class="scroll-select">
+								<table>
+									<tbody><tr>
+										<td id="purifier_turn_left" class="btn-area"><span class="glyphicon ic_ICON_19 control-icon"></span></td>
+										<td class="content"><span id="pm25_purifier" style="margin-right: 10px;" data-bind="text:pm25()">98</span><span id="voc_purifier" style="margin-right: 10px; display:none;" data-bind="text:voc()">58</span> <span id="purifier_unit">μg/m³</span>
+										</td><td id="purifier_turn_right" class="btn-area"><span class="glyphicon ic_ICON_04 control-icon"></span></td>
+									</tr>
+								</tbody></table>
+							</div>
+						</div>
+						<div style="font-size: 1.2em;" id="pm25_voc_purifier">室内PM2.5</div>
+						<div style="text-align: center;" id="controlTips_purifier"></div>
+						<div class="control-area" style="margin-top: 0;">
+							<div class="col-xs-2" id="deceleration_purifier" data-bind="css:{active:speed() &gt; 1 &amp;&amp; pattern() == &#39;手动&#39;}">
+								<span>风速</span> <span class="glyphicon ic_ICON_16 control-icon" style="font-size: 1.5em; display: block; margin: 0 auto;"></span>
+							</div>
+							<div class="col-xs-4">
+								<div class="triangle_box">
+									<div class="triangle_bg"></div>
+									<div class="triangle_controle gear_3" data-bind="css:{gear_1: speed() == 1,gear_2: speed() == 2,gear_3: speed() == 3,gear_4: speed() == 4,gear_5: speed() == 5 }"></div>
+								</div>
+							</div>
+							<div class="col-xs-2" id="acceleration_purifier" data-bind="css:{active:speed() &lt; 5 &amp;&amp; pattern() == &#39;手动&#39;}">
+								<span>风速</span> <span class="glyphicon ic_ICON_17 control-icon" style="font-size: 1.5em; display: block; margin: 0 auto;"></span>
+							</div>
+						</div>
+						<div class="function-select_purifier control-area" style="margin-top: 1em;">
+							<div class="col-xs-2 active" data-bind="css:{active:pattern() == &#39;自动&#39;,defaultColor:pattern() != &#39;自动&#39;}">
+								<span class="glyphicon ic_ICON_18 control-icon select-icon"></span><span>自动</span>
+								<input type="hidden" value="1">
+							</div>
+							<div class="col-xs-2 defaultColor" data-bind="css:{active:pattern() == &#39;净烟&#39;,defaultColor:pattern() != &#39;净烟&#39;}">
+								<span class="glyphicon ic_ICON_31 control-icon select-icon"></span><span>净烟</span>
+								<input type="hidden" value="2">
+							</div>
+							<div class="col-xs-2 active" data-bind="css:{active:healthy(),defaultColor:!healthy()}">
+								<span class="glyphicon ic_ICON_05 control-icon select-icon"></span><span>健康</span>
+								<input type="hidden" value="3">
+							</div>
+							<div class="col-xs-2 active" data-bind="css:{active:lockable(),defaultColor:!lockable()}">
+								<span class="glyphicon ic_ICON_30 control-icon select-icon"></span><span>童锁</span>
+								<input type="hidden" value="4">
+							</div>
+							<div class="col-xs-2 defaultColor" data-bind="css:{active:pattern() == &#39;睡眠&#39;,defaultColor:pattern() != &#39;睡眠&#39;}">
+								<span class="glyphicon ic_ICON_01 control-icon select-icon"></span><span>睡眠</span>
+								<input type="hidden" value="5">
+							</div>
+						</div>
+					</div>
+					<div data-bind="visible:!power()||!online()" style="display: none;">
+						<img alt="" src="./index_files/ac2_03.png" style="width: 80%;" id="turnOnDeviceBtn_purifier">
+					</div>
+					<div class="temp-line">
+						<div class="lineTitle">
+							<div class="col-xs-4 turnLeftLine" style="text-align: right;">
+								<font style="font-size: 1em;">&lt;</font>
+							</div>
+							<div class="col-xs-4 lineTypeText" style="text-align: center;">室内湿度曲线</div>
+							<div class="col-xs-4 turnRightLine" style="text-align: left;">
+								<font style="font-size: 1em;">&gt;</font>
+							</div>
+						</div>
+						<div id="wrapper_line_air_magic">
+							<div id="scroller_line_air_magic">
+								<canvas class="canvas" id="canvas-control_air_magic" style="position: relative; left: 0; right: 0;" onclick="javascript:void(0);" width="1730" height="250">你的浏览器不支持HTML5，赶快升级一下吧！</canvas>
+							</div>
+						</div>
+					</div>
+					<div id="unbindcondition_purifier" style="text-align: center; margin-bottom: 15px;">
+						<button type="button" class="btn btn-sm btn-danger btnSize" style="font-size: 1.1em;" onclick="$(&#39;#purifier_control&#39;).modal(&#39;hide&#39;);cancel_tryout_air_condition(4);">
+							<span class="glyphicon glyphicon-remove"></span> 取消试用
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<!-- 绑定设备用户列表 -->
+	
+<!-- 首页  -->
+
+<script type="text/javascript">
+	var myScroll, pullUpEl, pullUpOffset, generatedCount = 0;
+	setTime = null;
+	function pullUpAction() {
+		clearTimeout(setTime);
+		setTime = setTimeout(function() { // <-- Simulate network congestion, remove setTimeout from production!
+			$("#moreUser").click();
+			myScroll.refresh(); // Remember to refresh when contents are loaded (ie: on ajax completion)
+		}, 2000); // <-- Simulate network congestion, remove setTimeout from production!
+	}
+
+	function loaded() {
+		pullUpEl = document.getElementById('moreUser');
+		pullUpOffset = pullUpEl.offsetHeight;
+		myScroll = new iScroll('wrapper', {
+			useTransition : true,
+			onRefresh : function() {
+				if (pullUpEl.className.match('loading')) {
+					pullUpEl.className = '';
+					if($("#moreUser>span").html()!="已无绑定用户"){
+						pullUpEl.innerHTML = '上拉加载更多...';
+					}
+					
+				}
+			},
+			onScrollMove : function() {
+				if (this.y < (this.maxScrollY - 5) && !pullUpEl.className.match('flip')) {
+					pullUpEl.className = 'flip';
+					if($("#moreUser>span").html()!="已无绑定用户"){
+						pullUpEl.innerHTML = '释放后加载...';
+					}
+					this.maxScrollY = this.maxScrollY;
+				} else if (this.y > (this.maxScrollY + 5) && pullUpEl.className.match('flip')) {
+					pullUpEl.className = '';
+					if($("#moreUser>span").html()!="已无绑定用户"){
+						pullUpEl.innerHTML = '上拉加载更多...';
+					}
+					this.maxScrollY = pullUpOffset;
+				}
+			},
+			onScrollEnd : function() {
+				/* pullUpAction(); */
+				if (pullUpEl.className.match('flip')) {
+					pullUpEl.className = 'loading';
+					if($("#moreUser>span").html()!="已无绑定用户"){
+						pullUpEl.innerHTML = '上拉加载更多...';
+					}				
+					pullUpAction();	// Execute custom function (ajax call?)
+				}
+			}
+		});
+
+		setTimeout(function() {
+			document.getElementById('wrapper').style.left = '0';
+		}, 800);
+	}
+
+	document.addEventListener('DOMContentLoaded', function() {
+		setTimeout(loaded, 200);
+	}, false);
+</script>
+
+<style type="text/css" media="all">
+#wrapper {
+	position: absolute;
+	top: 70px;
+	bottom: 48px;
+	left: -9999px;
+	width: 100%;
+	overflow: hidden;
+	z-index:99;
+}
+
+#scroller {
+	position: absolute;
+	/*	-webkit-touch-callout:none;*/
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	width: 100%;
+	padding: 0;
+	z-index:99;
+}
+</style>
+<div id="userlist" style="display: none; overflow-x: hidden; z-index:99;">
+	<div style="float:right;" onclick="navigateToPage(prePage);">
+		<img style="width: 40px; height: 40px;" src="./index_files/del.png" alt="关闭对话框">
+	</div>
+	<p style="clear:both; padding:10px; text-align:center;">共有<span id="numOfUsers"></span>位用户绑定了该设备</p>
+	<div id="wrapper" style="overflow: hidden; left: 0px;">
+		<div id="scroller" style="transition-property: transform; transform-origin: 0px 0px 0px; transition-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1); transform: translate(0px, 0px) translateZ(0px); background-color: rgb(239, 239, 239);">
+			<div id="user-binding">
+				<div id="wechat-user-lst" class="userinfo">
+					<div class="row" style="margin: 15px;" data-bind="foreach: users"></div>
+				</div>
+			</div>
+			<div id="moreUser" class="center" style="-webkit-transform: rotate(0deg) !important; text-align:center !important; ">加载更多用户</div>
+		</div>
+	</div>
+	
+	<div id="otherBindingList" style="display: none; overflow-x: hidden;">
+		<div class="container round" style="position: fixed; left: 22%; top: 40%; width: 56%; z-index: 1051; background-color: gray;">
+			<img id="otherBindingListloading" src="./index_files/loading.png" style="width: 38px; display: inline;" alt="" class="img-rounded img-responsive"><span>正在加载设备列表…</span>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="confirmOther" data-backdrop="static" style="position: fixed;">
+		<div class="modal-dialog" style="margin-top: 150px;">
+			<div class="modal-content" style="height: auto;">
+				<div class="modal-body">
+					<p style="text-align: center; margin-bottom: 10px; font-size: 15px;">解绑后，该帐号将无法操控设备，是否确定？</p>
+					<p style="text-align: center;">
+						<button type="button" style="padding: 5px 20px;" class="btn btn-default" data-dismiss="modal" id="confirmunbindingOther">是</button>
+						<button type="button" style="padding: 5px 20px;" class="btn btn-default" data-dismiss="modal" id="cancleunbindingOther">否</button>
+					</p>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+	<!-- 输入海尔账号页面 -->
+	
+
+<div id="binding-page" style="display: none; overflow-x: hidden;">
+	<div id="binding-close" style="position: absolute; margin-left: 88%; width: 40px; height: 40px;">
+		<img src="./index_files/del.png" style="display: inline; max-width: 40px;" alt="" class="img-responsive">
+	</div>
+	<div style="text-align: center; padding-top: 35px;">
+		<img src="./index_files/haw_78.png" style="display: inline; max-width: 75px; margin-top: -20px;" alt="" class="img-responsive">
+		<div style="font-size: x-large; color: #0099cc; display: inline; margin-left: -4%;">绑定海尔账号</div>
+	</div>
+	<br>
+	<div style="text-align: center;">
+		<input id="username" type="text" placeholder="输入绑定海尔账号" class="form-control" style="width: 80%; min-height: 40px; padding-left: 15px; font-size: large; border-radius: 0px; -moz-border-radius: 0px; -webkit-border-radius: 0px; display: table; margin-left: auto; margin-right: auto;"><br>
+		<input id="password" type="password" placeholder="输入海尔账号密码" class="form-control" style="width: 80%; min-height: 40px; padding-left: 15px; font-size: large; border-radius: 0px; -moz-border-radius: 0px; -webkit-border-radius: 0px; display: table; margin-left: auto; margin-right: auto;">
+	</div>
+	<br>
+	<div style="text-align: center; width: 50%; margin: auto;">
+		<button id="binding" type="button" class="btn btn-primary btn-lg btn-block" style="background-color: #0099cc; border-style: solid; cursor: pointer; text-align: center; display: inline-block; -moz-display: inline-block; padding: 0 10px 1px; *padding: 3px 3px 1px; _padding: 0 4px 1px; line-height: 28px; *line-height: 24px; _line-height: 26px; height: 40px; font-size: 24px; border-radius: 6px; -moz-border-radius: 6px; -webkit-border-radius: 6px;">确定</button>
+		<!-- 		<button id="binding" type="button"
+			class="btn btn-primary btn-lg btn-block"
+			style="background-color: #0099cc;border-radius:6px;-moz-border-radius:6px;-webkit-border-radius:6px;
+			font-size:24px;text-align:center;;padding:0px;margin:0px;vertical-align:middle;line-height:40px;height: 40px;">确定</button> -->
+	</div>
+	<br>
+	<div style="text-align: center; color: red;">
+		<a id="download" href="http://uhome.haier.net/download/airkit/index.html" target="_blank">点击下载好空气app注册海尔账号</a>
+	</div>
+	<br>
+	<div id="bindingResult" class="container" style="display: none;">
+		<span id="error" style="color: red;"></span> <span id="msg" style="color: green;"></span>
+	</div>
+	<hr style="margin-bottom: 0;">
+	<!-- 
+	<div style="background-color: #0099cc; width: 20%; text-align: center; color: white;">我的家电
+	</div>
+	<div class="container">
+		<br>
+		<div id="userbinding" data-bind="foreach: devices">
+			<div class="row" style="font-size: large; padding: 10px 0;">
+				<div class="col-xs-8" style="padding-right: 0;">
+					&nbsp; <img
+						data-bind="attr:{src:icon},
+							click:function(){
+								if(isVirtual=='false')
+								{
+									air_condition_point(mac,familyId,deviceType);
+								}
+								else
+								{
+									if(status != 'STATUS_OTHER')
+									{
+									navigateToPage($('#condition_Modal')); 
+									load_data_with_device_type(deviceType);
+									}
+								}
+							}"
+						style="width: 28px; display: inline;" alt=""
+						class="img-responsive" /> <span
+						data-bind="text:name,click:function(){
+								if(isVirtual=='false')
+								{
+									air_condition_point(mac,familyId,deviceType);
+								}
+								else
+								{
+									if(status != 'STATUS_OTHER')
+									{
+									navigateToPage($('#condition_Modal')); 
+									load_data_with_device_type(deviceType);
+									}
+								}
+							}"></span>
+				</div>
+				<div class="col-xs-4" style="padding: 0">
+					<button
+						data-bind="visible: isVirtual=='false'&&status=='STATUS_ONLINE',click:function(){
+							controlDevice(this);
+							},attr:{mac: mac}"
+						type="button" class="btn btn-xs trueon">√已启用</button>
+					<button
+						data-bind="visible: isVirtual=='false'&&status=='STATUS_OFFLINE',click:function(){
+					      	controlDevice(this);
+							},attr:{mac: mac}"
+						type="button" class="btn btn-xs trueoff">未启用</button>
+					<button
+						data-bind="visible: isVirtual=='true'&&status=='STATUS_ONLINE',click:function(){
+							navigateToPage($('#condition_Modal')); 
+									load_data_with_device_type(deviceType);
+							}"
+						type="button" class="btn btn-xs opacity trueoff">虚拟试用</button>
+					<button
+						data-bind="visible: isVirtual=='true'&&status=='STATUS_OFFLINE',click:function(){
+							navigateToPage($('#condition_Modal')); 
+									load_data_with_device_type(deviceType);
+							}"
+						type="button" class="btn btn-xs opacity trueoff">未试用</button>
+					<button
+						data-bind="visible: isVirtual=='true'&&status=='STATUS_OTHER'"
+						type="button" class="btn btn-xs opacity trueoff">请期待</button>
+				</div>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+	<!-- 我的家电列表 -->
+	
+
+
+<div class="modal fade" id="binding-ListPage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+	<div class="modal-dialog">
+		<div class="modal-content" style="height: auto;">
+			<div class="modal-header" id="bindingList-close" data-dismiss="modal">
+				<img class="glyphicon close-modal" alt="close" src="./index_files/whiteDel.png" data-dismiss="modal">
+				<h5 class="modal-title">设备管理</h5>
+			</div>
+			<div class="modal-body" style="max-height: 380px; padding: 0; overflow-y: auto;">
+				<div id="list-group">
+					<div class="row" style="padding: 15px;">
+						<div class="col-xs-6" style="text-align: center;">
+							<img data-bind="attr:{src:headImg}" style="width: 45px;">
+						</div>
+						<div class="col-xs-6" style="text-align: center;">
+							<span data-bind="text:nickName" style="display: inline-block; max-width: 38%; vertical-align: middle; word-break: break-all;"></span>
+						</div>
+					</div>
+					<ul data-bind="foreach: device"></ul>
+				</div>
+
+
+
+				<!-- 				</ul> -->
+				<div id="accout-tips" style="color: #ff0000; text-align: center; display: none;">您还没有绑定任何设备！</div>
+				<div id="deviceList" style="display: none; overflow-x: hidden;">
+					<div class="container round" style="position: fixed; left: 22%; top: 40%; width: 56%; z-index: 1051; background-color: gray;">
+						<img id="deviceListloading" src="./index_files/loading.png" style="width: 38px; display: inline;" alt="" class="img-rounded img-responsive"><span>正在加载设备列表…</span>
+					</div>
+				</div>
+				<div class="text-center" style="padding: 15px;">
+					<button type="button" onclick="getPrize(lookInDoor,&#39;lookInDoor&#39;)" class="btn btn-primary" id="goto-indoor" style="width: 46%; margin-left: 10px; font-size: 1em; background: #009ACB;">
+						<img src="./index_files/haw_33.png" style="width: 20px;">查看我的室内
+					</button>
+					<!-- <button type="button" class="btn btn-primary scan"
+						onclick="getPrize(lookInDoor,'lookIndoor')" id="goto-indoor"
+						style="width: 46%; margin-left: 10px; font-size: 1em; background: #009ACB;">
+						<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+						查看室内
+					</button> -->
+					<button type="button" class="btn btn-primary scan" style="width: 46%; margin-left: 10px; font-size: 1em; background: #009ACB;">
+						<span class="glyphicon glyphicon-qrcode" aria-hidden="true"></span>
+						添加设备
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade bs-example-modal-sm" id="confirm">
+	<div class="modal-dialog" style="margin: 150px auto; width: 82%;">
+		<div class="modal-content" style="padding: 5px; height: auto;">
+			<div class="modal-body">
+				<p style="text-align: center; margin-bottom: 10px; font-size: 15px;">解绑后，该帐号下的设备将无法操控，是否确定？</p>
+				<p style="text-align: center;">
+					<button type="button" style="padding: 5px 20px;" class="btn btn-default" data-dismiss="modal" id="confirmunbinding">是</button>
+					<button type="button" style="padding: 5px 20px;" class="btn btn-default" data-dismiss="modal" id="cancleunbinding">否</button>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+	<!-- 绑定帐户 -->
+	
+
+	<div class="modal fade" id="binding-AccoutPage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header" data-dismiss="modal">
+						<img class="glyphicon close-modal" alt="close" src="./index_files/whiteDel.png" data-dismiss="modal">
+						<h5 class="modal-title">绑定</h5>
+				</div>
+				<div class="modal-body" style="height: 90%;overflow-y:auto;">
+					
+	
+<div style="text-align: center; padding-top: 10px;">
+	<img src="./index_files/haw_78.png" style="display: inline; max-width: 75px; margin-top: -20px;" alt="" class="img-responsive">
+	<div style="font-size: x-large; color: #FF3399; display: inline; margin-left: -4%;">绑定海尔账号</div>
+</div>
+<br>
+<div style="text-align: center;">
+	<input class="username" type="text" placeholder="输入绑定账号" style="width: 80%; min-height: 40px; padding-left: 15px; font-size: small; border-radius: 0px; -moz-border-radius: 0px; -webkit-border-radius: 0px; display: table; margin-left: auto; margin-right: auto; border: solid 1px #FF3399;"><br>
+	<input class="password" type="password" placeholder="输入账号密码" style="width: 80%; min-height: 40px; padding-left: 15px; font-size: small; border-radius: 0px; -moz-border-radius: 0px; -webkit-border-radius: 0px; display: table; margin-left: auto; margin-right: auto; border: solid 1px #FF3399;">
+</div>
+<div style="text-align: center; width: 50%; margin: auto;">
+	<button class="bind" type="button" style="background-color: #FF3399; color: #FFFFFF; border-style: solid; border: 0; cursor: pointer; text-align: center; display: inline-block; -moz-display: inline-block; padding: 0 50px 1px; *padding: 3px 3px 1px; _padding: 0 4px 1px; line-height: 28px; *line-height: 24px; _line-height: 26px; height: 40px; font-size: 18px; border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px; margin-top: 30px;">确定</button>
+</div>
+<br>
+<div style="text-align: center; color: red;">注意：绑定前请确保已通过app注册！</div>
+<br>
+<a class="download" target="_blank" href="http://uhome.haier.net/download/airkit/index.html" data-dismiss="modal">我要下载</a>
+<!-- <div>
+	<p style="font-weight:900">微信扫一扫，扫描设备二维码，完成设备绑定<p>
+</div> -->
+<br>
+<!-- <div class="bindingResult" class="container" style="display: none;">
+	<span class="error" style="color: red;"></span> <span class="msg"
+		style="color: green;"></span>
+</div> -->
+<!-- <a href="javascript:void(0)" class="btn btn-default btn-block scan" style="background-color:#FF3399; width:70%; display:inline-block;margin-bottom:12px; padding-left:10px;padding-right:10px;padding-bottom:5px;padding-top:5px;color:white;" >添加设备</a> -->
+<br>
+<div class="bangding_tips">
+		<p>绑定设备后可以进行如下操作：</p>
+		<ul>
+			<li><span class="glyphicon glyphicon-ok"></span><label>配置家电上网</label></li>
+			<li><span class="glyphicon glyphicon-ok"></span><label>微信语音/会话/操作远程控制家电</label></li>
+			<li><span class="glyphicon glyphicon-ok"></span><label>家电设备告警接收</label></li>
+			<li><span class="glyphicon glyphicon-ok"></span><label>查看室内空气指数</label></li>
+			<li><span class="glyphicon glyphicon-ok"></span><label>智能优化室内空气质量</label></li>
+			<li><span class="glyphicon glyphicon-ok"></span><label>与朋友PK家庭空气质量</label></li>
+		</ul>
+		<p>无设备绑定暂时可进行以下体验：</p>
+		<ul>
+			<li><span class="glyphicon glyphicon-ok"></span><label>查看室外空气质量</label></li>
+			<li><span class="glyphicon glyphicon-ok"></span><label>虚拟体验设备控制</label></li>
+			<li><span class="glyphicon glyphicon-ok"></span><label>商城购物</label></li>
+			<li><span class="glyphicon glyphicon-ok"></span><label>社区交流</label></li>
+		</ul>
+		<!-- <p>绑定帐号后暂时仍无法执行以下操作：</p>
+		<ul>
+			<li><span class="glyphicon glyphicon-remove"></span><label>使用微信绑定空调等家电设备</label></li>
+			<li><span class="glyphicon glyphicon-remove"></span><label>配置家电设备连接WIFI</label></li>
+		</ul> -->
+		<div class="click_more"><a href="http://pay.haierubic.com/haier/Public/haier.php/chat/bbs/detailannouncement?id=298&amp;type=6">点击此处</a><label>，了解更多。</label></div>
+		
+	</div>
+<script>
+wx.config({
+	beta : true, // 开启内测接口调用，注入wx.invoke方法
+	debug : false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+	appId : 'wxe44cfca97e5cf05a', // 公众号的唯一标识
+	timestamp : '1476956281', // 生成签名的时间戳
+	nonceStr : 'jqsojnol6s', // 生成签名的随机串
+	signature : '1fd9d4452a414309e16c9066bcdd9052f07918f0',// 签名，见附录1
+	jsApiList : ['scanQRCode']
+// 需要使用的jsapi列表，所有jsapi列表见附录2
+});
+wx.ready(function() {
+		$(".scan").unbind().bind("click",function(){
+			wx.scanQRCode({
+			    needResult: 0, // 默认为0，扫描结果由微信处理，1则直接返回扫描结果，
+			    scanType: ["qrCode","barCode"], // 可以指定扫二维码还是一维码，默认二者都有
+			    success: function (res) {
+				    var result = res.resultStr; // 当needResult 为 1 时，扫码返回的结果
+				}
+			});
+		});	
+});
+
+wx.error(function(res) {
+	alert(res.errMsg);
+});
+</script>
+<!-- <div id="binload" style="display: none; overflow-x: hidden;">
+	<div class="container round"
+		style="position: fixed; left: 22%; top: 40%; width: 56%; z-index: 1051; background-color: gray;">
+		<img id="binpreloading" src="images/loading.png"
+			style="width: 38px; display: inline;" alt=""
+			class="img-rounded img-responsive" /><span>正在绑定...</span>
+	</div>
+</div> -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--空气盒子曲线-->
+	
+
+
+<div class="modal fade" id="airbox" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header" id="box-close" data-dismiss="modal">
+				<img class="glyphicon close-modal" alt="close" src="./index_files/whiteDel.png" data-dismiss="modal">
+				<h5 class="modal-title">空气盒子</h5>
+			</div>
+
+			<div class="modal-body" style="padding: 0; height:90%;overflow-y:auto;">
+				<div class="line-main" style="height:231px;">
+					<div class="btn-group" style="display: none;">
+						<button type="button" class="btn btn-default active" id="weekBtn-voc-pm">周</button>
+						<button type="button" class="btn btn-default" id="monthBtn-voc-pm">月</button>
+					</div>
+					<div class="cutline">
+						<p>
+							<img src="./index_files/redPoint.png">温度:<span class="airBoxTemp">25</span>℃
+						</p>
+						<p>
+							<img src="./index_files/redPoint.png">湿度:<span class="airBoxWet">60</span>%
+						</p>
+					</div>
+					<div class="cutline" style="margin-top: -10px;">
+						<p style="color: #660000;">
+							<img src="./index_files/redCut.png">VOC:<span class="airBoxVOC">134</span>
+						</p>
+						<p style="color: #666">
+							<img src="./index_files/grayCut.png">PM2.5:<span class="airBoxPM25">34</span>
+						</p>
+					</div>
+					<!-- <div class="cutline">
+					<div class="col-xs-4 "><img src="images/redCut.png" style="width:2.5em;" />VOC:<span>134</span></div>
+					<div class="col-xs-4 "><img src="images/grayCut.png" style="width:2.5em;" />PM2.5:<span>34</span></div>
+					<div class="col-xs-4 ">温度:<span>25</span></div>
+					<div class="col-xs-4 ">湿度:<span>60</span></div>
+					</div> -->
+					<div id="wrapper_airLine" style="bottom:-23px; margin-top:-23px;">
+			<div id="scroller_airLine">
+						<canvas class="canvas" id="canvas-voc-pm" style="position:relative; left:0; right:0;" onclick="javascript:void(0);" width="1730" height="250">你的浏览器不支持HTML5，赶快升级一下吧！</canvas>
+						<span class="icon-left" id="icon-left-voc-pm" style="display: none;">＜</span> <span class="icon-right" id="icon-right-voc-pm" style="display: none;">＞</span>
+					</div>
+					</div>
+				</div>
+				<h5 style="text-align: left; padding-left: 15px; color: #666; font-weight: bold; margin-top: 33px;">为您推荐:</h5>
+				<ul class="list-group" style="min-height: 30%;">
+					<li class="list-group-item" style="overflow: hidden; border: none;"><img class="pull-left" style="width: 45px; margin-top: 5px;" src="./index_files/haw_13.png">
+						<div class="pull-left" style="display: inline-block; max-width: 42%; text-align: left; margin-left: 10px; word-break: break-all;">
+							<span style="display: inline-block; margin-top: 6px; font-weight: bolder;">海尔空调</span>
+							<p>马上自造新鲜好空气！</p>
+						</div>
+
+						<button class="btn btn-sm pull-right" style="background-color: #fb0c87; margin-top: 10px; font-size: 1.1em; color: #fff; width: 35%;" type="button" onclick="javascript:window.location.href=&#39;http://haierwx.haier.net/wxAircontrol/product?deviceType=1&#39;">
+							<img style="width: 20px; height: 20px; margin-right: 5px;" src="./index_files/haw_81.png" alt="">立即购买
+						</button></li>
+					<li class="list-group-item" style="overflow: hidden; border: none;"><img class="pull-left" style="width: 45px; margin-top: 5px;" src="./index_files/haw_35.png">
+						<div class="pull-left" style="display: inline-block; max-width: 42%; text-align: left; margin-left: 10px; word-break: break-all;">
+							<span style="display: inline-block; margin-top: 6px; font-weight: bolder;">空气盒子</span>
+							<p>我家空气污染了吗？</p>
+						</div>
+
+						<button class="btn btn-sm pull-right" style="background-color: #fb0c87; margin-top: 10px; font-size: 1.1em; color: #fff; width: 35%;" type="button" onclick="javascript:window.location.href=&#39;http://haierwx.haier.net/wxAircontrol/product?deviceType=2&#39;">
+							<img style="width: 20px; height: 20px; margin-right: 5px;" src="./index_files/haw_81.png" alt="">立即购买
+						</button></li>
+				</ul>
+				<hr>
+				<div id="unbindbox" style="text-align: center; margin-bottom: 15px;">
+					<button type="button" class="btn btn-sm btn-danger btnSize" style="font-size: 1.1em;" onclick="$(&#39;#airbox&#39;).modal(&#39;hide&#39;);cancel_tryout_air_condition(2)">
+						<span class="glyphicon glyphicon-remove"></span> 取消试用
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	<!--醛知道曲线-->
+	
+
+<div class="modal fade" id="allknow" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header" id="kown-close" data-dismiss="modal">
+				<img class="glyphicon close-modal" alt="close" src="./index_files/whiteDel.png" data-dismiss="modal">
+				<h5 class="modal-title">醛知道</h5>
+			</div>
+			<div class="modal-body" style="padding: 0;overflow-y:auto;height:90%;">
+				<div class="line-main" style="height:209px;">
+					<div class="btn-group" style="display: none;">
+						<button type="button" class="btn btn-default active" id="weekBtn-aldehyde">周</button>
+						<button type="button" class="btn btn-default" id="monthBtn-aldehyde">月</button>
+					</div>
+					<!-- <table class="cutline">
+						<tr>
+							<td class="td-1"><img src="images/grayCut.png" /></td>
+							<td class="td-2" style="color: #666;">室内甲醛</td>
+							<td class="td-3"><hr /></td>
+						</tr>
+					</table> -->
+					<div class="cutline">
+						<p style="color: #666;">
+							<img src="./index_files/grayCut.png">室内甲醛
+						</p>
+					</div>
+					<div id="wrapper_allLine" style="bottom:-23px; margin-top:-23px;">
+			<div id="scroller_allLine">
+						<canvas class="canvas" id="canvas-aldehyde" style="position:relative; left:0; right:0;" onclick="javascript:void(0);" width="1730" height="250">你的浏览器不支持HTML5，赶快升级一下吧！</canvas>
+						<span class="icon-left" id="icon-left-aldehyde" style="display:none;">＜</span> <span class="icon-right" id="icon-right-aldehyde" style="display:none;">＞</span>
+					</div>
+					</div>
+				</div>
+				<h5 style="text-align: left; padding-left: 15px; color: #666; font-weight: bold; margin-top: 33px;">为您推荐:</h5>
+				<ul class="list-group" style="min-height: 30%;">
+					<li class="list-group-item" style="overflow: hidden; border: none;"><img class="pull-left" style="width: 45px; margin-top: 5px;" src="./index_files/haw_13.png">
+						<div class="pull-left" style="display: inline-block; max-width: 42%; text-align: left; margin-left: 10px; word-break: break-all;">
+							<span style="display: inline-block; margin-top: 6px; font-weight: bolder;">醛知道</span>
+							<p>装修、家具让你生活在危险边缘！</p>
+						</div>
+
+						<button class="btn btn-sm pull-right" style="background-color: #fb0c87; margin-top: 10px; font-size: 1.1em; color: #fff; width: 35%;" type="button" onclick="javascript:window.location.href=&#39;http://haierwx.haier.net/wxAircontrol/product?deviceType=3&#39;">
+							<img style="width: 20px; height: 20px; margin-right: 5px;" src="./index_files/haw_81.png" alt="">立即购买
+						</button></li>
+					<li class="list-group-item" style="overflow: hidden; border: none;"><img class="pull-left" style="width: 45px; margin-top: 5px;" src="./index_files/haw_35.png">
+						<div class="pull-left" style="display: inline-block; max-width: 42%; text-align: left; margin-left: 10px; word-break: break-all;">
+							<span style="display: inline-block; margin-top: 6px; font-weight: bolder;">净化器</span>
+							<p>PM2.5、PM10、VOC、API统统搞定！</p>
+						</div>
+
+						<button class="btn btn-sm pull-right" style="background-color: #fb0c87; margin-top: 10px; font-size: 1.1em; color: #fff; width: 35%;" type="button" onclick="javascript:window.location.href=&#39;http://haierwx.haier.net/wxAircontrol/product?deviceType=5&#39;">
+							<img style="width: 20px; height: 20px; margin-right: 5px;" src="./index_files/haw_81.png" alt="">立即购买
+						</button></li>
+				</ul>
+				<hr>
+				<div id="unbindknow" style="text-align: center; margin-bottom: 15px;">
+					<button type="button" class="btn btn-sm btn-danger btnSize" data-dismiss="modal" style="font-size: 1.1em;" onclick="cancel_tryout_air_condition(3)">
+						<span class="glyphicon glyphicon-remove"></span> 取消试用
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	<!-- 下载列表 -->
+	
+<div class="modal fade" id="downlist" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" data-dismiss="modal" onclick="javascript:redirectToBind()">
+        <img class="glyphicon close-modal" alt="close" src="./index_files/whiteDel.png" data-dismiss="modal">
+        <h5 class="modal-title">下载 APP</h5>
+      </div>
+      <div class="modal-body" style="padding:20px 0; height:90%;">
+      <ul class="list-group">
+		<li class="list-group-item"><img src="./index_files/airBox.png" style="width: 48px;">
+			<span style="color: #666;">空气盒子</span>
+			<button type="button" class="btn btn-primary pull-right" id="airBoxDownLoad" style="margin-top: 5px; width: 35%; background-color: #0099cc;">
+				<!-- <span class="glyphicon glyphicon-download-alt"></span> -->
+				<img alt="" src="./index_files/downBtn.png" style="width:1em;"> 下载
+			</button> 
+		</li>
+		<li class="list-group-item"><img src="./index_files/allknow.png" style="width: 48px;">
+			<span style="color: #666;">醛知道</span>
+			<button type="button" class="btn btn-primary pull-right" id="allknowDownLoad" style="margin-top: 5px; width: 35%; background-color: #0099cc;">
+				<!-- <span class="glyphicon glyphicon-download-alt"></span> -->
+				<img alt="" src="./index_files/downBtn.png" style="width:1em;"> 下载
+			</button>
+		</li>
+		<li class="list-group-item"><img src="./index_files/airConditioner.png" style="width: 48px;">
+			<span style="color: #666;">智能空调</span>
+			<button type="button" class="btn btn-primary pull-right" id="airCondictionerDownLoad" style="margin-top: 5px; width: 35%; background-color: #0099cc;">
+				<!-- <span class="glyphicon glyphicon-download-alt"></span> -->
+				<img alt="" src="./index_files/downBtn.png" style="width:1em;"> 下载
+			</button>
+		</li>
+	</ul>
+    </div>
+    
+  </div>
+</div>
+</div>
+	<!-- 室内外曲线 -->
+	
+
+<div class="modal fade" id="in_out-door_line" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header" id="close-line">
+				<img class="glyphicon close-modal" alt="close" src="./index_files/whiteDel.png">
+				<h5 class="modal-title">空气指数趋势</h5>
+			</div>
+			<div class="modal-body" style="padding: 0;overflow-y:auto;height:90%;">
+				<div class="line-main" style="height:209px;">
+					<div class="btn-group" style="display: none;">
+						<button type="button" class="btn btn-default active" id="weekBtn-voc-pm">周</button>
+						<button type="button" class="btn btn-default" id="monthBtn-voc-pm">月</button>
+					</div>
+					<div class="cutline">
+						<p style="color: #fff; width:auto;">
+							<img src="./index_files/whiteCut.png">室外空气指数
+						</p>
+						<p style="color: #ff3399; width:auto;">
+							<img src="./index_files/pinkCut.png">室内空气指数
+						</p>
+					</div>
+					<div class="wrapper_inOutLine" style="bottom:-23px; margin-top:-23px;">
+			<div id="scroller_inOutLine">
+						<canvas class="canvas" id="canvas-indoor-outdoor" style="position: relative; left: 0px; right: 0px; width: 1860px; height: 200px;" onclick="javascript:void(0);" width="1860" height="200">你的浏览器不支持HTML5，赶快升级一下吧！</canvas>
+						<span class="icon-left" id="icon-left-voc-pm" style="display: none;">＜</span> <span class="icon-right" id="icon-right-voc-pm" style="display: none;">＞</span>
+					</div>
+					</div>
+				</div>
+				<p style="text-align: center; margin-top: 25%; color: #666; font-size: 1.1em;">
+					您的空气圈完整性被<span id="chao" style="font-size: 1.5em; font-weight: 800;">100%</span>的使用者超越
+				</p>
+				<button type="button" class="btn btn-primary" style="background-color: #0099cc; margin-bottom: 5%;" onclick="javascript:showDeviceIntegrity();">查看设备完整性
+				</button>
+                <br>
+				<button type="button" class="btn btn-primary" onclick="shareLine();" style="background-color: #0099cc; margin-bottom: 5%;padding-left:21px;padding-right:21px;">
+					<img src="./index_files/shareBtn.png" style="width: 20px; display: inline;" alt="" class="img-rounded img-responsive"> 微信分享
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+	<!-- 设备完整性 -->
+	
+<div class="modal fade" id="deviceIntegrity" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" style="position:fixed;">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header" data-dismiss="modal" onclick="$(&#39;#in_out-door_line&#39;).modal(&#39;show&#39;)">
+				<img class="glyphicon close-modal" alt="close" src="./index_files/whiteDel.png" data-dismiss="modal">
+				<h5 class="modal-title">空气设备完整性</h5>
+			</div>
+			<div class="modal-body container" style="padding: 20px; height:90%; overflow-y:auto;">
+				<div style="font-size: 51px; font-weight: bolder; margin-top: -20px;" data-bind="text:level"></div>
+				<div style="margin: -10px 0 20px 0" data-bind="text:title"></div>
+				
+				<!-- 污染监测能力 -->
+				<div>
+				<div style="float: left;">
+					<img src="./index_files/i_1.png" alt="" class="img-rounded img-responsive icon">
+				</div>
+				<div style="text-align: left;" onclick="javascript:navigateToPage($(&#39;#condition_Modal&#39;)); load_data_with_device_type(&#39;allknow&#39;);">
+					<div>
+						<span>污染监测能力&gt;</span> <span style="display: inline-block; float: right;" data-bind="text:monitor"></span>
+					</div>
+					<div class="progress" style="height: 6px; background-color: gray; border-radius: 0;">
+						<div class="progress-bar" role="progressbar" data-bind="style:{width:monitor_width()}">
+						</div>
+					</div>
+				</div>
+
+                <!-- 污染清理能力 -->
+				<div style="float: left;">
+					<img src="./index_files/i_2.png" alt="" class="img-rounded img-responsive icon">
+				</div>
+				<div style="text-align: left;" onclick="javascript:navigateToPage($(&#39;#condition_Modal&#39;)); load_data_with_device_type(&#39;purifier&#39;);">
+					<div>
+						<span>污染清理能力&gt;</span> <span style="display: inline-block; float: right;" data-bind="text:clear"></span>
+					</div>
+					<div class="progress" style="height: 6px; background-color: gray; border-radius: 0;">
+						<div class="progress-bar" role="progressbar" data-bind="style:{width:clear_width()}">
+						</div>
+					</div>
+				</div>
+				
+				<!-- 室外升高能力 -->
+				<div style="float: left;">
+					<img src="./index_files/i_3.png" alt="" class="img-rounded img-responsive icon">
+				</div>
+				<div style="text-align: left;" onclick="javascript:navigateToPage($(&#39;#condition_Modal&#39;)); load_data_with_device_type(&#39;heater&#39;);">
+					<div>
+						<span>室温升高能力&gt;</span> <span style="display: inline-block; float: right;" data-bind="text:rise"></span>
+					</div>
+					<div class="progress" style="height: 6px; background-color: gray; border-radius: 0;">
+						<div class="progress-bar" role="progressbar" data-bind="style:{width:rise_width()}">
+						</div>
+					</div>
+				</div>
+				
+				<!-- 室温降低能力 -->
+				<div style="float: left;">
+					<img src="./index_files/i_4.png" alt="" class="img-rounded img-responsive icon">
+				</div>
+				<div style="text-align: left;" onclick="javascript:navigateToPage($(&#39;#condition_Modal&#39;)); load_data_with_device_type(&#39;aircondition&#39;);">
+					<div>
+						<span>室温降低能力&gt;</span> <span style="display: inline-block; float: right;" data-bind="text:reduce"></span>
+					</div>
+					<div class="progress" style="height: 6px; background-color: gray; border-radius: 0;">
+						<div class="progress-bar" role="progressbar" data-bind="style:{width:reduce_width()}">
+						</div>
+					</div>
+				</div>
+				
+				<!-- 空气湿润能力 -->
+				<div style="float: left;">
+					<img src="./index_files/i_5.png" alt="" class="img-rounded img-responsive icon">
+				</div>
+				<div style="text-align: left;" onclick="javascript:navigateToPage($(&#39;#condition_Modal&#39;)); load_data_with_device_type(&#39;purifier&#39;);">
+					<div>
+						<span>空气湿润能力&gt;</span> <span style="display: inline-block; float: right;" data-bind="text:wet"></span>
+					</div>
+					<div class="progress" style="height: 6px; background-color: gray; border-radius: 0;">
+						<div class="progress-bar" role="progressbar" data-bind="style:{width:wet_width()}">
+						</div>
+					</div>
+				</div>
+				
+				<!-- 空气干燥能力 -->
+				<div style="float: left;">
+					<img src="./index_files/i_6.png" alt="" class="img-rounded img-responsive icon">
+				</div>
+				<div style="text-align: left;" onclick="javascript:navigateToPage($(&#39;#condition_Modal&#39;)); load_data_with_device_type(&#39;dehumidifier&#39;);">
+					<div>
+						<span>空气干燥能力&gt;</span> <span style="display: inline-block; float: right;" data-bind="text:dry"></span>
+					</div>
+					<div class="progress" style="height: 6px; background-color: gray; border-radius: 0;">
+						<div class="progress-bar" role="progressbar" data-bind="style:{width:dry_width()}">
+						</div>
+					</div>
+				</div>
+				
+				<!-- 家电控制能力 -->
+				<div style="float: left;">
+					<img src="./index_files/i_7.png" alt="" class="img-rounded img-responsive icon">
+				</div>
+				<div style="text-align: left;" onclick="javascript:navigateToPage($(&#39;#condition_Modal&#39;)); load_data_with_device_type(&#39;aircircle&#39;);">
+					<div>
+						<span>家电控制能力&gt;</span> <span style="display: inline-block; float: right;" data-bind="text:control"></span>
+					</div>
+					<div class="progress" style="height: 6px; background-color: gray; border-radius: 0;">
+						<div class="progress-bar" role="progressbar" data-bind="style:{width:control_width()}">
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+			<!-- <div class="modal-footer" style="position: relative;">
+				<div class="text-center">
+					<button class="btn btn-primary"
+						style="width: 50%; background-color: #0099cc;"
+						 data-dismiss="modal">返回</button>onclick="javascript:redirectToBind()"
+				</div>
+			</div> -->
+		</div>
+	</div>
+</div>
+	<!-- 空调弹框 -->
+	
+<!-- 空调弹框 -->
+<div class="modal fade" id="condition_Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header" data-dismiss="modal">
+				<img class="glyphicon close-modal" alt="close" src="./index_files/whiteDel.png" data-dismiss="modal">
+				<h5 class="modal-title"></h5>
+			</div>
+			<div class="modal-body" style="padding-bottom: 20px;padding-top:0;text-align:left; height:90%;overflow-x:hidden;overflow-y:auto;">
+				<!-- 	<div id="view-body"> -->
+				<div class="area" style="text-align: center;">
+					<div id="slides2" style="overflow: hidden; width: 1660px;">
+						<div class="slidesjs-container" style="overflow: hidden; position: relative; width: 1660px; height: 1037.5px;"><div class="slidesjs-control" style="position: relative; left: 0px; width: 1660px; height: 1037.5px; transform: translateX(-1660px); transition-duration: 250ms;"><img data-bind="visible: images().length &gt;= 1, attr:{src : images()[0]}" class="slidesjs-slide" slidesjs-index="0" style="position: absolute; top: 0px; left: 0px; width: 100%; z-index: 10; backface-visibility: hidden;"><img data-bind="visible: images().length &gt;= 2, attr:{src : images()[1]}" class="slidesjs-slide" slidesjs-index="1" style="display: block; position: absolute; top: 0px; left: 1660px; width: 100%; z-index: 10; backface-visibility: hidden;"><img data-bind="visible: images().length &gt;= 3, attr:{src : images()[2]}" class="slidesjs-slide" slidesjs-index="2" style="display: block; position: absolute; top: 0px; left: -1660px; width: 100%; z-index: 0; backface-visibility: hidden;"></div></div>
+						
+						
+					</div>
+				</div>
+				<div id="news" class="area" style="padding: 0 22px; border-bottom: 0px; margin-top: -30px;">
+					<!-- 新闻 -->
+					<ul>
+						<li><img src="./index_files/info.png" alt="新闻" class="img-responsive" style="display: inline; width: 35px; height: 35px;">全国有 <span id="usercount" data-bind="text:usercount"></span>个用户正在使用</li>
+					</ul>
+				</div>
+				<div data-bind="visible:deviceType()===&#39;1&#39;||deviceType()===&#39;2&#39;||deviceType()===&#39;3&#39;||deviceType()===&#39;4&#39;||deviceType()===&#39;8&#39;" style="text-align: center; margin-bottom: 10px; display: none;" class="area">
+
+					<button type="button" class="btn btn-primary" style="border-color: rgb(0, 153, 204); width: 42%; display: none; background-color: rgb(0, 153, 204);" data-bind="visible:hasDevice()==&#39;NO&#39;, click:function(){getPrize(function(){$(&#39;#condition_Modal&#39;).modal(&#39;hide&#39;),tryout_air_condition(deviceType())},&#39;tryout_air_condition&#39;)}">
+						<img src="./index_files/haw_80.png" style="width: 20px; display: inline; margin-bottom: 3px;" alt="" class="img-rounded img-responsive"> 模拟试用
+					</button>
+					<button type="button" class="btn btn-primary" data-dismiss="modal" style="border-color: rgb(0, 153, 204); margin-left: 10px; width: 42%; display: none; background-color: rgb(0, 153, 204);" data-bind="visible: hasDevice()==&#39;YES&#39;, click:function(){cancel_tryout_air_condition(deviceType())}">
+						<img src="./index_files/haw_80.png" style="width: 20px; display: inline; margin-bottom: 3px;" alt="" class="img-rounded img-responsive"> 取消使用
+					</button>
+					<button type="button" class="btn btn-primary" data-dismiss="modal" style="background-color: #FF00FF; border-color: #FF00FF; margin-left: 10px; width: 42%;" data-bind="click:function(){var a=deviceType()==4?5:deviceType()==8?10:deviceType(); window.open(&#39;http://haierwx.haier.net/wxAircontrol/product?deviceType=&#39; +a )}">
+						<img src="./index_files/haw_81.png" style="width: 20px; display: inline; margin-bottom: 3px;" alt="" class="img-rounded img-responsive"> 我想购买
+					</button>
+				</div>
+				<div id="functions" class="area" style="padding: 0 22px;">
+					<ul>
+						<li><img src="./index_files/i_1.png" alt="" style="display: inline; width: 35px; height: 35px;" class="img-responsive"> <span class="remark">污染监测能力</span><span class="precent" data-bind="text:pollDete"></span></li>
+						<li><img src="./index_files/i_2.png" alt="" style="display: inline; width: 35px; height: 35px;" class="img-responsive"> <span class="remark">污染清理能力</span><span class="precent" data-bind="text:pollClean"></span></li>
+						<li><img src="./index_files/i_3.png" alt="" style="display: inline; width: 35px; height: 35px;" class="img-responsive"> <span class="remark">室温升高能力</span><span class="precent" data-bind="text:tempRise"></span></li>
+						<li><img src="./index_files/i_4.png" alt="" style="display: inline; width: 35px; height: 35px;" class="img-responsive"> <span class="remark">室温降低能力</span><span class="precent" data-bind="text:tempReduce"></span></li>
+						<li><img src="./index_files/i_5.png" alt="" style="display: inline; width: 35px; height: 35px;" class="img-responsive"> <span class="remark">空气湿润能力</span><span class="precent" data-bind="text:airHum"></span></li>
+						<li><img src="./index_files/i_6.png" alt="" style="display: inline; width: 35px; height: 35px;" class="img-responsive"> <span class="remark">空气干燥能力</span><span class="precent" data-bind="text:airDry"></span></li>
+							<li><img src="./index_files/i_7.png" alt="" style="display: inline; width: 35px; height: 35px;" class="img-responsive"> <span class="remark">家电控制能力</span><span class="precent" data-bind="text:elecCtrl"></span></li>
+					</ul>
+				</div>
+				<br>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<input type="hidden" id="load_in_door_data" value="">
+
+<script type="text/javascript">
+	function random(min, max) {
+		return Math.floor(min + Math.random() * (max - min));
+	}
+	
+	function tryout_air_condition(deviceType) {
+		cancel_cdOptimize();
+		/*强制变换数值*/
+		viewModel.indoorViewModel.pm25(60);
+		viewModel.indoorViewModel.temp(23);
+		viewModel.indoorViewModel.hcho(0.03);
+		viewModel.indoorViewModel.wet(30);
+		viewModel.indoorViewModel.voc(50);
+		/*end*/
+		$(".loading").css("display","inline-block");
+		viewModel.indoorViewModel.tips("正在创建虚拟环境...");
+		/* $("#loadingMsg").text("正在创建虚拟环境..."); */
+		/* $('#ajax_loader').modal('show'); */
+		$('#ajax_loader_transparent').show();
+		$.get("http://" + window.location.hostname + ":" + window.location.port
+				+ "/wxAircontrol/BandAndUnBandVirtualServlet?openId="
+				+ $("#openId").val() + "&deviceType=" + deviceType
+				+ "&action=1", function(result) {
+			/* $('#ajax_loader').modal('hide'); */
+			$('#ajax_loader_transparent').hide();
+			$(".loading").hide();
+			$("#deviceIntegrity").modal("hide");
+			$("#in_out-door_line").modal("hide");
+			
+			/* $("#loadingMsg").text("正在加载..."); */
+			if (result.result === "绑定成功" || result.result === "已经绑定，不能重复绑定") {
+				/* $(".cdCircleMain").css("display", "none");
+				$(".after-air").css("display", "none"); */
+				navigateToPage($('#inDoor'));
+				/* $('.goto_icon').css("visibility", ""); */
+				var virtual = isVirtualOnly===1;
+				viewModel.loadIndoor($("#openId").val(), virtual);
+			}
+		});
+	}
+
+	function cancel_tryout_air_condition(deviceType) {
+		cancel_cdOptimize();
+		/*强制变换数值*/
+		viewModel.indoorViewModel.pm25(60);
+		viewModel.indoorViewModel.temp(23);
+		viewModel.indoorViewModel.hcho(0.03);
+		viewModel.indoorViewModel.wet(30);
+		viewModel.indoorViewModel.voc(50);
+		/*end*/
+		$('#ajax_loader').show();
+		$.get("http://" + window.location.hostname + ":" + window.location.port
+				+ "/wxAircontrol/BandAndUnBandVirtualServlet?openId="
+				+ $("#openId").val() + "&deviceType=" + deviceType
+				+ "&action=0", function(result) {
+			/* $('#ajax_loader').modal('hide'); */
+			$('#ajax_loader').hide();
+
+			if (result.hasDevice) {
+				viewModel.loadIndoor($("#openId").val(), false);
+				$(".goto_icon").css("visibility","visible");
+			} else if(result.hasVirtualDevice){
+ 				viewModel.loadIndoor($("#openId").val(), true);
+	 		} 
+			else{
+				navigateToPage($('#near'));
+				viewModel.loadNear($("#openId").val());
+			}
+		});
+	}
+	function imageSliderChange() {
+		if($('#slides2').length > 0){
+			$('#slides2').width($(window).width()-20);
+			$('#slides2').slidesjs({
+				width : 320,
+				height : 200,
+				navigation : false,
+				start : 1,
+				play : {
+					auto : true
+				},
+				pagination : {
+					active : false
+				}
+			});
+		}
+	}
+	jQuery(document).ready(
+			function($) {
+				/* $("#slider").width($(window).width()); */
+				/* window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function(){$("#slider").width($(window).width());}, false); */
+				window.addEventListener(
+						"onorientationchange" in window ? "orientationchange"
+								: "resize", imageSliderChange, false);
+			});
+</script>
+
+	
+	
+<div id="fullPk" style="display: none; overflow-x: hidden;">
+	<div class="bg pk" style="position: fixed; width: 100%; height: 100%; background-size: 100% 100%;">
+		<div style="height: 70%">
+			<div data-bind="text:tips" style="position: absolute; margin-top: 5px; z-index: 1000; width: 100%; text-align: center;">
+			</div>
+			<div style="vertical-align: middle; height: 40%; padding-left: 9%; padding-top: 18%">
+				<div>
+					<div style="float: left; height: 100%; width: 30px; padding-top: 10px; text-align: center;">
+						<img class="pk_img_3" src="./index_files/haw_85.png" width="30px" height="30px"> <img src="./index_files/tou.png" data-bind="attr:{src:myheadUrl}" style="display: block; border: solid 1px #F0F0F0;" width="28px" height="27px">
+					</div>
+					<div style="float: left; width: 95px; height: 95px; background: url(images/haw_74.png); background-size: 95px 95px; margin-left: 5px;">
+						<div style="margin: 22px 18px;">
+							<div style="width: 61px; height: 36px; font-size: 35px; line-height: 36px; text-align: center;">
+								<span style="font-size: 35px;" data-bind="text:myhai"></span>
+							</div>
+							<div style="width: 61px; height: 12px; font-size: 8px; text-align: center;">
+								<span data-bind="text:myquality"></span>
+							</div>
+
+						</div>
+					</div>
+					<img class="pk_img_1" src="./index_files/haw_30.png" style="display: block; float: left; margin-top: 8px; margin-left: 5px; width: 130px; height: 60px;">
+
+				</div>
+			</div>
+			<div style="width: 100%; height: 45%;">
+				<div style="width: 100%; margin-left: 15%; padding-top: 34%">
+					<img class="pk_img_2" width="100px" height="50px" src="./index_files/haw_62.png" style="display: block; float: left;">
+					<div style="float: left; width: 70px; height: 70px; background: url(&#39;images/haw_74.png&#39;); background-size: 70px 70px; margin-left: 10px;">
+						<div style="margin: 11px 13px;">
+							<div style="width: 36px; height: 34px; font-size: 28px; line-height: 34px; text-align: center;">
+								<span style="font-size: 28px;" data-bind="text:hai"></span>
+							</div>
+							<div style="width: 36px; height: 12px; font-size: 8px; text-align: center;">
+								<span data-bind="text:quality"></span>
+							</div>
+						</div>
+
+					</div>
+					<div style="float: left; height: 100%; width: 30px; text-align: center; margin-left: 10px;">
+						<img class="pk_img_4" src="./index_files/haw_85.png" width="30px" height="30px"> <img src="./index_files/tou.png" data-bind="attr:{src:headUrl}" style="display: block; border: solid 1px #F0F0F0;" width="28px" height="27px">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="text-align: center; width: 45%; margin: 40px auto;">
+			<button type="button" class="btn btn-primary  btn-block" data-bind="click:function(){sharePk(myhai(),pkId());}" style="background-color: #0099cc;">
+				<img src="./index_files/shareBtn.png" style="width: 20px; display: inline;" alt="" class="img-rounded img-responsive"> 微信分享
+			</button>
+		</div>
+	</div>
+</div>
+	
+	
+<div id="fullLine" style="display: none; overflow-x: hidden; text-align:center;">
+	
+
+
+<div class="line-main" style="height: 209px;">
+	<div class="btn-group" style="display: none;">
+		<button type="button" class="btn btn-default active" id="weekBtn-voc-pm">周</button>
+		<button type="button" class="btn btn-default" id="monthBtn-voc-pm">月</button>
+	</div>
+	<div class="cutline">
+		<p style="color: #fff; width: auto;">
+			<img src="./index_files/whiteCut.png">室外空气指数
+		</p>
+		<p style="color: #ff3399; width: auto;">
+			<img src="./index_files/pinkCut.png">室内空气指数
+		</p>
+	</div>
+	<div class="wrapper_inOutLine" style="bottom: -23px; margin-top: -23px;">
+		<div id="scroller_inOutLine">
+			<canvas class="canvas" id="canvas-indoor-outdoor-share" style="position: relative; left: 0px; right: 0px; width: 1860px; height: 200px;" onclick="javascript:void(0);" width="1860" height="200">你的浏览器不支持HTML5，赶快升级一下吧！</canvas>
+			<span class="icon-left" id="icon-left-voc-pm" style="display: none;">＜</span>
+			<span class="icon-right" id="icon-right-voc-pm" style="display: none;">＞</span>
+		</div>
+	</div>
+</div>
+<p style="text-align: center; margin-top: 25%; color: #666; font-size: 1.1em;">
+	您的空气圈完整性被<span class="chao" style="font-size: 1.5em; font-weight: 800;"></span>的使用者超越
+</p>
+<button type="button" class="btn btn-primary" style="background-color: #0099cc; margin-bottom: 5%;">查看设备完整性</button>
+<br>
+<button type="button" class="btn btn-primary" style="background-color: #0099cc; margin-bottom: 5%; padding-left: 21px; padding-right: 21px;">
+	<img src="./index_files/shareBtn.png" style="width: 20px; display: inline;" alt="" class="img-rounded img-responsive"> 微信分享
+</button>
+</div>
+	
+	
+<div id="fullOpt" style="display: none; overflow-x: hidden; text-align: center;">
+	
+
+
+<p style="color: #0099cc; font-size: 2em; margin-top: 5%; text-align: center;">优化完毕！</p>
+<p style="color: #666; font-size: 1.1em; text-align: center; margin-bottom: 10%;">您家空气
+	水光潋滟晴方好 山色空朦雨亦奇</p>
+<div style="text-align: center;">
+	<div style="text-align: center; display: inline-block;">
+		<p style="color: #666; font-size: 1.1em; margin: 0;">优化前</p>
+		<p style="color: #cc6666; font-size: 5em;" class="optimization-before"></p>
+	</div>
+	<div style="text-align: center; display: inline-block; vertical-align: middle; margin-bottom: 12%;">
+		<img alt="" src="./index_files/changeTo.png" style="width: 65%;">
+	</div>
+	<div style="text-align: center; display: inline-block;">
+		<p style="color: #666; font-size: 1.1em; margin: 0;">优化后</p>
+		<p style="color: #64c6be; font-size: 5em;" class="optimization-after"></p>
+	</div>
+</div>
+<button type="button" class="btn btn-primary" onclick="shareYouhua($(&#39;.optimization-before:first&#39;).text(),$(&#39;.optimization-after:first&#39;).text())" style="background-color: #0099cc; display: block; margin: 0 auto; width: 60%;">
+	<img src="./index_files/shareBtn.png" style="width: 20px; display: inline;" alt="" class="img-rounded img-responsive">微信分享
+</button>
+<button type="button" class="btn btn-default" style="background-color: #FF3399; color: #fff; margin: 10px auto; width: 60%;" onclick="window.location.href=&#39;http://&#39;+window.location.hostname+ &#39;:&#39;+ window.location.port+&#39;/wxAircontrol/product?deviceType=1&#39;">
+	<img style="width: 20px; height: 20px; margin-right: 5px;" src="./index_files/haw_81.png" alt="">进入商城
+</button>
+<p style="color: #666; font-size: 1.1em;">添加更多设备，让空气更好!</p>
+</div>
+	
+	
+<div id="fullBindingAccount" style="display: none; overflow-x: hidden; text-align:center;">
+	
+	
+<div style="text-align: center; padding-top: 10px;">
+	<img src="./index_files/haw_78.png" style="display: inline; max-width: 75px; margin-top: -20px;" alt="" class="img-responsive">
+	<div style="font-size: x-large; color: #FF3399; display: inline; margin-left: -4%;">绑定海尔账号</div>
+</div>
+<br>
+<div style="text-align: center;">
+	<input class="username" type="text" placeholder="输入绑定账号" style="width: 80%; min-height: 40px; padding-left: 15px; font-size: small; border-radius: 0px; -moz-border-radius: 0px; -webkit-border-radius: 0px; display: table; margin-left: auto; margin-right: auto; border: solid 1px #FF3399;"><br>
+	<input class="password" type="password" placeholder="输入账号密码" style="width: 80%; min-height: 40px; padding-left: 15px; font-size: small; border-radius: 0px; -moz-border-radius: 0px; -webkit-border-radius: 0px; display: table; margin-left: auto; margin-right: auto; border: solid 1px #FF3399;">
+</div>
+<div style="text-align: center; width: 50%; margin: auto;">
+	<button class="bind" type="button" style="background-color: #FF3399; color: #FFFFFF; border-style: solid; border: 0; cursor: pointer; text-align: center; display: inline-block; -moz-display: inline-block; padding: 0 50px 1px; *padding: 3px 3px 1px; _padding: 0 4px 1px; line-height: 28px; *line-height: 24px; _line-height: 26px; height: 40px; font-size: 18px; border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px; margin-top: 30px;">确定</button>
+</div>
+<br>
+<div style="text-align: center; color: red;">注意：绑定前请确保已通过app注册！</div>
+<br>
+<a class="download" target="_blank" href="http://uhome.haier.net/download/airkit/index.html" data-dismiss="modal">我要下载</a>
+<!-- <div>
+	<p style="font-weight:900">微信扫一扫，扫描设备二维码，完成设备绑定<p>
+</div> -->
+<br>
+<!-- <div class="bindingResult" class="container" style="display: none;">
+	<span class="error" style="color: red;"></span> <span class="msg"
+		style="color: green;"></span>
+</div> -->
+<!-- <a href="javascript:void(0)" class="btn btn-default btn-block scan" style="background-color:#FF3399; width:70%; display:inline-block;margin-bottom:12px; padding-left:10px;padding-right:10px;padding-bottom:5px;padding-top:5px;color:white;" >添加设备</a> -->
+<br>
+<div class="bangding_tips">
+		<p>绑定设备后可以进行如下操作：</p>
+		<ul>
+			<li><span class="glyphicon glyphicon-ok"></span><label>配置家电上网</label></li>
+			<li><span class="glyphicon glyphicon-ok"></span><label>微信语音/会话/操作远程控制家电</label></li>
+			<li><span class="glyphicon glyphicon-ok"></span><label>家电设备告警接收</label></li>
+			<li><span class="glyphicon glyphicon-ok"></span><label>查看室内空气指数</label></li>
+			<li><span class="glyphicon glyphicon-ok"></span><label>智能优化室内空气质量</label></li>
+			<li><span class="glyphicon glyphicon-ok"></span><label>与朋友PK家庭空气质量</label></li>
+		</ul>
+		<p>无设备绑定暂时可进行以下体验：</p>
+		<ul>
+			<li><span class="glyphicon glyphicon-ok"></span><label>查看室外空气质量</label></li>
+			<li><span class="glyphicon glyphicon-ok"></span><label>虚拟体验设备控制</label></li>
+			<li><span class="glyphicon glyphicon-ok"></span><label>商城购物</label></li>
+			<li><span class="glyphicon glyphicon-ok"></span><label>社区交流</label></li>
+		</ul>
+		<!-- <p>绑定帐号后暂时仍无法执行以下操作：</p>
+		<ul>
+			<li><span class="glyphicon glyphicon-remove"></span><label>使用微信绑定空调等家电设备</label></li>
+			<li><span class="glyphicon glyphicon-remove"></span><label>配置家电设备连接WIFI</label></li>
+		</ul> -->
+		<div class="click_more"><a href="http://pay.haierubic.com/haier/Public/haier.php/chat/bbs/detailannouncement?id=298&amp;type=6">点击此处</a><label>，了解更多。</label></div>
+		
+	</div>
+<script>
+wx.config({
+	beta : true, // 开启内测接口调用，注入wx.invoke方法
+	debug : false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+	appId : 'wxe44cfca97e5cf05a', // 公众号的唯一标识
+	timestamp : '1476956281', // 生成签名的时间戳
+	nonceStr : 'jqsojnol6s', // 生成签名的随机串
+	signature : '1fd9d4452a414309e16c9066bcdd9052f07918f0',// 签名，见附录1
+	jsApiList : ['scanQRCode']
+// 需要使用的jsapi列表，所有jsapi列表见附录2
+});
+wx.ready(function() {
+		$(".scan").unbind().bind("click",function(){
+			wx.scanQRCode({
+			    needResult: 0, // 默认为0，扫描结果由微信处理，1则直接返回扫描结果，
+			    scanType: ["qrCode","barCode"], // 可以指定扫二维码还是一维码，默认二者都有
+			    success: function (res) {
+				    var result = res.resultStr; // 当needResult 为 1 时，扫码返回的结果
+				}
+			});
+		});	
+});
+
+wx.error(function(res) {
+	alert(res.errMsg);
+});
+</script>
+<!-- <div id="binload" style="display: none; overflow-x: hidden;">
+	<div class="container round"
+		style="position: fixed; left: 22%; top: 40%; width: 56%; z-index: 1051; background-color: gray;">
+		<img id="binpreloading" src="images/loading.png"
+			style="width: 38px; display: inline;" alt=""
+			class="img-rounded img-responsive" /><span>正在绑定...</span>
+	</div>
+</div> -->
+</div>
+	
+	
+<div id="fullBindingList" style="display: none; overflow-x: hidden; text-align:center;">
+	
+<div id="list-group-share">
+	<div class="row" style="padding: 15px;">
+		<div class="col-xs-6" style="text-align: center;">
+			<img data-bind="attr:{src:headImg}" style="width: 45px;" class="img-circle">
+		</div>
+		<div class="col-xs-6" style="text-align: center;">
+			<span data-bind="text:nickName" style="display: inline-block; max-width: 38%; vertical-align: middle; word-break: break-all; margin-top: 19%;">
+			</span>
+		</div>
+	</div>
+	<ul data-bind="foreach: device">
+		<li style="background-color: #e2e2e2; padding: 0px 15px;">
+			<div class="row">
+				<div class="col-xs-6" style="text-align: center;" data-bind="css: { &#39;gray&#39; :status==&#39;STATUS_ONLINE&#39;}">
+					<!-- 真实设备 -->
+					<img data-bind="visible:status==&#39;STATUS_ONLINE&#39;, attr:{src:img, mac: mac,familyId:$parent.familyId},click:function(){
+						$(&#39;#binding-ListPage&#39;).modal(&#39;hide&#39;); air_condition_point(mac,$parent.familyId,deviceType);
+						}" alt="" class="img-rounded img-responsive deviceIcon"> <img data-bind="visible:status==&#39;STATUS_OFFLINE&#39;, attr:{src:img, mac: mac,familyId:$parent.familyId},click:function(){
+						showOfflineMessage();
+						}" alt="" class="img-rounded img-responsive deviceIcon"> <span data-bind="text:name"></span>
+				</div>
+				<div class="col-xs-6">
+					<button data-bind="click:function(){
+				unbinding($(&#39;#openId&#39;).val(),mac) 
+						}" type="button" class="btn btn-sm btn-danger pull-right btnSize">
+						<span class="glyphicon glyphicon-remove"></span> 解除绑定
+					</button>
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>
+<div id="accout-tips" style="color: #ff0000; text-align: center; display: none;">您还没有绑定任何设备！</div>
+<div id="deviceList" style="display: none; overflow-x: hidden;">
+	<div class="container round" style="position: fixed; left: 22%; top: 40%; width: 56%; z-index: 1051; background-color: gray;">
+		<img id="deviceListloading" src="./index_files/loading.png" style="width: 38px; display: inline;" alt="" class="img-rounded img-responsive"><span>正在加载设备列表…</span>
+	</div>
+</div>
+<div id="airkis-button-list" class="text-center" style="padding: 15px;">
+	<!-- 	<button type="button" onclick="getPrize(lookInDoor,'lookInDoor')"
+		class="btn btn-primary" id="goto-indoor"
+		style="width: 46%; margin-left: 10px; font-size: 1em; background: #009ACB;">
+		<img src="images/haw_33.png" style="width: 20px;" />查看室内
+	</button> -->
+	<!-- <button type="button"
+		class="btn btn-primary scan"
+		style="width: 46%; margin-left: 10px; font-size: 1em; background: #009ACB;">
+		<span class="glyphicon glyphicon-qrcode">添加设备</span>
+	</button> -->
+	<!-- <button type="button" class="btn btn-primary scan"
+		onclick="getPrize(lookInDoor,'lookIndoor')" id="goto-indoor"
+		style="width: 46%; margin-left: 10px; font-size: 1em; background: #009ACB;">
+		<span class="glyphicon glyphicon-user" aria-hidden="true"></span> 查看室内
+	</button> -->
+<!-- 	<button type="button" class="btn btn-primary scan"
+		style="width: 46%; margin-left: 10px; font-size: 1em; background: #009ACB;">
+		<span class="glyphicon glyphicon-qrcode" aria-hidden="true"></span>
+		添加设备
+	</button> -->
+	<button type="button" class="btn btn-primary" onclick="window.location.href=&#39;http://pay.haierubic.com/haier/Public/haier.php/chat/bbs/send_info?id=377&#39;" style="width: 46%; margin-left: 10px; font-size: 1em; background: #009ACB;">
+		<span class="glyphicon glyphicon-qrcode" aria-hidden="true"></span>
+		添加设备
+	</button>
+	<button data-bind="visible:!bindingHaierAccount" type="button" class="btn btn-primary" onclick="window.location.href=&#39;/wxAircontrol/haierservice?page=airkissbingding&#39;" style="width: 46%; margin-left: 10px; font-size: 1em; background: #009ACB;">
+		<span class="glyphicon glyphicon-qrcode glyphicon-airkiss" aria-hidden="true"></span>
+		绑定海尔账号
+	</button>
+	<button id="glyphicon-airkiss-unbind" data-bind="visible:bindingHaierAccount" type="button" class="btn btn-primary" style="width: 46%; margin-left: 10px; font-size: 1em; background: #009ACB;">
+		<span class="glyphicon glyphicon-qrcode glyphicon-airkiss-unbind" aria-hidden="true"></span>
+		解绑海尔账号
+	</button>
+</div>
+</div>
+	
+	<!-- 抽奖动画展示浮层 -->
+	<div class="prize" style="position:absolute;width:100%;z-index:9000;top:0;display:none;">
+		<div class="absoluteCentering circleSize">
+			<div class="circleMain" style="text-align: center; transform: scale(1.1);">
+				<div id="prize" class="prize-s" style="position:absolute;width:206px;height:206px;z-index:9999;top:0px;"></div>
+				<div id="prize_sure" class="receive-bt" style="position:relative;width:110px;height:23px;z-index:9999;top:70%;margin:auto;display:none;"></div>
+				<div id="prize_hint" style="position:relative;margin:auto;z-index:9999;top:15%;width:90px;color:white;line-height:200%;text-align:left;display:none;"></div>
+				
+			</div>
+		</div>
+	</div>
+	
+	<!-- 弹框 -->
+	<div class="modal fade" id="overlay" data-backdrop="static">
+		<div class="modal-dialog" style="margin-top: 150px;">
+			<div class="modal-content" style="height:auto;">
+				<div class="modal-body">
+					<p id="overlay-msg" style="text-align: center; font-size: 15px; word-break: break-all; max-width:90%; margin:0 auto;"></p>
+					<p style="text-align: center; margin-top: 10px;">
+						<button type="button" class="btn btn-default btn-xm" data-dismiss="modal" onclick="$(&#39;#overlay&#39;).modal(&#39;hide&#39;);">确定</button>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="sure" data-backdrop="static">
+		<div class="modal-dialog" style="margin: 150px auto; width: 82%;">
+			<div class="modal-content" style="padding: 5xp; height:auto;">
+				<div class="modal-body">
+					<p id="controlMsg" style="text-align: center; margin-bottom: 10px; font-size: 15px;"></p>
+					<p style="text-align: center;">
+						<button type="button" class="btn btn-default btn-xm" data-dismiss="modal" id="toPage">确定</button>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="ajax_loader" id="ajax_loader" style="display: none;">
+		<div style="position: fixed; top: 50%; left: 50%; margin-top: -40px; margin-left: -60px;text-align: center; color: white;">
+
+			<img id="loading" src="./index_files/loading.png" style="width: 38px; display: inline; transform: rotate(300deg); transform-origin: 50% 50% 0px;" alt="" class="img-rounded img-responsive"> <span id="loadingMsg">正在加载...</span>
+		</div>
+	</div>
+	<div class="ajax_loader ajax_loader_transparent" id="ajax_loader_transparent" style="display:none;"></div>
+	<div class="ajax_loader" id="share_tip" style="display:none;">
+		<div style="position: fixed; top: 0%; right: 0%; color: white;">
+			<img src="./index_files/share_arrow.png" style="width: 95%;" alt="" class="img-rounded img-responsive"> 
+				<span style="font-size:large;color:white;bottom:-20px;margin-left:-50%;">点右上角按钮选择分享</span>
+		</div>
+		
+	</div>
+	<script type="text/javascript">
+	//alert('http://haierwx.haier.net/wxAircontrol/haierservice?isShare=1&openId=oFE8Aj7jgN9VwV7VnGUm_bap6HJQ&callback=1&code=0117ckmq1lkwOo0dhmnq1drfmq17ckmM&state='+'wxe44cfca97e5cf05a'+'1fd9d4452a414309e16c9066bcdd9052f07918f0');
+		$.getScript("js/model.js?v=20140801");
+		$.getScript("js/global.js?v=20140801");
+		$.getScript("js/drawLine/Chart.js?v=20140801");
+		$.getScript("js/drawLine/line.js?v=20140801");
+		$.getScript("js/index.js?v=20140801");
+		$.getScript("js/countUp.min.js?v=20140801");
+		$.getScript("js/jquery.slides.js?v=20140801");
+		$.getScript("js/jssor.slider.mini.js?v=20140801");
+		
+		function lookInDoor(){
+			$('#noEquipment').modal( 'hide');
+			$('#binding-ListPage').modal('hide'); 
+			navigateToPage($('#inDoor')); 
+			viewModel.loadIndoor($('#openId').val(), false);
+		} 
+		
+		var interval;
+		var glass_good_in_img = document.getElementById("in4rotate");
+		//屏幕旋转自适应(曲线、圈)
+		function orientationChange() {
+			if(typeof(lineAdaptation())!="undefined"){
+				lineAdaptation();
+			}
+			if ($("#weekBtn-aldehyde")) {
+				// alert("#weekBtn-aldehyde");
+				$("#weekBtn-aldehyde").click();
+			}
+			if ($("#weekBtn-voc-pm")) {
+				// alert("#weekBtn-voc-pm");
+				$("#weekBtn-voc-pm").click();
+			}
+			if ($("#canvas-indoor-outdoor")) {
+				inOutDoorLine();
+			}
+			if ($("#canvas-indoor-outdoor-share")) {
+				inOutDoorLine();
+			}
+			if ($("#canvas-control") && typeof(controlLineType)!="undefined") {
+				control_line_color(controlLineType[lineTypeFlag], control_offset);
+			}
+			/* if($(".circleMain")){
+				circleAdaptation();
+			} */
+		}
+		$(document).ready(function() {
+			//圈自适应
+			circleAdaptation();
+			//屏幕旋转自适应(曲线、圈)
+			window.addEventListener(
+					"onorientationchange" in window ? "orientationchange"
+							: "resize", orientationChange, false);
+			/* $(".goto_icon,#in4rotate").unbind('click').bind('click',function() {
+				if (!checkPermission()) {
+					return;
+				}
+				beforeOptimizeValue = $("#myHai").text();
+				setTimeout('optimize()',3000);
+			});  */
+		});
+
+		function optimize() {
+			$("#ajax_loader_transparent").show();
+			$('.goto_icon').css("visibility", "hidden"); 
+			var value = viewModel.indoorViewModel.indoorHai();
+			var wordingId = viewModel.indoorViewModel.wordingId();
+			if (value == null || value == "") {
+				return;
+			}
+			$(".loading").css("display", "inline");
+			$.get("http://" + window.location.hostname + ":" + window.location.port + "/wxAircontrol/OptimizeServlet?value=" + value + "&openId=" + $("#openId").val() + "&isVirtual=" + isVirtualOnly + "&wordingId=" + wordingId,
+			function(data) {
+			    $(".loading").css("display", "none");
+			    if (data.hasOptimize == "1") {
+			        var devices = data.device;
+			        for (var i = 0; i < devices.length; i++) {
+			            switch (devices[i].deviceType) {
+			            case "AirCondition":
+			                if (devices[i].isVirtual === 'true') {
+			                    if (devices[i].status === "STATUS_ONLINE") {
+			                        devices[i].img = "images/haw_14.png";
+			                    } else {
+			                        devices[i].img = "images/haw_17.png";
+			                    }
+			                } else {
+			                    if (devices[i].status === "STATUS_ONLINE") {
+			                    	console.info(devices[i].switchStatus);
+			                        if (devices[i].switchStatus === "开") {
+			                            devices[i].img = "images/haw_14.png";
+			                        } else {
+			                            devices[i].img = "images/haw_15.png";
+			                        }
+			                        console.info( devices[i].img);
+			                    } else {
+			                        devices[i].img = "images/haw_16.png";
+			                    }
+			                }
+			                console.info('---befor break '+ devices[i].img);
+			                break;
+			            case "AirCircle":
+			                if (devices[i].status === "STATUS_ONLINE") {
+			                    devices[i].img = "images/haw_37.png";
+			                } else if (devices[i].status === "STATUS_OFFLINE" && devices[i].isVirtual === 'false') {
+			                    devices[i].img = "images/haw_39.png";
+			                } else {
+			                    devices[i].img = "images/haw_40.png";
+			                }
+			                break;
+			            case "AllKnow":
+			                if (devices[i].status === "STATUS_ONLINE") {
+			                    devices[i].img = "images/haw_45.png";
+			                } else if (devices[i].status === "STATUS_OFFLINE" && devices[i].isVirtual === 'false') {
+			                    devices[i].img = "images/haw_47.png";
+			                } else {
+			                    devices[i].img = "images/haw_48.png";
+			                }
+			                break;
+			            case "AirCube":
+			                if (devices[i].status === "STATUS_ONLINE") {
+			                    devices[i].img = "images/haw_101.png";
+			                } else if (devices[i].status === "STATUS_OFFLINE" && devices[i].isVirtual === 'false') {
+			                    devices[i].img = "images/haw_102.png";
+			                } else {
+			                    devices[i].img = "images/haw_103.png";
+			                }
+			                break;
+			            case "Purifier":
+			                if (devices[i].status === "STATUS_ONLINE") {
+			                    devices[i].img = "images/haw_201.png";
+			                } else if (devices[i].status === "STATUS_OFFLINE" && devices[i].isVirtual === 'false') {
+			                    devices[i].img = "images/haw_202.png";
+			                } else {
+			                    devices[i].img = "images/haw_203.png";
+			                }
+			                break;
+			            default:
+			                break;
+			            }
+			        }
+
+			        viewModel.indoorViewModel.devices(devices);
+			    
+
+			    /* viewModel.indoorViewModel.tips(data.tips); */
+			    var goUpdate = new countUp("myHai", Number($("myHai").text()), Number(data.myHAIValue), 0, 2.2);
+			    goUpdate.start();
+
+			} else {
+			    viewModel.indoorViewModel.tips(data.tips);
+			    $("#in4rotate").unbind("click");
+			}
+			optimizeAnimation(data.myHAIValue, 0, 360, ".indoorAangle_2", ".indoorAngle_1", "#indoorCircle_3");
+			if (data.tips != "设备没通电，我们无法帮您一键优化" && data.tips != "无法清理空气，确保空气圈家电完整") {
+			    cdOptimizeAnimation(".cdAngle_2", ".cdAngle_1", 20, isVirtualOnly);
+			} else {
+			    /* $(".cdCircleMain").css("display", "none"); */
+			    cancel_cdOptimize();
+			}
+			/* $('#optimize_tips').text(data.tips); */
+			viewModel.indoorViewModel.hai(data.myHAIValue); $("#ajax_loader_transparent").hide();
+			});
+		}
+	</script>
+
+
+</body></html>

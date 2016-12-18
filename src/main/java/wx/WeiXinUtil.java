@@ -3,6 +3,8 @@ package wx;
 
 import org.json.JSONObject;
 
+import com.freemarker.WXProductID;
+
 public class WeiXinUtil {
 
 	/**

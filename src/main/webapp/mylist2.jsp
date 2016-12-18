@@ -1,7 +1,7 @@
 <%@ page language="java" import="java.util.*"
 	contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <!DOCTYPE html>
-<html>
+<html style="margin: 0;">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
@@ -25,23 +25,36 @@
 <link href="./css/wx/list_page.css" rel="stylesheet">
 <style type="text/css">
 </style>
+
+<script type="text/javascript">
+
+	function showPage() {
+
+		window.location.href = "/wx/haire/index.html";
+	}
+</script>
+
+<style type="css/text">
+
+</style>
 </head>
 
-<body style="">
+<body style="margin: 0;">
 	<div class="page1">
 		<div id="mainmenu">
 			<div class="row"
-				style="margin: 5px auto auto; border-radius: 5px; background-color: rgb(45, 42, 60);">
+				style="border-radius: 5px; background-color: #58e1c8;">
 				<div class="row">
 					<div class="col-xs-2" style="padding: 0px;">
-						<img src="./image/图标B3.png"
-							style="width: 100%; margin-top: 18%; margin-left: 25%;">
+						<img src="./image/jhq_w.png"
+							style="width: 100%; margin-top: 18%; margin-left: 50%;">
 					</div>
-					<div class="col-xs-5" style="padding: 5% 0% 5% 10%;">
+					<div class="col-xs-5"
+						style="margin-left: 5%; padding: 5% 0% 5% 10%;">
 						<div class="row"
-							style="color: rgb(168, 165, 185); font-family: 'Microsoft YaHei'; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">空气净化器</div>
+							style="color: white; font-family: 'Microsoft YaHei'; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">空气净化器</div>
 						<div class="row"
-							style="color: rgb(168, 165, 185); font-family: 'Microsoft YaHei'; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">C893464AE12A</div>
+							style="color: rgb(168, 165, 185); font-family: 'Microsoft YaHei'; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">&nbsp;</div>
 						<div class="row"
 							style="font-family: 'Microsoft YaHei'; color: white;">
 							<img id="img_C893464AE12A" src="./image/在线.png"
@@ -49,16 +62,17 @@
 								id="s_C893464AE12A" style="color: white;">&nbsp;&nbsp;在线</span>
 						</div>
 					</div>
-					<div class="col-xs-3">
+					<div class="col-xs-3" style="margin-left: -10%;">
 						<div class="row" style="text-align: center; margin-top: 50%;">
-							<img src="./image/list_pm25.png"
+							<img src="./image/pm25.png"
 								style="width: 70%; padding-left: 10px;">
 						</div>
 						<div id="ListPM25_C893464AE12A" class="row"
-							style="text-align: center; border-radius: 100px; margin-top: 5%; margin-left: 20%; margin-right: 20%; font-family: 'Microsoft YaHei'; color: rgb(0, 0, 0); background-color: rgb(93, 156, 236);">34</div>
+							style="text-align: center; border-radius: 100px; margin-top: 5%; margin-left: 20%; margin-right: 20%; font-family: 'Microsoft YaHei'; color: white;">34</div>
 					</div>
 					<div class="col-xs-1" style="padding: 0px; margin-left: 2%;">
-						<img src="./image/下拉.png" style="width: 100%; margin-top: 80%;">
+						<img src="./image/下拉.png" style="width: 100%; margin-top: 80%"
+							onclick="showPage();">
 					</div>
 				</div>
 			</div>

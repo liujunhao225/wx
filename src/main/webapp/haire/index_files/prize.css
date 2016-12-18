@@ -1,0 +1,25 @@
+.prize-s{
+    background: url("../images/prize_s.png") no-repeat;
+    background-size:100% 100%;
+    z-index:9999;
+}
+.prize-b{
+    background: url("../images/prize_b.png") no-repeat;
+    background-size:100% 100%;
+    z-index:9999;
+}
+.prize-bg{
+    background: url("../images/prize_bg.png") no-repeat;
+    background-size:100% 100%;
+    z-index:9999;
+}
+.receive-bt{
+	background: url("../images/receive.png") no-repeat;
+	background-size:100% 100%;
+	z-index:9999;
+}
+.thks-bt{
+	background: url("../images/thks.png") no-repeat;
+	background-size:100% 100%;
+	z-index:9999;
+}
