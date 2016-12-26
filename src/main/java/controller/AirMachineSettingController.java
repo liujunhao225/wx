@@ -2,10 +2,12 @@ package controller;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.log4j.Logger;
 import org.json.JSONObject;
 import org.springframework.stereotype.Controller;
 
 import bean.DeviceBean;
+import dao.DBRecorder;
 import definition.ReturnCodeDefinition;
 import definition.WXURLDefinition;
 import util.StringUtil;
@@ -13,6 +15,8 @@ import util.WXInterface;
 
 @Controller
 public class AirMachineSettingController {
+
+	private static Logger logger = Logger.getLogger(AirMachineSettingController.class);
 
 	public String setMachine(HttpServletRequest request) {
 
@@ -28,12 +32,19 @@ public class AirMachineSettingController {
 
 		String autoFlag = request.getParameter("autoFlag");// 可为空
 		autoFlag = StringUtil.emptySetDefaultValue(autoFlag, "1");
+
 		String windLevel = request.getParameter("windLevel");// 可为空
 		windLevel = StringUtil.emptySetDefaultValue(windLevel, "1");
 
-		// FIXME 请求前拼装参数
+		String warmFlag = request.getParameter("warmFlag");
+		warmFlag = StringUtil.emptySetDefaultValue(warmFlag, "0");
 
-		String postData = DeviceBean.DeviceBeanToString(autoFlag, windLevel);
+		String anion = request.getParameter("anionFlag");
+
+		// FIXME 请求前拼装参数
+		String postData = DeviceBean.DeviceBeanToString(autoFlag, windLevel, warmFlag, anion);
+		logger.info("请求前数据：" + postData);
+
 		JSONObject jsonObject = new JSONObject();
 		jsonObject.put("device_type", deviceType);
 		jsonObject.put("device_id", deviceId);
@@ -49,8 +60,31 @@ public class AirMachineSettingController {
 
 		String result = WXInterface.doPost(WXURLDefinition.SET_DEVICE_STATUS, jsonObject.toString());
 
-		// 记录控制设备日志 到数据库
-		return "";
+		JSONObject resultJob = new JSONObject(result);
+
+		String msgId = resultJob.getString("msg_id");
+
+		// String response_code = resultJob.getString("");
+
+		// FIXME 记录控制设备日志 到数据库
+		// DBRecorder recorder = new DBRecorder();
+		// DeviceBean bean = new DeviceBean();
+		//
+		// bean.setDeviceId(deviceId);
+		// bean.setDeviceType(deviceType);
+		// bean.set
+		// recorder.addSettingLog(openId, bean);
+		job.put("rescode", ReturnCodeDefinition.OK);
+		job.put("resdesc", "设置微信成功");
+		return job.toString();
+
+	}
+
+	private JSONObject parseResult(String result) {
+
+		JSONObject job = new JSONObject();
+
+		return null;
 
 	}
 
