@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import bean.DeviceBean;
 import dao.DBRecorder;
@@ -22,6 +24,8 @@ import util.WXToken;
 @Controller
 public class AirMachineListController {
 
+	@RequestMapping("/wx/device_list.do")
+	@ResponseBody
 	public String getDeviceList(HttpServletRequest request, HttpServletResponse response) {
 
 		String openId = request.getParameter("openId");

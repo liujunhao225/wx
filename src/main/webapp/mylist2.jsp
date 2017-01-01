@@ -23,11 +23,11 @@
 <link type="text/css" href="./css/rzr_main_1.css" rel="stylesheet">
 <link href="./css/bootstrap.min.css" rel="stylesheet">
 <link href="./css/wx/list_page.css" rel="stylesheet">
+<script type="text/javascript" src="/wx/js/jquery-1.10.1.min.js"></script>
 <style type="text/css">
 </style>
 
 <script type="text/javascript">
-
 	function showPage() {
 
 		window.location.href = "/wx/haire/index.html";
@@ -44,6 +44,7 @@
 		<div id="mainmenu">
 			<div class="row"
 				style="border-radius: 5px; background-color: #58e1c8;">
+				
 				<div class="row">
 					<div class="col-xs-2" style="padding: 0px;">
 						<img src="./image/jhq_w.png"
