@@ -20,14 +20,15 @@ import definition.KeyParamDefinition;
  * 
  * @author ljh
  *
- */
+ */ 
 public class DBRecorder {
 
-	private static final String name = "com.mysql.jdbc.Driver";
+	private static final String name = "com.mysql.jdbc.Driver";	
 	private static final String url = "jdbc:mysql://127.0.0.1/putao";
 
 	private static final String user = "root";
 	private static final String password = "123456";
+//	private static final String password = "";
 
 	private static Logger logger = Logger.getLogger(DBRecorder.class);
 
@@ -96,6 +97,7 @@ public class DBRecorder {
 
 		Connection conn = null;
 
+		System.out.println(System.currentTimeMillis() / 1000 );
 		// 查询5 秒以内上报过数据的设备
 		String sql = "SELECT Device_id,device_type,Data FROM wx_device_upload_log " + "WHERE Device_id IN(" + param
 				+ ") AND create_time >"

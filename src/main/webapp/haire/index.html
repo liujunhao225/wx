@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <!--<base href="http://haierwx.haier.net:80/wxAircontrol/">-->
 <base href=".">
-<title>刘俊浩家室外空气质量轻度污染。湿气蒙蒙，让除湿器来帮你</title>
+<title>刘俊浩家室外空气质量轻度污染</title>
 <meta name="viewport"
 	content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link type="text/css" rel="stylesheet"
@@ -13,7 +13,7 @@
 <link type="text/css" rel="stylesheet" href="./index_files/main.css">
 
 <script type="text/javascript" src="./index_files/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="./index_files/bootstrap.min.js"></script>
+<script type="text/javascript" src="/wx/js/detail.js"></script>
 <style type="text/css">
 html, body {
 	margin: 0;
@@ -23,7 +23,7 @@ html, body {
 </head>
 <body style="background-color: rgb(240, 240, 240);">
 	<div id="main" style="overflow-x: hidden; height: 100%;">
-		<div class="location" style="height: 8%;background:#58e1c8;">
+		<div class="location" style="height: 8%; background: #58e1c8;">
 			<img src="./index_files/haw_10.png"
 				style="width: 40px; display: inline;" alt="" /> <span
 				style="color: white;">河南省郑州市金水区凤鸣路</span>
@@ -34,7 +34,7 @@ html, body {
 			<div style="width: 100%; height: 55%;">
 
 				<img id="detector-b3-circle-bg-circle"
-					style="position: absolute; z-index: 2; width: 50%; height: 53%;margin-left:25%;"
+					style="position: absolute; z-index: 2; width: 50%; height: 53%; margin-left: 25%;"
 					src="../image/b3-blue-circle-bg.png">
 				<div id="detector-b3-pm-back-div"
 					style="position: absolute; z-index: 3; color: white; text-align: center; width: 40%; height: 40%; margin-left: 30%; margin-top: 5%;">
@@ -144,43 +144,55 @@ html, body {
 
 			</div>
 		</div>
-		
+
 		<div style="height: 29%; color: #000000;">
-                <div style="height: 50%; position: relative;">
-                    <div id="detector-b3-page-device-control-row1" style="width: 100%; position: absolute; top: 50%; margin-top: -39px;">
-                        <div class="col-xs-4" id="div_LinkWIFI" style="text-align: center" onclick="OpenWifiForm()">
-                            <img style="width: 50%;" src="../image/连网1.png">
-                            <div style="margin-top: 5%">连接网络</div>
-                        </div>
-                        <div class="col-xs-4" style="text-align: center" onclick="Share()">
-                            <img style="width: 50%;" src="../image/分享2.png">
-                            <div style="margin-top: 5%">分享</div>
-                        </div>
-                        <div class="col-xs-4" style="text-align: center" id="bxl_more_div" onclick="More()">
-                            <img style="width: 50%;" src="../image/更多1.png">
-                            <div style="margin-top: 5%">更多</div>
-                        </div>
-                    </div>
-                </div>
+			<div style="height: 50%; position: relative;">
+				<div id="detector-b3-page-device-control-row1"
+					style="width: 100%; position: absolute; top: 50%; margin-top: -39px;">
+					<div class="col-xs-4" id="div_LinkWIFI" style="text-align: center"
+						onclick="OpenWifiForm()">
+						<img style="width: 50%;" src="../image/连网1.png">
+						<div style="margin-top: 5%">连接网络</div>
+					</div>
+					<div class="col-xs-4" style="text-align: center"
+						onclick="switch_open_or_close()">
+						<input type="hidden" name="switch_flag" id="switch_flag" value="1">
+						<img id="detector-b3-switch-img" style="width: 50%;"
+							src="/wx/image/打开.png">
+						<div id="detector-b3-switch-text" style="margin-top: 5%">已开</div>
+					</div>
+					<div class="col-xs-4" style="text-align: center"
+						onclick="change_wind()">
+						<input type="hidden" name="wind_flag" id="wind_flag" value="1">
+						<img id="detector-b3-wind-img" style="width: 50%;"
+							src="/wx/image/2b.png">
+						<div id="detector-b3-wind-text" style="margin-top: 5%">自动</div>
+					</div>
 
-                <div style="height: 50%; position: relative;">
-                    <div id="detector-b3-page-device-control-row2" style="width: 100%; position: absolute; top: 50%; margin-top: -39px;">
-                        <div class="col-xs-4" style="text-align: center" onclick="detectorB3SwitchBtnClick()">
-                            <img id="detector-b3-switch-img" style="width: 50%;" src="../image/打开.png">
-                            <div id="detector-b3-switch-text" style="margin-top: 5%">已开</div>
-                        </div>
-                        <div class="col-xs-4" style="text-align: center" onclick="ShowTime()">
-                            <img style="width: 50%;" src="../image/定时.png">
-                            <div style="margin-top: 5%">定时</div>
-                        </div>
+				</div>
+			</div>
 
-                        <div class="col-xs-4" style="text-align: center" onclick="HistoryBtnClick()">
-                            <img style="width: 50%;" src="../image/历史数据1.png">
-                            <div style="margin-top: 5%">历史数据</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+			<div style="height: 50%; position: relative;">
+				<div id="detector-b3-page-device-control-row2"
+					style="width: 100%; position: absolute; top: 50%; margin-top: -39px;">
+					<div class="col-xs-4" style="text-align: center" id="bxl_more_div"
+						onclick="More()">
+						<img style="width: 50%;" src="../image/更多1.png">
+						<div style="margin-top: 5%">更多</div>
+					</div>
+					<div class="col-xs-4" style="text-align: center"
+						onclick="ShowTime()">
+						<img style="width: 50%;" src="../image/定时.png">
+						<div style="margin-top: 5%">定时</div>
+					</div>
+					<div class="col-xs-4" style="text-align: center" onclick="Share()">
+						<img style="width: 50%;" src="../image/分享2.png">
+						<div style="margin-top: 5%">分享</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
 
 	</div>
 </body>

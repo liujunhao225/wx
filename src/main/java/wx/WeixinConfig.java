@@ -48,7 +48,7 @@ public class WeixinConfig {
 		signature = tempSignature;
 	}
 
-	public String getToken() {
+	public static String getToken() {
 		return token;
 	}
 

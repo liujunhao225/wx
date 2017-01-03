@@ -16,4 +16,7 @@ public class WXURLDefinition {
 
 	// 控制设备参数
 	public static final String SET_DEVICE_STATUS = "https://api.weixin.qq.com/hardware/mydevice/platform/ctrl_device?access_token=%s";
+	
+	//获取 用户openID接口
+	public static final String GET_USER_OPENID_URL = "https://api.weixin.qq.com/sns/oauth2/access_token?appid=%s&secret=%s&code=%s&grant_type=authorization_code";
 }

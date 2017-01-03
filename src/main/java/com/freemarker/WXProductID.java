@@ -29,7 +29,7 @@ public class WXProductID {
 
 	static String qrcode_url = "https://api.weixin.qq.com/device/create_qrcode?access_token=%s";
 
-	static String token = "sUJcKo7sfMlKziNUsMVppvvMNHHhdc9GNArWk8zDZZN2u7lXXZq_DKBxIMqwezDfESMnLQbcgQYCF4R1i_x94OMyBlz8rsmV6Z2dYrt618CWNL9Do_qoSUbBiKWcM18cWFFfAFAZII";
+	static String token = "pYCo1RWEPga6C4ClLvfmvnTMyAca1gzc64Mcql0iSyQQmc-X1obpwAfoDMheKHjimikb8qqXBaMPFkSbVoJvJ-ot62darz8xmiRpxZfgixFCYq60J788fB5mW-RBSaGPRFKhAFAAOT";
 
 	static String deviceId = "gh_f279452b86ad_9a7422ad8c96a649";
 
@@ -314,8 +314,8 @@ public class WXProductID {
 		JSONObject menujob = new JSONObject();
 
 		menujob.put("type", "view");
-		menujob.put("name", "解绑");
-		menujob.put("url", "http://www.legou114.net/wx/unbind.html");
+		menujob.put("name", "我的设备");
+		menujob.put("url", "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx7b982f3eac2bc602&redirect_uri=http://www.fulijietong.com/wx/mylist2.jsp&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect");
 
 		buttonList.add(menujob);
 		job.put("button", buttonList);

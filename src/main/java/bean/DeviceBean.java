@@ -31,6 +31,7 @@ public class DeviceBean {
 	public static DeviceBean build(String deviceId, String deviceType, String data) {
 
 		DeviceBean bean = new DeviceBean();
+		bean.setDeviceId(deviceId);
 
 		String deviceStatus = data.substring(0, 1);// 自动或者手动
 		bean.setDeviceStatus(deviceStatus);

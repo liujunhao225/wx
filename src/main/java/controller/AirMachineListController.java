@@ -6,7 +6,9 @@ import java.util.Set;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
+import org.apache.log4j.Logger;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.stereotype.Controller;
@@ -20,15 +22,34 @@ import definition.WXURLDefinition;
 import util.StringUtil;
 import util.WXInterface;
 import util.WXToken;
+import wx.WeixinConfig;
 
 @Controller
+@RequestMapping("/device")
 public class AirMachineListController {
 
-	@RequestMapping("/wx/device_list.do")
+	private static Logger logger = Logger.getLogger(AirMachineListController.class);
+
+	@RequestMapping("/device_list.do")
 	@ResponseBody
 	public String getDeviceList(HttpServletRequest request, HttpServletResponse response) {
+	
+		HttpSession session = request.getSession();
+		if (session.getAttribute("openId") == null || StringUtil.isEmpty(session.getAttribute("openId").toString())) {
+			String keyCode = request.getParameter("keyCode");
 
-		String openId = request.getParameter("openId");
+			WeixinConfig config = new WeixinConfig();
+			String getUserOpenIdUrl = String.format(WXURLDefinition.GET_USER_OPENID_URL, config.getAppId(),
+					config.getSecret(), keyCode);
+			String result = WXInterface.doGet(getUserOpenIdUrl);
+			logger.info("返回结果:"+result);
+			System.out.println("返回结果:"+result);
+			JSONObject job = new JSONObject(result);
+			session.setAttribute("openId", job.getString("openid"));
+
+		}
+
+		String openId = session.getAttribute("openId").toString();
 		JSONObject job = new JSONObject();
 		if (StringUtil.isEmpty(openId)) {
 			job.put("rescode", ReturnCodeDefinition.PARAM_CANNOT_NULL);
@@ -38,7 +59,8 @@ public class AirMachineListController {
 		// 通过WX接口取用户绑定的设备 --start
 
 		String url = WXURLDefinition.GET_USER_DEIVCE_LIST_URL;
-		String requestUrl = String.format(url, WXToken.getToken(), openId);
+		System.out.println(WeixinConfig.getToken());
+		String requestUrl = String.format(url, WeixinConfig.getToken(), openId);
 
 		String result = WXInterface.doGet(requestUrl);
 		JSONObject resultJob = new JSONObject(result);
