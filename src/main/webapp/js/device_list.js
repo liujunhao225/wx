@@ -13,6 +13,7 @@
 				
 				var tempjob = json.list[i];
 				console.log(tempjob.deviceId);
+				console.log(tempjob.deviceStatus);
 				var temphtml = "<div class=\"row\">";
 				 temphtml += "<div class=\"col-xs-2\" style=\"padding: 0px;\">";
 				
@@ -24,8 +25,20 @@
 				 temphtml += "空气净化器";
 				 temphtml += "</div>";
 				 temphtml += "<div class=\"row\"style=\"color: rgb(168, 165, 185);font-family: 'Microsoft YaHei'; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;\">&nbsp;</div>";
-				 temphtml += "<div class=\"row\" style=\"font-family: 'Microsoft YaHei';color: white;\"><img id=\"img_C893464AE12A\" src=\"./image/在线.png\" style=\"width: 15px; height: 13px;\"><span id=\"img_C893464AE12A\" style=\"color: white;\">";
-				 temphtml += "&nbsp;&nbsp;" + "开" + "</span>";
+				if(tempjob.deviceStatus=="1"){
+					temphtml += "<div class=\"row\" style=\"font-family: 'Microsoft YaHei';color: white;\">" +
+			 		"<img id=\"img_C893464AE12A\" src=\"./image/在线.png\" style=\"width: 15px; height: 13px;\">" +
+			 		"<span id=\"img_C893464AE12A\" style=\"color: white;\">";
+					 temphtml += "&nbsp;&nbsp;" + "开" + "</span>";
+					
+				}else{
+					temphtml += "<div class=\"row\" style=\"font-family: 'Microsoft YaHei';color: white;\">" +
+			 		"<img id=\"img_C893464AE12A\" src=\"./image/离线.png\" style=\"width: 15px; height: 13px;\">" +
+			 		"<span id=\"img_C893464AE12A\" style=\"color: white;\">";
+					 temphtml += "&nbsp;&nbsp;" + "关" + "</span>";
+					
+				}
+				
 				 temphtml += "</div>";
 				 temphtml += "</div>";
 				 temphtml += "<div class=\"col-xs-3\" style=\"margin-left: -10%;\">";
@@ -33,7 +46,14 @@
 				 temphtml += "<img src=\"./image/pm25.png\" style=\"width: 70%; padding-left: 10px;\">";
 				 temphtml += "</div>";
 				 temphtml += "<div id=\"ListPM25_C893464AE12A\" class=\"row\" style=\"text-align: center; border-radius: 100px; margin-top: 5%;margin-left: 20%; margin-right: 20%; font-family: 'Microsoft YaHei';color: white;\">";
-				 temphtml += 34 + "</div>"
+				 if(tempjob.deviceStatus=="1"){
+					 
+					 temphtml += tempjob.devicePmTwo + "</div>"
+						
+					}else{
+						temphtml +=  "--"+ "</div>"
+						
+					}
 				 temphtml += "</div>";
 				 temphtml += "<div class=\"col-xs-1\" style=\"padding: 0px; margin-left: 2%;\">"
 				 temphtml += "<img src=\"./image/下拉.png\" style=\"width: 100%; margin-top:80%\" onclick=\"showPage();\">"

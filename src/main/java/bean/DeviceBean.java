@@ -1,5 +1,7 @@
 package bean;
 
+import definition.KeyParamDefinition;
+
 public class DeviceBean {
 
 	private String deviceType;// 设备类型
@@ -65,12 +67,12 @@ public class DeviceBean {
 	public static DeviceBean build(String deviceId) {
 		DeviceBean bean = new DeviceBean();
 		bean.setDeviceId(deviceId);
-		bean.setDeviceStatus("2");
+		bean.setDeviceStatus(KeyParamDefinition.CLOSED);
 		return bean;
 	}
 
 	public static String DeviceBeanToString(String autoFlag, String windLevel, String warmUpFlag, String anion) {
-		
+
 		StringBuffer sb = new StringBuffer();
 		sb.append(autoFlag);
 		sb.append(windLevel);

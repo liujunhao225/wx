@@ -34,7 +34,10 @@ public class AirMachineListController {
 	@ResponseBody
 	public String getDeviceList(HttpServletRequest request, HttpServletResponse response) {
 	
+	
 		HttpSession session = request.getSession();
+
+session.setAttribute("openId", "oWpqHs27Hl_g99HJ7l6lU_meN1cQ");
 		if (session.getAttribute("openId") == null || StringUtil.isEmpty(session.getAttribute("openId").toString())) {
 			String keyCode = request.getParameter("keyCode");
 
